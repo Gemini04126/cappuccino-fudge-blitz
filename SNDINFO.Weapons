@@ -1,0 +1,39 @@
+// I might do the Skulltag weapons if I have enough fun doing this.
+
+weapons/empty				"Sounds/Weapons/plr_dry_fire_00.wav"
+
+//// Slot 1 ////
+// Brass Knuckles //
+
+// Chainsaw //
+
+//// Slot 2 ////
+// Pistol //
+
+//// Slot 3 ////
+// Shotgun //
+weapons/shotgun/fire		"Sounds/Weapons/3 - Shotgun/sawedoff-1.wav"
+weapons/shotgun/draw		"Sounds/Weapons/3 - Shotgun/sawedoff_draw.wav"
+weapons/shotgun/pump_in		"Sounds/Weapons/3 - Shotgun/pump_in.wav"
+weapons/shotgun/pump_out	"Sounds/Weapons/3 - Shotgun/pump_out.wav"
+weapons/shotgun/pickup		"Sounds/Weapons/3 - Shotgun/sawedoff_pump.wav"
+
+weapons/shotgun/load1		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_01.wav"
+weapons/shotgun/load2		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_02.wav"
+weapons/shotgun/load3		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_03.wav"
+
+$random weapons/shotgun/load {weapons/shotgun/load1 weapons/shotgun/load2 weapons/shotgun/load3}
+
+// Over-and-Under Shotgun //
+
+//// Slot 4 ////
+// Chaingun //
+
+//// Slot 5 ////
+// Rocket Launcher //
+
+//// Slot 6 ////
+// Plasma Rifle //
+
+//// Slot 7 ////
+// BFG9000

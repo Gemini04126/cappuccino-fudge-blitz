@@ -1,0 +1,98 @@
+[enu default]
+PLACEHOLDER = "You shouldn't see this.";
+FONTTEST = "The quick brown fox jumps over the lazy dog.\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!\nthe quick brown fox jumps over the lazy dog?\n`~1!2@3#4$5%6^7&8*9(0)-_=+[]{}\\|;:\'\",<.>/?";
+
+// ======================== //
+//  Weapon pickup messages  //
+// ======================== //
+// Slot 1 //
+// No Brass Knuckles pickup message, you start with em!
+GOTCHAINSAW = "\c[White]Picked up a \c[DarkGray]Chainsaw\c[White]! Find some meat! (Slot 1)";
+// Slot 2 //
+GOTPISTOL = "\c[White]Picked up a \c[Yellow]Pistol\c[White]! (Slot 2)";
+// Slot 3 //
+GOTSHOTGUN = "\c[White]Picked up a \c[Red]Shotgun\c[White]! (Slot 3)";
+GOTOVERANDUNDERSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3)";
+// Slot 4 //
+GOTCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4)";
+// Slot 5 //
+GOTROCKETLAUNCHER = "\c[White]Picked up a \c[Brown]Rocket Launcher\c[White]! (Slot 5)";
+// Slot 6 //
+GOTPLASMARIFLE = "\c[White]Picked up a \c[LightBlue]Plasma Rifle\c[White]! (Slot 6)";
+// Slot 7 //
+GOTBFG9000 = "\c[White]Picked up a \c[Green]BFG9000\c[White]! Oh, yes! (Slot 7)";
+
+// ======================== //
+// Weapon obituary messages //
+// ======================== //
+// Slot 1 //
+KILLBRASSKNUCKLES = "%o was punched in %p snout by %k to establish superiority.";
+// Slot 2 //
+KILLPISTOL = "%o was plinked to death by %k's \c[Yellow]Pistol\c[Gold].";
+// Slot 3 //
+KILLSHOTGUN = "%o was slammed by %k's \c[Red]Shotgun\c[Gold].";
+KILLOVERANDUNDERSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
+// Slot 4 //
+KILLCHAINGUN = "%o was mowed down by %k's \c[Yellow]Chaingun\c[Gold].";
+// Slot 5 //
+KILLROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[Brown]Rocket Launcher\c[Gold].";
+// Slot 6 //
+KILLPLASMARIFLE = "%o was fried by %k's \c[LightBlue]Plasma Rifle\c[Gold].";
+// Slot 7 //
+KILLBFG9000 = "%o was reduced to ashes by %k's \c[Green]BFG9000\c[Gold].";
+
+// ======================== //
+//       Weapon names       //
+// ======================== //
+// Slot 1 //
+TAG_BRASSKNUCKLES = "Brass Knuckles";
+TAG_CHAINSAW = "Chainsaw";
+// Slot 2 //
+TAG_PISTOL = "Pistol";
+// Slot 3 //
+TAG_SHOTGUN = "Shotgun";
+TAG_OVERANDUNDERSHOTGUN = "Over-and-Under Shotgun";
+// Slot 4 //
+TAG_CHAINGUN = "Chaingun";
+// Slot 5 //
+TAG_ROCKETLAUNCHER = "Rocket Launcher";
+// Slot 6 //
+TAG_PLASMARIFLE = "Plasma Rifle";
+// Slot 7 //
+TAG_BFG9000 = "BFG9000";
+
+// ======================== //
+//   Ammo pickup messages   //
+// ======================== //
+// Please, for the love of god, rename clips to mags...
+// Add color, too. It'll look nice!
+
+// ======================== //
+//   Item pickup messages   //
+// ======================== //
+// Health //
+GOTHEALTHBONUS = "\c[White]Picked up a \c[Blue]health bonus\c[White]. (+1 health)";
+GOTHEALTHBONUSNEED = "\c[White]Picked up a \c[Blue]health bonus\c[White]. Gonna need more. (+1 health)";
+GOTSTIMPACK = "\c[White]Picked up a \c[Red]stimpack\c[White]. (+10 health)";
+GOTSTIMPACKNEED = "\c[White]Picked up a \c[Red]stimpack\c[White]. Feeling a bit better. (+10 health)";
+GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
+GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
+// Armor //
+GOTARMORBONUS = "\c[White]Picked up an \c[Green]armor bonus\c[White]. (+1 armor)";
+GOTGREENARMOR = "\c[White]Picked up the \c[Green]security armor\c[White]. (100 armor)";
+GOTBLUEARMOR = "\c[White]Picked up the \c[Blue]combat armor\c[White]. (200 armor)";
+
+// Powerups //
+GOTBERSERK = "\c[Red]Berserk\c[White]! (10x punch damage!)";
+GOTSOULSPHERE = "\c[Blue]Soulsphere\c[White]! (+100 health)";
+GOTMEGASPHERE = "\c[Brown]Megasphere\c[White]! (200 health and armor)";
+
+// ======================== //
+//         Ammo tags        //
+// ======================== //
+// Don't think we'll need any, thankfully.
+
+// ======================== //
+//           Menus          //
+// ======================== //
+// Don't think we'll need any of these, either.

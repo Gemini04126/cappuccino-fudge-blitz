@@ -1,0 +1,11 @@
+class CFB_Player : DoomPlayer
+{
+	Default
+	{
+		Player.StartItem "Pistol";
+		Player.StartItem "Clip", 50;
+		Player.StartItem "Fist";
+		Player.StartItem "CFB_ShotgunAmmo", 9; // Damn, I wanted a random value. Oh well~
+		Player.AttackZOffset 11;
+	}
+}

@@ -1,0 +1,36 @@
+# Sprites & Graphics
+## Weapons
+### Dry fire sound (generic)
+* Treyarch (Call of Duty: Black Ops)
+### Shotgun
+* Skelegant
+* Tesefy
+* LossForWords
+### Over-and-Under Shotgun
+* Wocht11K
+* Tesefy (flash)
+
+## Effects
+### Bullet puff
+* Zrrion the Insect
+* id Software
+## Items
+
+## Other
+
+
+# Sounds
+## Weapons
+
+## Effects
+
+## Other
+
+
+# Code
+### ZTracers
+* Denis Belmondo
+
+# Other
+### Coffee brown gloves, suggestion to use the Over-and-Under Shotgun instead of the standard Super Shotgun
+* JMartinez9820

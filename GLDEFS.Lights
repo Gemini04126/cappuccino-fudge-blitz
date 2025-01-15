@@ -1,0 +1,10 @@
+// Flashes
+flickerlight2 CFB_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.pk3
+{
+    color 1.0 0.8 0.2
+    size 72
+    secondarySize 84
+    interval 1
+    offset 0 40 0
+	attenuate 1
+}

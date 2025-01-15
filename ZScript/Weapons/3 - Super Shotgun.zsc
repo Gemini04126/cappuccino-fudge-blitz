@@ -1,0 +1,8 @@
+// Over-and-Under Shotgun
+// Batandy's favorite(?) double-barreled shotgun.
+// Deals the same damage as the normal shotgun, but fires 10 pellets per barrel instead of 7.
+// Can alt-fire to fire one barrel at a time, starting with the top.
+class CFB_OverAndUnderShotgun : /*CFB_Weapon*/SuperShotgun replaces SuperShotgun
+{
+	
+}

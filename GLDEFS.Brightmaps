@@ -1,0 +1,44 @@
+//// Weapons ////
+/// Slot 1 ///
+// Brass Knuckles //
+// Not applicable. Hands don't glow!
+// Chainsaw //
+// Not really applicable, unless it has a light on it.
+/// Slot 2 ///
+// Pistol //
+// Likely just a muzzle flash.
+/// Slot 3 ///
+// Shotgun //
+brightmap sprite SHTGA0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
+brightmap sprite SHTGB0 {map Graphics/Brightmaps/SHTGB0.png}
+brightmap sprite SHTGC0 {map Graphics/Brightmaps/SHTGC0.png}
+brightmap sprite SHTGD0 {map Graphics/Brightmaps/SHTGD0.png}
+brightmap sprite SHTGE0 {map Graphics/Brightmaps/SHTGE0.png}
+brightmap sprite SHTGF0 {map Graphics/Brightmaps/SHTGF0.png}
+brightmap sprite SHTGG0 {map Graphics/Brightmaps/SHTGG0.png}
+brightmap sprite SHTGJ0 {map Graphics/Brightmaps/SHTGJ0.png disablefullbright}
+brightmap sprite SHTGK0 {map Graphics/Brightmaps/SHTGK0.png disablefullbright}
+brightmap sprite SHTGL0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
+brightmap sprite SHTGM0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
+brightmap sprite SHTGN0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
+brightmap sprite SHTGO0 {map Graphics/Brightmaps/SHTGO0U0.png}
+brightmap sprite SHTGP0 {map Graphics/Brightmaps/SHTGP0T0.png}
+brightmap sprite SHTGQ0 {map Graphics/Brightmaps/SHTGQ0S0.png}
+brightmap sprite SHTGR0 {map Graphics/Brightmaps/SHTGR0.png}
+brightmap sprite SHTGS0 {map Graphics/Brightmaps/SHTGQ0S0.png}
+brightmap sprite SHTGT0 {map Graphics/Brightmaps/SHTGP0T0.png}
+brightmap sprite SHTGU0 {map Graphics/Brightmaps/SHTGO0U0.png}
+// Super Shotgun //
+// Likely just a muzzle flash.
+/// Slot 4 ///
+// Chaingun //
+// Likely just a muzzle flash.
+/// Slot 5 ///
+// Rocket Launcher //
+// Likely just a muzzle flash.
+/// Slot 6 ///
+// Plasma Rifle //
+// Likely just a muzzle flash and lights.
+/// Slot 7 ///
+// BFG9000 //
+// Likely just a muzzle flash and lights.

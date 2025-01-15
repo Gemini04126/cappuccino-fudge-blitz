@@ -1,0 +1,2 @@
+Brightness -100
+... that's it

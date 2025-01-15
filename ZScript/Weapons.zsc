@@ -1,0 +1,72 @@
+//// WEAPONS ////
+// Slot 1 //
+#include "./Weapons/1 - Brass Knuckles.zsc"
+#include "./Weapons/1 - Chainsaw.zsc"
+// Slot 2 //
+#include "./Weapons/2 - Pistol.zsc"
+// Slot 3 //
+#include "./Weapons/3 - Shotgun.zsc"
+#include "./Weapons/3 - Super Shotgun.zsc"
+// Slot 4 //
+#include "./Weapons/4 - Chaingun.zsc"
+// Slot 5 //
+#include "./Weapons/5 - Rocket Launcher.zsc"
+// Slot 6 //
+#include "./Weapons/6 - Plasma Rifle.zsc"
+// Slot 7 //
+#include "./Weapons/7 - BFG9000.zsc"
+// Slot 8 //
+// Slot 9 //
+// Slot 0 //
+
+
+class CFB_Weapon : Weapon
+{
+	action bool JustPressed(int which) // "which" being any BT_* value, mentioned above or not
+	{
+		return player.cmd.buttons & which && !(player.oldbuttons & which);
+	}
+	action bool IsPressed(int which) // "which" being any BT_* value, mentioned above or not
+	{
+		return player.cmd.buttons & which;
+	}
+	// Cheers, Brutal Doom Platinum!!
+	// Changes ammo icon only
+	action void ChangeAmmoIcon1(String AmmoIcon)
+	{
+		(findInventory(invoker.ammo1.GetClassName())).icon = texman.CheckForTexture(AmmoIcon, TexMan.Type_Any);
+	}
+	action void ChangeAmmoIcon2(String AmmoIcon)
+	{
+		(findInventory(invoker.ammo2.GetClassName())).icon = texman.CheckForTexture(AmmoIcon, TexMan.Type_Any);
+	}
+	Default
+	{
+		//$Category Weapons
+		+THRUGHOST // use -THRUGHOST to make it affect Heretic ghosts if you do make this compatible
+		//+WEAPON.NOAUTOSWITCHTO
+		Weapon.Kickback 100;
+		//Weapon.UpSound "weapons/draw_default";
+		Obituary "$PLACEHOLDER";
+		Tag "Weapon base";
+		Weapon.BobStyle "Smooth";
+		Weapon.BobRangeX 1.0;
+		Weapon.BobRangeY 1.0;
+		Weapon.BobSpeed 1.0;
+	}
+}
+
+class CFB_BulletTracer : _ZTracer
+{
+	Default
+	{
+		Decal "BulletChip";
+		Speed 70;
+		DamageFunction 0;
+	}
+	States
+	{
+		Death:
+			Stop;
+	}
+}

@@ -1,0 +1,22 @@
+class CFB_BulletPuff : Actor replaces BulletPuff
+{
+	Default
+	{
+		+NOBLOCKMAP
+		+NOGRAVITY
+		+ALLOWPARTICLES
+		+RANDOMIZE
+		RenderStyle "Translucent";
+		Alpha 0.5;
+		VSpeed 1;
+		Mass 5;
+	}
+	States
+	{
+		Spawn:
+			BPUF AB 4 Bright;
+		Melee:
+			BPUF CDEF 2;
+			Stop;
+	}
+}

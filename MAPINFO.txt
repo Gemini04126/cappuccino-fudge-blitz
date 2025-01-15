@@ -1,0 +1,4 @@
+GameInfo
+{
+	PlayerClasses = "CFB_Player"
+}
