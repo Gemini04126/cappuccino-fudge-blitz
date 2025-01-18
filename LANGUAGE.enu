@@ -14,7 +14,7 @@ GOTPISTOL = "\c[White]Picked up a \c[Yellow]Pistol\c[White]! (Slot 2)";
 GOTSHOTGUN = "\c[White]Picked up a \c[Red]Shotgun\c[White]! (Slot 3)";
 GOTOVERANDUNDERSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3)";
 // Slot 4 //
-GOTCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4)";
+GOTCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4, alt-fire for automatic chaintap)";
 // Slot 5 //
 GOTROCKETLAUNCHER = "\c[White]Picked up a \c[Brown]Rocket Launcher\c[White]! (Slot 5)";
 // Slot 6 //

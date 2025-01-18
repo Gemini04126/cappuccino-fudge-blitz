@@ -1,7 +1,5 @@
 # Sprites & Graphics
 ## Weapons
-### Dry fire sound (generic)
-* Treyarch (Call of Duty: Black Ops)
 ### Shotgun
 * Skelegant
 * Tesefy
@@ -9,11 +7,17 @@
 ### Over-and-Under Shotgun
 * Wocht11K
 * Tesefy (flash)
+### Chaingun
+* Zdexium
+* Midway
+* Necronoxis
+* DoomerBlazkowicz (Pickup)
 
 ## Effects
 ### Bullet puff
 * Zrrion the Insect
 * id Software
+
 ## Items
 
 ## Other
@@ -21,8 +25,16 @@
 
 # Sounds
 ## Weapons
+### Dry fire sound (generic)
+* Treyarch (Call of Duty: Black Ops, generic)
+### Shotgun
+* Valve Software (Counter-Strike: Global Offensive, Sawed-Off Shotgun)
+### Chaingun
+* Treyarch (Call of Duty: Black Ops, HK12)
 
 ## Effects
+### Bullets
+* Valve Software (Counter-Strike, bullet whiz and ricochet)
 
 ## Other
 

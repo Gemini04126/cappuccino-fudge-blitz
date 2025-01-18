@@ -2,6 +2,24 @@
 
 weapons/empty				"Sounds/Weapons/plr_dry_fire_00.wav"
 
+weapons/whiz1				"Sounds/Weapons/Bullets/bulletltor01.wav"
+weapons/whiz2				"Sounds/Weapons/Bullets/bulletltor06.wav"
+weapons/whiz3				"Sounds/Weapons/Bullets/bulletltor07.wav"
+weapons/whiz4				"Sounds/Weapons/Bullets/bulletltor08.wav"
+weapons/whiz5				"Sounds/Weapons/Bullets/bulletltor09.wav"
+weapons/whiz6				"Sounds/Weapons/Bullets/bulletltor10.wav"
+weapons/whiz7				"Sounds/Weapons/Bullets/bulletltor11.wav"
+weapons/whiz8				"Sounds/Weapons/Bullets/bulletltor13.wav"
+weapons/whiz9				"Sounds/Weapons/Bullets/bulletltor14.wav"
+weapons/ricochet1			"Sounds/Weapons/Bullets/ric3.wav"
+weapons/ricochet2			"Sounds/Weapons/Bullets/ric4.wav"
+weapons/ricochet3			"Sounds/Weapons/Bullets/ric5.wav"
+
+$random weapons/whiz {weapons/whiz1 weapons/whiz2 weapons/whiz3 weapons/whiz4 weapons/whiz5 weapons/whiz6 weapons/whiz7 weapons/whiz8 weapons/whiz9}
+$random weapons/ricochet {weapons/ricochet1 weapons/ricochet2 weapons/ricochet3}
+$volume weapons/whiz 0.5
+$volume weapons/ricochet 0.5
+
 //// Slot 1 ////
 // Brass Knuckles //
 
@@ -28,6 +46,12 @@ $random weapons/shotgun/load {weapons/shotgun/load1 weapons/shotgun/load2 weapon
 
 //// Slot 4 ////
 // Chaingun //
+weapons/chaingun/fire1		"Sounds/Weapons/4 - Chaingun/shot_00.wav"
+weapons/chaingun/fire2		"Sounds/Weapons/4 - Chaingun/shot_01.wav"
+weapons/chaingun/fire3		"Sounds/Weapons/4 - Chaingun/shot_02.wav"
+weapons/chaingun/fire4		"Sounds/Weapons/4 - Chaingun/shot_04.wav"
+
+$random weapons/chaingun/fire {weapons/chaingun/fire1 weapons/chaingun/fire2 weapons/chaingun/fire3 weapons/chaingun/fire4}
 
 //// Slot 5 ////
 // Rocket Launcher //

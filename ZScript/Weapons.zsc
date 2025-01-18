@@ -6,7 +6,7 @@
 #include "./Weapons/2 - Pistol.zsc"
 // Slot 3 //
 #include "./Weapons/3 - Shotgun.zsc"
-#include "./Weapons/3 - Super Shotgun.zsc"
+#include "./Weapons/3 - Over-and-Under Shotgun.zsc"
 // Slot 4 //
 #include "./Weapons/4 - Chaingun.zsc"
 // Slot 5 //
@@ -63,10 +63,13 @@ class CFB_BulletTracer : _ZTracer
 		Decal "BulletChip";
 		Speed 70;
 		DamageFunction 0;
+		SeeSound "weapons/whiz";
+		DeathSound "weapons/ricochet";
 	}
 	States
 	{
 		Death:
+			TNT1 A 0 A_Scream;
 			Stop;
 	}
 }
