@@ -1,5 +1,8 @@
 # Sprites & Graphics
 ## Weapons
+### Pistol
+* Tesefy
+* JMartinez9820 (Animating it, putting hands on it...)
 ### Shotgun
 * Skelegant
 * Tesefy
@@ -27,6 +30,8 @@
 ## Weapons
 ### Dry fire sound (generic)
 * Treyarch (Call of Duty: Black Ops, generic)
+### Pistol
+* Treyarch (Call of Duty: World at War, P38 & generic pistol dryfire sound)
 ### Shotgun
 * Valve Software (Counter-Strike: Global Offensive, Sawed-Off Shotgun)
 ### Chaingun

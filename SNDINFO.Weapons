@@ -27,6 +27,14 @@ $volume weapons/ricochet 0.5
 
 //// Slot 2 ////
 // Pistol //
+weapons/pistol/fire			"Sounds/Weapons/2 - Pistol/p38_st_f.wav"
+weapons/pistol/mag_in		"Sounds/Weapons/2 - Pistol/p38_mag_in.wav"
+weapons/pistol/mag_out		"Sounds/Weapons/2 - Pistol/p38_mag_out.wav"
+weapons/pistol/slide		"Sounds/Weapons/2 - Pistol/p38_slide.wav"
+weapons/pistol/empty		"Sounds/Weapons/2 - Pistol/pistol_dry_fire_st.wav"
+
+$alias weapons/pistol/pickup weapons/pistol/mag_out
+$alias weapons/pistol/draw weapons/pistol/mag_in
 
 //// Slot 3 ////
 // Shotgun //
