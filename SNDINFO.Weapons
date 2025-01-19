@@ -46,6 +46,9 @@ $random weapons/shotgun/load {weapons/shotgun/load1 weapons/shotgun/load2 weapon
 
 //// Slot 4 ////
 // Chaingun //
+weapons/chaingun/pickup		"Sounds/Weapons/4 - Chaingun/fly_hk21_pull.wav"
+weapons/chaingun/draw		"Sounds/Weapons/4 - Chaingun/fly_minigun_up.wav"
+
 weapons/chaingun/fire1		"Sounds/Weapons/4 - Chaingun/shot_00.wav"
 weapons/chaingun/fire2		"Sounds/Weapons/4 - Chaingun/shot_01.wav"
 weapons/chaingun/fire3		"Sounds/Weapons/4 - Chaingun/shot_02.wav"

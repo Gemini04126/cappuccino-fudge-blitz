@@ -2,11 +2,14 @@
 /// Slot 1 ///
 // Brass Knuckles //
 // Not applicable. Hands don't glow!
+
 // Chainsaw //
 // Not really applicable, unless it has a light on it.
+
 /// Slot 2 ///
 // Pistol //
 // Likely just a muzzle flash.
+
 /// Slot 3 ///
 // Shotgun //
 brightmap sprite SHTGA0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
@@ -28,17 +31,25 @@ brightmap sprite SHTGR0 {map Graphics/Brightmaps/SHTGR0.png}
 brightmap sprite SHTGS0 {map Graphics/Brightmaps/SHTGQ0S0.png}
 brightmap sprite SHTGT0 {map Graphics/Brightmaps/SHTGP0T0.png}
 brightmap sprite SHTGU0 {map Graphics/Brightmaps/SHTGO0U0.png}
+
 // Super Shotgun //
 // Likely just a muzzle flash.
+
 /// Slot 4 ///
 // Chaingun //
-// Likely just a muzzle flash.
+brightmap sprite CHGGA0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
+brightmap sprite CHGGB0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
+brightmap sprite CHGGC0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
+brightmap sprite CHGGD0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
+
 /// Slot 5 ///
 // Rocket Launcher //
 // Likely just a muzzle flash.
+
 /// Slot 6 ///
 // Plasma Rifle //
 // Likely just a muzzle flash and lights.
+
 /// Slot 7 ///
 // BFG9000 //
 // Likely just a muzzle flash and lights.
