@@ -4,7 +4,7 @@ class CFB_ShotgunAmmo : Ammo
 {
 	Default
 	{
-		Inventory.Icon "IPUMA0";
+		Inventory.Icon "SHTGZ0"; // Replace later
 		Inventory.Amount 0;
 		Inventory.MaxAmount 9;
 		Ammo.BackpackAmount 0;
@@ -21,7 +21,7 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 		Weapon.AmmoType1 "CFB_ShotgunAmmo";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 0;
-		Weapon.AmmoType2 "Shell";
+		Weapon.AmmoType2 "CFB_Shells";
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 8;
 
@@ -39,11 +39,24 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 			SHTG Z -1;
 			Stop;
 		Select:
-			SHTG A 1 A_Raise(18); // Redo this later to be fancier? I think it'd be cool.
-			Loop;
+			TNT1 A 0 A_QuickRaise();
+			SHTG X 1 A_WeaponOffset(90, 122, WOF_INTERPOLATE);
+			SHTG X 1 A_WeaponOffset(60, 92, WOF_INTERPOLATE);
+			SHTG X 1 A_WeaponOffset(40, 72, WOF_INTERPOLATE);
+			SHTG W 1 A_WeaponOffset(20, 52, WOF_INTERPOLATE);
+			SHTG V 1 A_WeaponOffset(10, 42, WOF_INTERPOLATE);
+			SHTG A 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
+			Goto Ready;
 		Deselect:
-			SHTG A 1 A_Lower(18); // Ditto.
-			Loop;
+			SHTG A 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
+			SHTG V 1 A_WeaponOffset(10, 42, WOF_INTERPOLATE);
+			SHTG W 1 A_WeaponOffset(20, 52, WOF_INTERPOLATE);
+			SHTG X 1 A_WeaponOffset(40, 72, WOF_INTERPOLATE);
+			SHTG X 1 A_WeaponOffset(60, 92, WOF_INTERPOLATE);
+			SHTG X 1 A_WeaponOffset(90, 122, WOF_INTERPOLATE);
+			TNT1 A 0 A_WeaponOffset(0, 32);
+			TNT1 A 0 A_QuickLower();
+			Stop;
 		Ready:
 			SHTG A 1 A_WeaponReady(WRF_ALLOWRELOAD);
 			Loop;
@@ -69,7 +82,7 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 			SHTG A 2 A_ReFire;
 			Goto Ready;
 		FireEmpty:
-			TNT1 A 0 A_JumpIfInventory("Shell", 1, "ReloadEmpty");
+			TNT1 A 0 A_JumpIfInventory("CFB_Shells", 1, "ReloadEmpty");
 			SHTG N 3 A_StartSound("weapons/empty");
 			SHTG A 9;
 			Goto Ready;
@@ -77,7 +90,7 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 		// Check for shells, and if you're already full.
 			TNT1 A 0 A_JumpIfInventory("CFB_ShotgunAmmo", 0, "Ready");
 			TNT1 A 0 A_JumpIfNoAmmo("ReloadEmpty");
-			TNT1 A 0 A_JumpIfInventory("Shell", 1, 1);
+			TNT1 A 0 A_JumpIfInventory("CFB_Shells", 1, 1);
 			Goto Ready;
 			SHTG BCD 2;
 			SHTG EF 1;
@@ -86,13 +99,13 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 			// if full on ammo, finish reload
 			TNT1 A 0 A_JumpIfInventory("CFB_ShotgunAmmo", 0, "Reload.Finish");
 			// if at least 1 shell to load, continue
-			TNT1 A 0 A_JumpIfInventory("Shell", 1, 1);
+			TNT1 A 0 A_JumpIfInventory("CFB_Shells", 1, 1);
 			Goto Reload.Finish;
 			SHTG OPQ 2;
 			// exchange shell for ammo
 			TNT1 A 0 {
 				A_GiveInventory("CFB_ShotgunAmmo", 1);
-				A_Takeinventory("Shell",1);
+				A_Takeinventory("CFB_Shells",1);
 			}
 			SHTG R 2 A_StartSound("weapons/shotgun/load");
 			SHTG SSTT 1 A_JumpIf(IsPressed(BT_ATTACK), "Reload.Finish");
@@ -103,6 +116,9 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 			SHTG DCBA 2;
 			Goto Ready;
 		ReloadEmpty:
+			// if at least 1 shell to load, continue
+			TNT1 A 0 A_JumpIfInventory("CFB_Shells", 1, 1);
+			Goto Ready;
 			SHTG BCD 2;
 			SHTG EF 1;
 			SHTG F 3;
@@ -110,13 +126,13 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 			// if full on ammo, finish reload
 			TNT1 A 0 A_JumpIfInventory("CFB_ShotgunAmmo", invoker.ammo1.MaxAmount - 1, "ReloadEmpty.Finish");
 			// if at least 1 shell to load, continue
-			TNT1 A 0 A_JumpIfInventory("Shell", 1, 1);
+			TNT1 A 0 A_JumpIfInventory("CFB_Shells", 1, 1);
 			Goto ReloadEmpty.Finish;
 			SHTG OPQ 2;
 			// exchange shell for ammo
 			TNT1 A 0 {
 				A_GiveInventory("CFB_ShotgunAmmo", 1);
-				A_Takeinventory("Shell",1);
+				A_Takeinventory("CFB_Shells",1);
 			}
 			SHTG R 2 A_StartSound("weapons/shotgun/load");
 			SHTG SSTT 1 A_JumpIf(IsPressed(BT_ATTACK), "ReloadEmpty.Finish");

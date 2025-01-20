@@ -8,39 +8,50 @@
 
 /// Slot 2 ///
 // Pistol //
-// Likely just a muzzle flash.
+brightmap sprite PISGA0 {map Graphics/Brightmaps/BMPISGA0F0.png}
+brightmap sprite PISGB0 {map Graphics/Brightmaps/BMPISGB0.png disablefullbright}
+brightmap sprite PISGC0 {map Graphics/Brightmaps/BMPISGC0.png disablefullbright}
+brightmap sprite PISGD0 {map Graphics/Brightmaps/BMPISGD0.png}
+brightmap sprite PISGE0 {map Graphics/Brightmaps/BMPISGE0.png}
+brightmap sprite PISGF0 {map Graphics/Brightmaps/BMPISGA0F0.png}
+brightmap sprite PISGZ0 {map Graphics/Brightmaps/BMPISGZ0.png}
 
 /// Slot 3 ///
 // Shotgun //
-brightmap sprite SHTGA0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
-brightmap sprite SHTGB0 {map Graphics/Brightmaps/SHTGB0.png}
-brightmap sprite SHTGC0 {map Graphics/Brightmaps/SHTGC0.png}
-brightmap sprite SHTGD0 {map Graphics/Brightmaps/SHTGD0.png}
-brightmap sprite SHTGE0 {map Graphics/Brightmaps/SHTGE0.png}
-brightmap sprite SHTGF0 {map Graphics/Brightmaps/SHTGF0.png}
-brightmap sprite SHTGG0 {map Graphics/Brightmaps/SHTGG0.png}
-brightmap sprite SHTGJ0 {map Graphics/Brightmaps/SHTGJ0.png disablefullbright}
-brightmap sprite SHTGK0 {map Graphics/Brightmaps/SHTGK0.png disablefullbright}
-brightmap sprite SHTGL0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
-brightmap sprite SHTGM0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
-brightmap sprite SHTGN0 {map Graphics/Brightmaps/SHTGA0L0M0N0.png}
-brightmap sprite SHTGO0 {map Graphics/Brightmaps/SHTGO0U0.png}
-brightmap sprite SHTGP0 {map Graphics/Brightmaps/SHTGP0T0.png}
-brightmap sprite SHTGQ0 {map Graphics/Brightmaps/SHTGQ0S0.png}
-brightmap sprite SHTGR0 {map Graphics/Brightmaps/SHTGR0.png}
-brightmap sprite SHTGS0 {map Graphics/Brightmaps/SHTGQ0S0.png}
-brightmap sprite SHTGT0 {map Graphics/Brightmaps/SHTGP0T0.png}
-brightmap sprite SHTGU0 {map Graphics/Brightmaps/SHTGO0U0.png}
+brightmap sprite SHTGA0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
+brightmap sprite SHTGB0 {map Graphics/Brightmaps/BMSHTGB0.png}
+brightmap sprite SHTGC0 {map Graphics/Brightmaps/BMSHTGC0.png}
+brightmap sprite SHTGD0 {map Graphics/Brightmaps/BMSHTGD0.png}
+brightmap sprite SHTGE0 {map Graphics/Brightmaps/BMSHTGE0.png}
+brightmap sprite SHTGF0 {map Graphics/Brightmaps/BMSHTGF0.png}
+brightmap sprite SHTGG0 {map Graphics/Brightmaps/BMSHTGG0.png}
+brightmap sprite SHTGJ0 {map Graphics/Brightmaps/BMSHTGJ0.png disablefullbright}
+brightmap sprite SHTGK0 {map Graphics/Brightmaps/BMSHTGK0.png disablefullbright}
+brightmap sprite SHTGL0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
+brightmap sprite SHTGM0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
+brightmap sprite SHTGN0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
+brightmap sprite SHTGO0 {map Graphics/Brightmaps/BMSHTGO0U0.png}
+brightmap sprite SHTGP0 {map Graphics/Brightmaps/BMSHTGP0T0.png}
+brightmap sprite SHTGQ0 {map Graphics/Brightmaps/BMSHTGQ0S0.png}
+brightmap sprite SHTGR0 {map Graphics/Brightmaps/BMSHTGR0.png}
+brightmap sprite SHTGS0 {map Graphics/Brightmaps/BMSHTGQ0S0.png}
+brightmap sprite SHTGT0 {map Graphics/Brightmaps/BMSHTGP0T0.png}
+brightmap sprite SHTGU0 {map Graphics/Brightmaps/BMSHTGO0U0.png}
+brightmap sprite SHTGV0 {map Graphics/Brightmaps/BMSHTGV0.png}
+brightmap sprite SHTGW0 {map Graphics/Brightmaps/BMSHTGW0.png}
+brightmap sprite SHTGX0 {map Graphics/Brightmaps/BMSHTGX0.png}
 
 // Super Shotgun //
 // Likely just a muzzle flash.
 
 /// Slot 4 ///
 // Chaingun //
-brightmap sprite CHGGA0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
-brightmap sprite CHGGB0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
-brightmap sprite CHGGC0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
-brightmap sprite CHGGD0 {map Graphics/Brightmaps/CHGGA0B0C0D0.png}
+brightmap sprite CHGFA0 {map Graphics/Brightmaps/BMCHGFA0.png disablefullbright}
+brightmap sprite CHGFB0 {map Graphics/Brightmaps/BMCHGFB0.png disablefullbright}
+brightmap sprite CHGGA0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
+brightmap sprite CHGGB0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
+brightmap sprite CHGGC0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
+brightmap sprite CHGGD0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
 
 /// Slot 5 ///
 // Rocket Launcher //

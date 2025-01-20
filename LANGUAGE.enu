@@ -64,8 +64,10 @@ TAG_BFG9000 = "BFG9000";
 // ======================== //
 //   Ammo pickup messages   //
 // ======================== //
-// Please, for the love of god, rename clips to mags...
-// Add color, too. It'll look nice!
+GOTMAGAZINE = "\c[White]Picked up a \c[Yellow]magazine\c[White].";
+GOTMAGAZINEBOX = "\c[White]Picked up a \c[Yellow]box of magazines\c[White].";
+GOTSHELLS = "\c[White]Picked up a \c[Red]handful of shotgun shells\c[White].";
+GOTSHELLBOX = "\c[White]Picked up a \c[Red]box of shotgun shells\c[White].";
 
 // ======================== //
 //   Item pickup messages   //
@@ -90,9 +92,10 @@ GOTMEGASPHERE = "\c[Brown]Megasphere\c[White]! (200 health and armor)";
 // ======================== //
 //         Ammo tags        //
 // ======================== //
-// Don't think we'll need any, thankfully.
+AMMO_MAGAZINE = "Magazines";
+AMMO_SHELLS = "Shotgun shells";
 
 // ======================== //
 //           Menus          //
 // ======================== //
-// Don't think we'll need any of these, either.
+// Don't think we'll need any of these.

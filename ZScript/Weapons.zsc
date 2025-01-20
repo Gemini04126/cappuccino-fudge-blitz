@@ -40,6 +40,17 @@ class CFB_Weapon : Weapon
 	{
 		(findInventory(invoker.ammo2.GetClassName())).icon = texman.CheckForTexture(AmmoIcon, TexMan.Type_Any);
 	}
+	// Cheers, ZWL! I don't like much more of ya, though.
+	// Raises weapon all the way, but doesn't jump to Ready state. Use before custom select animation.
+	action void A_QuickRaise()
+	{
+		A_OverlayOffset(PSP_WEAPON, 0, 32);
+	}
+	// Lowers weapon and switches to next one immediately. Use after custom deselect animation.
+	action void A_QuickLower()
+	{
+		A_Lower(256);
+	}
 	Default
 	{
 		//$Category Weapons

@@ -1,0 +1,67 @@
+class CFB_Magazine : Ammo replaces Clip
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTMAGAZINE";
+		Inventory.Amount 10;
+		Inventory.MaxAmount 200;
+		Ammo.BackpackAmount 10;
+		Ammo.BackpackMaxAmount 400;
+		Inventory.Icon "AMAGA0";
+		Tag "$AMMO_MAGAZINE";
+	}
+	States
+	{
+		Spawn:
+			AMAG A -1;
+			Stop;
+	}
+}
+class CFB_MagazineBox : CFB_Magazine replaces ClipBox
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTMAGAZINEBOX";
+		Inventory.Amount 50; // 5x
+	}
+	States
+	{
+		Spawn:
+			AMAG B -1;
+			Stop;
+	}
+}
+
+class CFB_Shells : Ammo replaces Shell
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSHELLS";
+		Inventory.Amount 4;
+		Inventory.MaxAmount 50;
+		Ammo.BackpackAmount 4;
+		Ammo.BackpackMaxAmount 100;
+		Inventory.Icon "ASHLA0";
+		Tag "$AMMO_SHELLS";
+	}
+	States
+	{
+		Spawn:
+			ASHL A -1;
+			Stop;
+	}
+}
+class CFB_ShellBox : CFB_Shells replaces ShellBox
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSHELLBOX";
+		Inventory.Amount 20; // 5x
+	}
+	States
+	{
+		Spawn:
+			ASHL B -1;
+			Stop;
+	}
+}
