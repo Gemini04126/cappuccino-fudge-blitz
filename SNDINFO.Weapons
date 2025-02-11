@@ -66,6 +66,24 @@ $random weapons/chaingun/fire {weapons/chaingun/fire1 weapons/chaingun/fire2 wea
 
 //// Slot 5 ////
 // Rocket Launcher //
+weapons/rlauncher/fire		"Sounds/Weapons/5 - Rocket Launcher/RL_Fire03.ogg"
+weapons/rlauncher/load_out	"Sounds/Weapons/5 - Rocket Launcher/RL_Load01.ogg"
+weapons/rlauncher/load_in	"Sounds/Weapons/5 - Rocket Launcher/RL_Load02.ogg"
+weapons/rlauncher/loaded	"Sounds/Weapons/5 - Rocket Launcher/RL_RocketLoaded02.ogg"
+weapons/rlauncher/pickup	"Sounds/Weapons/5 - Rocket Launcher/Rocket_Pickup.ogg"
+weapons/rlauncher/draw		"Sounds/Weapons/5 - Rocket Launcher/RL_Raise01.ogg"
+weapons/rlauncher/travel	"Sounds/Weapons/5 - Rocket Launcher/RL_Travel01.ogg"
+
+weapons/rlauncher/explode1	"Sounds/Weapons/5 - Rocket Launcher/RL_Impact01.ogg"
+weapons/rlauncher/explode2	"Sounds/Weapons/5 - Rocket Launcher/RL_Impact02.ogg"
+weapons/rlauncher/explode3	"Sounds/Weapons/5 - Rocket Launcher/RL_Impact03.ogg"
+
+$random weapons/rlauncher/explode {weapons/rlauncher/explode1 weapons/rlauncher/explode2 weapons/rlauncher/explode3}
+
+$volume weapons/rlauncher/fire 0.8
+$volume weapons/rlauncher/load_out 0.6
+$volume weapons/rlauncher/load_in 0.6
+$volume weapons/rlauncher/loaded 0.6
 
 //// Slot 6 ////
 // Plasma Rifle //

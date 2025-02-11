@@ -107,18 +107,19 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			PISG A 0 A_JumpIfNoAmmo("PostFireEmpty");
 			Goto PostFire;
 		PostFire:
-			PISG D 3;
-			PISG EEEEEEDDDAA 1 A_ReFirePistol;
+			PISG D 1;
+			PISG EEDDDAAAAAA 1 A_ReFirePistol;
+			Goto Ready;
+		PostFireEmpty:
+			PISG DEEDDD 1;
+			TNT1 A 0 A_JumpIfInventory("CFB_Magazine", 1, "ReloadEmpty");
 			Goto Ready;
 		FireEmpty:
 			TNT1 A 0 A_JumpIfInventory("CFB_Magazine", 1, "ReloadEmpty");
 			PISG F 2 A_StartSound("weapons/pistol/empty");
-			Goto PostFireEmpty;
-		PostFireEmpty:
-			PISG DEED 3;
+			PISG DDDF 1;
 			TNT1 A 0 A_JumpIfInventory("CFB_Magazine", 1, "ReloadEmpty");
 			Goto Ready;
-
 		Reload:
 		// Check for bullets, and if you're already full.
 			TNT1 A 0 A_JumpIfInventory("CFB_PistolAmmo", 0, "Ready");

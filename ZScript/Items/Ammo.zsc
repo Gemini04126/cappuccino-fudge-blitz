@@ -65,3 +65,37 @@ class CFB_ShellBox : CFB_Shells replaces ShellBox
 			Stop;
 	}
 }
+
+class CFB_RocketAmmo : Ammo replaces RocketAmmo
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTROCKET";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 50;
+		Ammo.BackpackAmount 1;
+		Ammo.BackpackMaxAmount 100;
+		Inventory.Icon "AROCA0";
+		Tag "$AMMO_ROCKETS";
+	}
+	States
+	{
+	Spawn:
+		AROC A -1;
+		Stop;
+	}
+}
+class CFB_RocketBox : CFB_RocketAmmo replaces RocketBox
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTROCKETBOX";
+		Inventory.Amount 5; // 5x
+	}
+	States
+	{
+		Spawn:
+			AROC B -1;
+			Stop;
+	}
+}

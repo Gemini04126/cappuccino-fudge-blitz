@@ -2,7 +2,7 @@
 ## Weapons
 ### Pistol
 * Tesefy
-* JMartinez9820 (Hands)
+* JMartinez9820 (hands)
 ### Shotgun
 * Skelegant
 * Tesefy
@@ -16,7 +16,12 @@
 * Necronoxis
 * DoomerBlazkowicz (Pickup)
 ### Rocket Launcher
-* Captain J (Projectile)
+* OJSC
+* Amuscaria
+* Tesefy
+* Captain J (projectile)
+### Plasma Rifle
+### BFG
 
 ## Effects
 ### Bullet puff
@@ -30,8 +35,11 @@
 * Midway Games
 ### Shells and box
 * FreeDoom contributors
-### Rockets and box
+### Rocket
 * Captain J
+### Rocket box
+* Zrrion the Insect
+### Cells
 
 ## Other
 

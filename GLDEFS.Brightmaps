@@ -55,7 +55,20 @@ brightmap sprite CHGGD0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
 
 /// Slot 5 ///
 // Rocket Launcher //
-// Likely just a muzzle flash.
+brightmap sprite RKTGA0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
+brightmap sprite RKTGB0 {map Graphics/Brightmaps/BMRKTGB0.png disablefullbright}
+brightmap sprite RKTGC0 {map Graphics/Brightmaps/BMRKTGC0.png disablefullbright}
+brightmap sprite RKTGD0 {map Graphics/Brightmaps/BMRKTGD0.png disablefullbright}
+brightmap sprite RKTGE0 {map Graphics/Brightmaps/BMRKTGE0.png disablefullbright}
+brightmap sprite RKTGF0 {map Graphics/Brightmaps/BMRKTGF0.png disablefullbright}
+brightmap sprite RKTGG0 {map Graphics/Brightmaps/BMRKTGG0.png}
+brightmap sprite RKTGH0 {map Graphics/Brightmaps/BMRKTGH0.png}
+brightmap sprite RKTGI0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
+brightmap sprite RKTGJ0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
+brightmap sprite RKTGK0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
+brightmap sprite RKTGL0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
+brightmap sprite RKTGM0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
+brightmap sprite RKTGN0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
 
 /// Slot 6 ///
 // Plasma Rifle //
