@@ -18,6 +18,7 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 	{
 		+WEAPON.AMMO_OPTIONAL
 		+WEAPON.EXPLOSIVE
+		+WEAPON.NOALERT
 		Weapon.SlotNumber 5;
 		Weapon.AmmoType1 "CFB_LoadedRocket";
 		Weapon.AmmoUse1 1;
@@ -48,6 +49,7 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 			RKTG A 1 A_WeaponReady;
 			Loop;
 		Fire:
+			TNT1 A 0 A_AlertMonsters;
 			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 5, "Fire.Five");
 			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 4, "Fire.Four");
 			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 3, "Fire.Three");
@@ -124,20 +126,20 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 			Goto PostFire;
 		PostFire:
 			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 5, "Ready");
-			RKTG I 3 A_StartSound("weapons/rlauncher/load_out");
+			RKTG I 3 A_StartSound("weapons/rlauncher/load_out", CHAN_5);
 			RKTG JK 3;
 			TNT1 A 0 A_JumpIfInventory("CFB_RocketAmmo", 1, 1);
 			Goto PostFire.Empty;
 			RKTG L 2 {
-				A_StartSound("weapons/rlauncher/load_in");
+				A_StartSound("weapons/rlauncher/load_in", CHAN_6);
 				A_TakeInventory("CFB_RocketAmmo", 1);
 				A_GiveInventory("CFB_LoadedRocket", 1);
 			}
 			RKTG MN 2;
-			RKTG A 2 A_StartSound("weapons/rlauncher/loaded");
+			RKTG A 2 A_StartSound("weapons/rlauncher/loaded", CHAN_7);
 			Goto Ready;
 		PostFire.Empty:
-			RKTG K 2 A_StartSound("weapons/rlauncher/load_in");
+			RKTG K 2 A_StartSound("weapons/rlauncher/load_in", CHAN_6);
 			RKTG JI 2;
 			RKTG A 2;
 			Goto Ready;
