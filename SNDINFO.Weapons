@@ -51,6 +51,18 @@ weapons/shotgun/load3		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_03.wav"
 $random weapons/shotgun/load {weapons/shotgun/load1 weapons/shotgun/load2 weapons/shotgun/load3}
 
 // Over-and-Under Shotgun //
+weapons/oushotgun/double	"Sounds/Weapons/3 - Over-and-Under Shotgun/double.wav"
+weapons/oushotgun/single	"Sounds/Weapons/3 - Over-and-Under Shotgun/single.wav"
+weapons/oushotgun/pickup	"Sounds/Weapons/3 - Over-and-Under Shotgun/pickup.wav"
+weapons/oushotgun/draw		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_ready.ogg"
+weapons/oushotgun/open		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_open.ogg"
+weapons/oushotgun/close		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_close.ogg"
+
+weapons/oushotgun/load1		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_load01.ogg"
+weapons/oushotgun/load2		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_load02.ogg"
+
+$random weapons/oushotgun/load {weapons/oushotgun/load1 weapons/oushotgun/load2}
+
 
 //// Slot 4 ////
 // Chaingun //

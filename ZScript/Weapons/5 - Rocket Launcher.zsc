@@ -125,7 +125,7 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 			RKTG H 1;
 			Goto PostFire;
 		PostFire:
-			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 5, "Ready");
+			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", invoker.ammo1.MaxAmount, "Ready");
 			RKTG I 3 A_StartSound("weapons/rlauncher/load_out", CHAN_5);
 			RKTG JK 3;
 			TNT1 A 0 A_JumpIfInventory("CFB_RocketAmmo", 1, 1);

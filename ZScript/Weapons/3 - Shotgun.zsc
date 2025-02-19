@@ -83,8 +83,12 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 			Goto Ready;
 		FireEmpty:
 			TNT1 A 0 A_JumpIfInventory("CFB_Shells", 1, "ReloadEmpty");
-			SHTG N 3 A_StartSound("weapons/empty");
-			SHTG A 9;
+			SHTG N 3 {
+				A_StartSound("weapons/empty");
+				A_OverlayPivot(OverlayID(), 0.56, 0.5);
+				A_OverlayScale(OverlayID(), 1.1);
+			}
+			SHTG A 9 A_OverlayScale(OverlayID(), 1.0);
 			Goto Ready;
 		Reload:
 		// Check for shells, and if you're already full.
