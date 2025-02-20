@@ -12,7 +12,7 @@ GOTCHAINSAW = "\c[White]Picked up a \c[DarkGray]Chainsaw\c[White]! Find some mea
 GOTPISTOL = "\c[White]Picked up a \c[Yellow]Pistol\c[White]! (Slot 2)";
 // Slot 3 //
 GOTSHOTGUN = "\c[White]Picked up a \c[Red]Shotgun\c[White]! (Slot 3)";
-GOTOVERANDUNDERSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3)";
+GOTOUSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3)";
 // Slot 4 //
 GOTCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4, alt-fire for automatic chaintap)";
 // Slot 5 //
@@ -31,7 +31,7 @@ KILLBRASSKNUCKLES = "%o was punched in %p snout by %k to establish superiority."
 KILLPISTOL = "%o was plinked to death by %k's \c[Yellow]Pistol\c[Gold].";
 // Slot 3 //
 KILLSHOTGUN = "%o was slammed by %k's \c[Red]Shotgun\c[Gold].";
-KILLOVERANDUNDERSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
+KILLOUSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
 // Slot 4 //
 KILLCHAINGUN = "%o was mowed down by %k's \c[Yellow]Chaingun\c[Gold].";
 // Slot 5 //
@@ -51,7 +51,7 @@ TAG_CHAINSAW = "Chainsaw";
 TAG_PISTOL = "Pistol";
 // Slot 3 //
 TAG_SHOTGUN = "Shotgun";
-TAG_OVERANDUNDERSHOTGUN = "Over-and-Under Shotgun";
+TAG_OUSHOTGUN = "Over-and-Under Shotgun";
 // Slot 4 //
 TAG_CHAINGUN = "Chaingun";
 // Slot 5 //
