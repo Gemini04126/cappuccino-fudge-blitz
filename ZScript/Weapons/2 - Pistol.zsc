@@ -51,39 +51,39 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 		Select:
 			TNT1 A 0 A_QuickRaise();
 			TNT1 A 0 A_JumpIfNoAmmo("SelectEmpty");
-			PISG G 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
 			PISG A 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
 			Goto Ready;
 		SelectEmpty:
-			PISG H 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
 			PISG F 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
 			Goto ReadyEmpty;
 
 		Deselect:
 			TNT1 A 0 A_JumpIfNoAmmo("DeselectEmpty");
-			PISG G 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
-			PISG G 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			PISG X 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
 			TNT1 A 0 A_WeaponOffset(0, 32);
 			TNT1 A 0 A_QuickLower();
 			Stop;
 		DeselectEmpty:
 			PISG F 1;
-			PISG H 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
-			PISG H 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			PISG Y 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
 			TNT1 A 0 A_WeaponOffset(0, 32);
 			TNT1 A 0 A_QuickLower();
 			Stop;
@@ -126,12 +126,11 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			TNT1 A 0 A_JumpIfNoAmmo("ReloadEmpty");
 			TNT1 A 0 A_JumpIfInventory("CFB_Magazine", 1, 1);
 			Goto Ready;
-		// Animate this later
-			PISG G 8;
-			PISG G 6 A_StartSound("weapons/pistol/mag_out");
-			PISG G 10;
-			PISG G 4;
-			PISG G 3 A_StartSound("weapons/pistol/mag_in");
+			PISG GHIJ 2;
+			PISG L 3 A_StartSound("weapons/pistol/mag_out");
+			PISG J 13;
+			PISG J 4;
+			PISG K 3 A_StartSound("weapons/pistol/mag_in");
 		Reload.Repeat:
 			// if 10 bullets, finish reload
 			TNT1 A 0 A_JumpIfInventory("CFB_PistolAmmo", invoker.ammo1.MaxAmount, "Reload.Finish");
@@ -144,21 +143,18 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			}
 			Goto Reload.Repeat;
 		Reload.Finish:
-		// Animate this later
-			PISG G 3;
-			PISG G 5;
-			PISG GGG 2;
+			PISG JIHG 2;
 			Goto Ready;
 		ReloadEmpty:
 		// Check for bullets -- you'll never be here if you're full
 			TNT1 A 0 A_JumpIfInventory("CFB_Magazine", 1, 1);
 			Goto Ready;
 		// Copy the other one's animation but with the slide back
-			PISG H 8;
-			PISG H 6 A_StartSound("weapons/pistol/mag_out");
-			PISG H 10;
-			PISG H 4;
-			PISG H 3 A_StartSound("weapons/pistol/mag_in");
+			PISG MNOP 2;
+			PISG R 3 A_StartSound("weapons/pistol/mag_out");
+			PISG P 13;
+			PISG P 4;
+			PISG Q 3 A_StartSound("weapons/pistol/mag_in");
 		ReloadEmpty.Repeat:
 			// if 9 bullets, finish reload
 			TNT1 A 0 A_JumpIfInventory("CFB_PistolAmmo", invoker.ammo1.MaxAmount - 1, "ReloadEmpty.Finish");
@@ -171,13 +167,8 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			}
 			Goto ReloadEmpty.Repeat;
 		ReloadEmpty.Finish:
-		// Copy the other one's animation but with the slide back
-			PISG H 3;
-			PISG H 5;
-		// Close the slide
-			PISG G 4 A_StartSound("weapons/pistol/slide_fwd");
-			PISG GGG 2;
-			Goto Ready;
+			PISG K 4 A_StartSound("weapons/pistol/slide_fwd");
+			Goto Reload.Finish;
 
 		Flash:
 			TNT1 A 2 A_AttachLightDef("Flash", "CFB_GunFlash");
