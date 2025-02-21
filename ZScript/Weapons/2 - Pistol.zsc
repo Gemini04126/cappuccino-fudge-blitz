@@ -107,11 +107,10 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			PISG A 0 A_JumpIfNoAmmo("PostFireEmpty");
 			Goto PostFire;
 		PostFire:
-			PISG D 1;
-			PISG EEDDDAAAAAA 1 A_ReFirePistol;
+			PISG EEEDDDDAAAAAA 1 A_ReFirePistol;
 			Goto Ready;
 		PostFireEmpty:
-			PISG DEEDDD 1;
+			PISG EEEDDDD 1;
 			TNT1 A 0 A_JumpIfInventory("CFB_Magazine", 1, "ReloadEmpty");
 			Goto Ready;
 		FireEmpty:
