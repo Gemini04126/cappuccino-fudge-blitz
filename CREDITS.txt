@@ -10,6 +10,7 @@
 ### Over-and-Under Shotgun
 * Wocht11K
 * Tesefy (flash)
+* JMartinez9820 (reload animation)
 ### Chaingun
 * Zdexium
 * Midway
@@ -47,16 +48,17 @@
 # Sounds
 ## Weapons
 ### Dry fire sound (generic)
-* Treyarch (Call of Duty: Black Ops, generic)
+* Treyarch (Call of Duty: Black Ops) (generic)
 ### Pistol
-* Treyarch (Call of Duty: World at War, P38 & generic pistol dryfire sound)
+New World Interactive (Insurgency) (M1911 fire sound)
+* Treyarch (Call of Duty: World at War) (1911 & generic pistol dryfire sound)
 ### Shotgun
 * Valve Software (Counter-Strike: Global Offensive, Sawed-Off Shotgun)
 ### Over-and-Under Shotgun
 * ProSoundEffects (pond5.com) (fire, altfire)
 * Cardboard Marty (Blue Vertigo, Model DHDB2) (reload, ready, pickup)
 ### Chaingun
-* Treyarch (Call of Duty: Black Ops, HK12)
+* Treyarch (Call of Duty: Black Ops) (HK12)
 ### Rocket Launcher
 * Epic Megagames (Unreal Tournament 3)
 
