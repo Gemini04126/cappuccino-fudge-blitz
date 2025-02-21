@@ -2,7 +2,7 @@
 ## Weapons
 ### Pistol
 * Tesefy
-* JMartinez9820 (hands)
+* JMature (hands)
 ### Shotgun
 * Skelegant
 * Tesefy
@@ -10,7 +10,7 @@
 ### Over-and-Under Shotgun
 * Wocht11K
 * Tesefy (flash)
-* JMartinez9820 (reload animation)
+* JMature (reload animation)
 ### Chaingun
 * Zdexium
 * Midway
@@ -76,4 +76,4 @@ New World Interactive (Insurgency) (M1911 fire sound)
 
 # Other
 ### Coffee brown gloves, suggestion to use the Over-and-Under Shotgun instead of the standard Super Shotgun
-* JMartinez9820
+* JMature
