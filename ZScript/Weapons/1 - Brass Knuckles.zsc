@@ -1,0 +1,40 @@
+class CFB_BrassKnuckles : CFB_Weapon replaces Fist
+{
+	Default
+	{
+		+WEAPON.WIMPY_WEAPON
+		+WEAPON.MELEEWEAPON
+		+WEAPON.NOAUTOSWITCHTO
+		Weapon.SlotNumber 1;
+		Weapon.SelectionOrder 3700;
+
+		Tag "$TAG_BRASSKNUCKLES";
+		Obituary "$KILLBRASSKNUCKLES";
+	}
+	States
+	{
+		Select:
+			PUNG A 1 A_Raise(18);
+			Loop;
+		Deselect:
+			PUNG A 1 A_Lower(18);
+			Loop;
+		Ready:
+			PUNG A 1 A_WeaponReady;
+			Loop;
+		Fire:
+			PUNG B 4;
+			PUNG C 4 {
+				int dmg = 11;
+				if (FindInventory("CFB_PowerStrength"))
+				{
+					dmg *= 10;
+				}
+				A_CustomPunch(dmg, norandom:true, range: meleeRange + 20, meleesound: "*fist");
+			}
+			PUNG D 5;
+			PUNG C 4;
+			PUNG B 5 A_ReFire;
+			Goto Ready;
+	}
+}

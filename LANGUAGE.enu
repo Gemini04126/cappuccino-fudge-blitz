@@ -27,6 +27,7 @@ GOTBFG9000 = "\c[White]Picked up a \c[Green]BFG9000\c[White]! Oh, yes! (Slot 7)"
 // ======================== //
 // Slot 1 //
 KILLBRASSKNUCKLES = "%o was punched in %p snout by %k to establish superiority.";
+KILLCHAINSAW = "%o was torn asunder by %k's \c[DarkGray]Chainsaw\c[Gold].";
 // Slot 2 //
 KILLPISTOL = "%o was plinked to death by %k's \c[Yellow]Pistol\c[Gold].";
 // Slot 3 //

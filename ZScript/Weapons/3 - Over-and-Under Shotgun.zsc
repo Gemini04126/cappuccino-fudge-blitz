@@ -28,6 +28,7 @@ class CFB_OUShotgun : CFB_Weapon replaces SuperShotgun
 	{
 		+WEAPON.AMMO_OPTIONAL
 		Weapon.SlotNumber 3;
+		Weapon.SelectionOrder 400;
 		Weapon.AmmoType1 "CFB_OUShotgunAmmo";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 0;

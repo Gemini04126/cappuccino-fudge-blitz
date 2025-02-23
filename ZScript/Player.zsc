@@ -2,16 +2,16 @@ class CFB_Player : DoomPlayer
 {
 	Default
 	{
-		Player.WeaponSlot 1, "Fist", "Chainsaw";
+		Player.WeaponSlot 1, "CFB_BrassKnuckles", "CFB_Chainsaw";
 		Player.WeaponSlot 2, "CFB_Pistol";
 		Player.WeaponSlot 3, "CFB_Shotgun", "CFB_OverAndUnderShotgun";
 		Player.WeaponSlot 4, "CFB_Chaingun";
-		Player.WeaponSlot 5, "RocketLauncher";
+		Player.WeaponSlot 5, "CFB_RocketLauncher";
 		Player.WeaponSlot 6, "PlasmaRifle";
 		Player.WeaponSlot 7, "BFG9000";
 		Player.StartItem "CFB_Pistol";
 		Player.StartItem "CFB_Magazine", 50;
-		Player.StartItem "Fist";
+		Player.StartItem "CFB_BrassKnuckles";
 		Player.StartItem "CFB_PistolAmmo", 10;
 		Player.StartItem "CFB_ShotgunAmmo", 9; // Damn, I wanted a random value. Oh well~
 		Player.StartItem "CFB_OUShotgunAmmo", 2;

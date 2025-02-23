@@ -18,6 +18,7 @@ class CFB_Shotgun : CFB_Weapon replaces Shotgun
 	{
 		+WEAPON.AMMO_OPTIONAL
 		Weapon.SlotNumber 3;
+		Weapon.SelectionOrder 1300;
 		Weapon.AmmoType1 "CFB_ShotgunAmmo";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 0;

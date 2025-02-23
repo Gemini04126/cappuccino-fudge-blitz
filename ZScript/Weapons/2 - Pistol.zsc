@@ -27,6 +27,7 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 	{
 		+WEAPON.AMMO_OPTIONAL
 		Weapon.SlotNumber 2;
+		Weapon.SelectionOrder 1900;
 		Weapon.AmmoType1 "CFB_PistolAmmo";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoGive1 0;

@@ -11,6 +11,7 @@ class CFB_Chaingun : CFB_Weapon replaces Chaingun
 		+WEAPON.ALT_AMMO_OPTIONAL
 		+WEAPON.ALT_USES_BOTH
 		Weapon.SlotNumber 4;
+		Weapon.SelectionOrder 700;
 		Weapon.AmmoType "CFB_Magazine";
 		Weapon.AmmoUse 1;
 		Weapon.AmmoGive 20;

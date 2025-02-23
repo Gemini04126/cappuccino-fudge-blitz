@@ -20,6 +20,7 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 		+WEAPON.EXPLOSIVE
 		+WEAPON.NOALERT
 		Weapon.SlotNumber 5;
+		Weapon.SelectionOrder 2500;
 		Weapon.AmmoType1 "CFB_LoadedRocket";
 		Weapon.AmmoUse1 1;
 		Weapon.AmmoType2 "CFB_RocketAmmo";
