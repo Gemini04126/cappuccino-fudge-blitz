@@ -5,7 +5,7 @@
 // Slot 2 //
 #include "./Weapons/2 - Pistol.zsc"
 // Slot 3 //
-#include "./Weapons/3 - Shotgun.zsc"
+#include "./Weapons/3 - Pump Shotgun.zsc"
 #include "./Weapons/3 - Over-and-Under Shotgun.zsc"
 // Slot 4 //
 #include "./Weapons/4 - Chaingun.zsc"

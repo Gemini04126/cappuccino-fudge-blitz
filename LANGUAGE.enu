@@ -11,12 +11,12 @@ GOTCHAINSAW = "\c[White]Picked up a \c[DarkGray]Chainsaw\c[White]! Find some mea
 // Slot 2 //
 GOTPISTOL = "\c[White]Picked up a \c[Yellow]Pistol\c[White]! (Slot 2)";
 // Slot 3 //
-GOTSHOTGUN = "\c[White]Picked up a \c[Red]Shotgun\c[White]! (Slot 3)";
-GOTOUSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3)";
+GOTPSHOTGUN = "\c[White]Picked up a \c[Red]Pump Shotgun\c[White]! (Slot 3)";
+GOTOUSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3, alt-fire for single barrel)";
 // Slot 4 //
-GOTCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4, alt-fire for automatic chaintap)";
+GOTCFBCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4, alt-fire for automatic chaintap)";
 // Slot 5 //
-GOTROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White]! (Slot 5, alt-fire to load more rockets.)";
+GOTROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White]! (Slot 5, alt-fire to load more rockets)";
 // Slot 6 //
 GOTPLASMARIFLE = "\c[White]Picked up a \c[LightBlue]Plasma Rifle\c[White]! (Slot 6)";
 // Slot 7 //
@@ -31,10 +31,10 @@ KILLCHAINSAW = "%o was torn asunder by %k's \c[DarkGray]Chainsaw\c[Gold].";
 // Slot 2 //
 KILLPISTOL = "%o was plinked to death by %k's \c[Yellow]Pistol\c[Gold].";
 // Slot 3 //
-KILLSHOTGUN = "%o was slammed by %k's \c[Red]Shotgun\c[Gold].";
+KILLPSHOTGUN = "%o was slammed by %k's \c[Red]Pump Shotgun\c[Gold].";
 KILLOUSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
 // Slot 4 //
-KILLCHAINGUN = "%o was mowed down by %k's \c[Yellow]Chaingun\c[Gold].";
+KILLCFBCHAINGUN = "%o was mowed down by %k's \c[Yellow]Chaingun\c[Gold].";
 // Slot 5 //
 KILLROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[DarkGray]Rocket Launcher\c[Gold].";
 // Slot 6 //
@@ -51,10 +51,10 @@ TAG_CHAINSAW = "Chainsaw";
 // Slot 2 //
 TAG_PISTOL = "Pistol";
 // Slot 3 //
-TAG_SHOTGUN = "Shotgun";
+TAG_PSHOTGUN = "Pump Shotgun";
 TAG_OUSHOTGUN = "Over-and-Under Shotgun";
 // Slot 4 //
-TAG_CHAINGUN = "Chaingun";
+TAG_CFBCHAINGUN = "Chaingun";
 // Slot 5 //
 TAG_ROCKETLAUNCHER = "Rocket Launcher";
 // Slot 6 //
@@ -69,7 +69,7 @@ GOTMAGAZINE = "\c[White]Picked up a \c[Yellow]magazine\c[White].";
 GOTMAGAZINEBOX = "\c[White]Picked up a \c[Yellow]box of magazines\c[White].";
 GOTSHELLS = "\c[White]Picked up a \c[Red]handful of shotgun shells\c[White].";
 GOTSHELLBOX = "\c[White]Picked up a \c[Red]box of shotgun shells\c[White].";
-GOTROCKET = "\c[White]Picked up a \c[DarkGray]rocket\c[White].";
+GOTROCKETAMMO = "\c[White]Picked up a \c[DarkGray]rocket\c[White].";
 GOTROCKETBOX = "\c[White]Picked up a \c[DarkGray]box of rockets\c[White].";
 
 // ======================== //

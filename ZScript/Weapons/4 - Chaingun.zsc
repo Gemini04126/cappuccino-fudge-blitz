@@ -16,9 +16,9 @@ class CFB_Chaingun : CFB_Weapon replaces Chaingun
 		Weapon.AmmoUse 1;
 		Weapon.AmmoGive 20;
 
-		Tag "$TAG_CHAINGUN";
-		Obituary "$KILLCHAINGUN";
-		Inventory.PickupMessage "$GOTCHAINGUN";
+		Tag "$TAG_CFBCHAINGUN";
+		Obituary "$KILLCFBCHAINGUN";
+		Inventory.PickupMessage "$GOTCFBCHAINGUN";
 
 		Weapon.UpSound "weapons/chaingun/draw";
 		Inventory.PickupSound "weapons/chaingun/pickup";

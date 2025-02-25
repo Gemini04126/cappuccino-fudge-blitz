@@ -70,7 +70,7 @@ class CFB_RocketAmmo : Ammo replaces RocketAmmo
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTROCKET";
+		Inventory.PickupMessage "$GOTROCKETAMMO";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 50;
 		Ammo.BackpackAmount 1;

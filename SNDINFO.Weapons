@@ -38,17 +38,17 @@ $alias weapons/pistol/draw weapons/pistol/mag_in
 
 //// Slot 3 ////
 // Shotgun //
-weapons/shotgun/fire		"Sounds/Weapons/3 - Shotgun/sawedoff-1.wav"
-weapons/shotgun/draw		"Sounds/Weapons/3 - Shotgun/sawedoff_draw.wav"
-weapons/shotgun/pump_in		"Sounds/Weapons/3 - Shotgun/pump_in.wav"
-weapons/shotgun/pump_out	"Sounds/Weapons/3 - Shotgun/pump_out.wav"
-weapons/shotgun/pickup		"Sounds/Weapons/3 - Shotgun/sawedoff_pump.wav"
+weapons/pshotgun/fire		"Sounds/Weapons/3 - Shotgun/sawedoff-1.wav"
+weapons/pshotgun/draw		"Sounds/Weapons/3 - Shotgun/sawedoff_draw.wav"
+weapons/pshotgun/pump_in	"Sounds/Weapons/3 - Shotgun/pump_in.wav"
+weapons/pshotgun/pump_out	"Sounds/Weapons/3 - Shotgun/pump_out.wav"
+weapons/pshotgun/pickup		"Sounds/Weapons/3 - Shotgun/sawedoff_pump.wav"
 
-weapons/shotgun/load1		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_01.wav"
-weapons/shotgun/load2		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_02.wav"
-weapons/shotgun/load3		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_03.wav"
+weapons/pshotgun/load1		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_01.wav"
+weapons/pshotgun/load2		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_02.wav"
+weapons/pshotgun/load3		"Sounds/Weapons/3 - Shotgun/sawedoff_insertshell_03.wav"
 
-$random weapons/shotgun/load {weapons/shotgun/load1 weapons/shotgun/load2 weapons/shotgun/load3}
+$random weapons/pshotgun/load {weapons/pshotgun/load1 weapons/pshotgun/load2 weapons/pshotgun/load3}
 
 // Over-and-Under Shotgun //
 weapons/oushotgun/double	"Sounds/Weapons/3 - Over-and-Under Shotgun/double.wav"
