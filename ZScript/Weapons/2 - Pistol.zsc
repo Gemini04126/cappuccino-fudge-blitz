@@ -6,9 +6,9 @@ class CFB_PistolAmmo : Ammo
 	{
 		Inventory.Icon "PISGZ0"; // Replace later
 		Inventory.Amount 0;
-		Inventory.MaxAmount 10;
+		Inventory.MaxAmount 11;
 		Ammo.BackpackAmount 0;
-		Ammo.BackpackMaxAmount 10;
+		Ammo.BackpackMaxAmount 11;
 		+INVENTORY.IGNORESKILL
 	}
 }
@@ -100,7 +100,7 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 		Fire:
 			PISG A 0 A_JumpIfNoAmmo("FireEmpty");
 			PISG B 1 Bright {
-				A_FireBullets(0.8, 0.8, -1, 16, "CFB_BulletPuff", FBF_USEAMMO|FBF_NORANDOM, missile: "CFB_BulletTracer", -2.5);
+				A_FireBullets(1.2, 1.2, -1, 15, "CFB_BulletPuff", FBF_USEAMMO|FBF_NORANDOM, missile: "CFB_BulletTracer", -2.5);
 				A_GunFlash();
 			}
 			PISG C 1 Bright;

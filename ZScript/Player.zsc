@@ -12,7 +12,7 @@ class CFB_Player : DoomPlayer
 		Player.StartItem "CFB_Pistol";
 		Player.StartItem "CFB_Magazine", 50;
 		Player.StartItem "CFB_BrassKnuckles";
-		Player.StartItem "CFB_PistolAmmo", 10;
+		Player.StartItem "CFB_PistolAmmo", 11;
 		Player.StartItem "CFB_PumpShotgunAmmo", 9;
 		Player.StartItem "CFB_OUShotgunAmmo", 2;
 		Player.StartItem "CFB_LoadedRocket", 1;

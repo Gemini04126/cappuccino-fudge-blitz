@@ -3,5 +3,6 @@ version "4.1.0"
 #include "ZScript/Libraries.zsc"			// Library includes
 #include "ZScript/Player.zsc"				// Player class
 #include "ZScript/Effects.zsc"				// Graphical effect classes
+#include "ZScript/Event Handlers.zsc"		// Event handler(s)
 #include "ZScript/Weapons.zsc"				// Weapon includes
 #include "ZScript/Items.zsc"				// Item includes

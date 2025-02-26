@@ -1,0 +1,153 @@
+class CFB_ThingReplacer : StaticEventHandler
+{
+    override void CheckReplacement(ReplaceEvent e)
+    {
+		// Stuff from other mapsets
+		// check if the class exists first
+		let cls = e.Replacee.GetClassName(); //Although not necessary, it helps out for simplification.
+		switch(cls)
+		{
+		// Eviternity I & II
+//			case 'Perforator':
+//				e.Replacement = "";
+//				break;
+		// Paradise, Godless Night, and any other map(set) that uses Supercharge
+			// weapons
+//			case 'TangoChainsaw':
+//				e.Replacement = "CFB_Chainsaw";
+//				break;
+			case 'TangoPistol':
+				e.Replacement = "CFB_Pistol";
+				break;
+			case 'TangoShotgun':
+				e.Replacement = "CFB_PumpShotgun";
+				break;
+			case 'TangoSuperShotgun':
+				e.Replacement = "CFB_OUShotgun";
+				break;
+			case 'TangoAssaultRifle':
+				e.Replacement = "CFB_Chaingun"; // ...Maybe?
+				break;
+//			case 'TangoMinigun':
+//				e.Replacement = "";
+//				break;
+			case 'TangoRocketLauncher':
+				e.Replacement = "CFB_RocketLauncher";
+				break;
+			case 'TangoPlasmaRifle':
+				e.Replacement = "CFB_PlasmaRifle";
+				break;
+//			case 'TangoBFG9000':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoStomper':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoScrapgun':
+//				e.Replacement = "";
+//				break;
+			// Nailgun seems to be unused and inaccessible
+			// Ammo
+			case 'TangoBulletClip':
+			case 'TangoBulletClipHalf':
+				e.Replacement = "CFB_Magazine";
+				break;
+			case 'TangoBulletBox':
+				e.Replacement = "CFB_MagazineBox";
+				break;
+			case 'TangoShell':
+				e.Replacement = "CFB_Shells";
+				break;
+			case 'TangoShellBox':
+				e.Replacement = "CFB_ShellBox";
+				break;
+			case 'TangoRocketAmmo':
+				e.Replacement = "CFB_RocketAmmo";
+				break;
+			case 'TangoRocketBox':
+				e.Replacement = "CFB_RocketBox";
+				break;
+//			case 'TangoCell':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoCellPack':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoScrapDrum':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoScrapDrumPack':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoStomperAmmo':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoStomperBox':
+//				e.Replacement = "";
+//				break;
+			// Nailgun seems to be unused and inaccessible
+			case 'TangoBerserk':
+				e.Replacement = "CFB_Berserk";
+				break;
+//			case 'TangoVioletArmorSmall':
+//				e.Replacement = "GSW_MediumSuitBattery";
+//				break;
+//			case 'TangoVioletArmorMedium':
+//				e.Replacement = "GSW_MediumSuitBattery";
+//				break;
+//			case 'TangoVioletArmorLarge':
+//				e.Replacement = "GSW_LargeSuitBattery";
+//				break;
+//			case 'TangoArmorBonus':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoGreenArmor':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoBlueArmor':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoStimpack':
+//				e.Replacement = "";
+//				break;
+//			case 'TangoMedkit':
+//				e.Replacement = "";
+//				break;
+		// Skulltag
+//			case 'ChaingunSpawner':
+//				e.Replacement = "";
+//				break;
+//			case 'Minigun':
+//			case 'PTag_Minigun':
+//				e.Replacement = "";
+//				break;
+//			case 'RocketLauncherSpawner':
+//			case 'GrenadeLauncher':
+//			case 'PTag_GrenadeLauncher':
+//				e.Replacement = "";
+//				break;
+//			case 'PlasmaRifleSpawner':
+//			case 'Railgun':
+//			case 'PTag_Railgun':
+//				e.Replacement = "";
+//				break;
+//			case 'BFGSpawner':
+//			case 'BFG10K':
+//			case 'PTag_BFG10K':
+//				e.Replacement = "";
+//				break;
+//			case 'BlueArmorSpawner':
+//				e.Replacement = "";
+//				break;
+//			case 'ArmorBonus2':
+//				e.Replacement = "";
+//				break;
+//			case 'HealthBonus2':
+//				e.Replacement = "";
+//				break;
+//			case 'RedArmor':
+//				e.Replacement = "";
+//				break;
+		}
+    }
+}

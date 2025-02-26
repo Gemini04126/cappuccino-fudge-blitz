@@ -1,4 +1,5 @@
 GameInfo
 {
 	PlayerClasses = "CFB_Player"
+	AddEventHandlers = "CFB_ThingReplacer"
 }
