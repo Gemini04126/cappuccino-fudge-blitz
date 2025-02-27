@@ -1,5 +1,9 @@
-class CFB_Berserk : Berserk replaces Berserk // Cheers, Tango, for like the fifteenth time.
+class CFB_Berserk : Berserk replaces Berserk // Cheers, Tango, for like, the fifteenth time.
 {
+	Default
+	{
+		Inventory.PickupMessage "$GOTCFBBERSERK";
+	}
 	States
 	{
 		Spawn:

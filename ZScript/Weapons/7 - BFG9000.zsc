@@ -1,0 +1,95 @@
+// BFG9000
+// Not really replaced yet, visually, but it at least works for now.
+// It has been realigned and renamed, though.
+class CFB_BFG9000 : CFB_Weapon replaces BFG9000
+{
+	Default
+	{
+		+WEAPON.BFG
+		+WEAPON.NOAUTOFIRE
+		Weapon.SlotNumber 7;
+		Weapon.SelectionOrder 2800;
+		Weapon.AmmoType "CFB_Cell";
+		Weapon.AmmoUse 40;
+		Weapon.AmmoGive 40;
+		
+		Tag "$TAG_CFBBFG9000";
+		// No Obituary defined here because this is a projectile weapon
+		Inventory.PickupMessage "$GOTCFBBFG9000";
+
+		//Weapon.UpSound "weapons/bfg9000/draw";
+		//Inventory.PickupSound "weapons/bfg9000/pickup";
+		// No AttackSound defined here because this is a projectile weapon
+	}
+	States
+	{
+		Spawn:
+			BFGG Z -1;
+			Stop;
+		Select:
+			BFGG A 1 A_Raise(18); // Redo this later to be fancier? I think it'd be cool.
+			Loop;
+		Deselect:
+			BFGG A 1 A_Lower(18); // Ditto.
+			Loop;
+		Ready:
+			BFGG A 1 A_WeaponReady;
+			Loop;
+		Fire: // Redo this later when you have a specific sprite set
+			BFGG A 20 A_StartSound("weapons/bfgf", CHAN_WEAPON);
+			BFGG B 10 A_GunFlash;
+			BFGG B 10 A_FireProjectile("CFB_BFGBall");
+			BFGG B 20 A_ReFire;
+			Goto Ready;
+		Flash:
+			BFGF A 10 Bright A_Light1;
+			BFGF B 5 Bright A_Light2;
+			Goto LightDone;
+	}
+}
+class CFB_BFGBall : Actor
+{
+	Default
+	{
+		+RANDOMIZE
+		Decal "BFGLightning";
+		Radius 13;
+		Height 8;
+		Speed 25;
+		DamageFunction (450);
+		Projectile;
+		RenderStyle "Add";
+		Alpha 0.75;
+		DeathSound "weapons/bfgx";
+		DamageType "BFG";
+		Obituary "$KILLCFBBFG9000";
+	}
+	States
+	{
+		Spawn:
+			BFGP AB 4 Bright;
+			Loop;
+		Death:
+			BFGP CD 8 Bright;
+			BFGP E 8 Bright A_BFGSpray("CFB_BFGExtra");
+			BFGP FGH 8 Bright;
+			Stop;
+	}
+}
+class CFB_BFGExtra : Actor
+{
+	Default
+	{
+		+NOBLOCKMAP
+		+NOGRAVITY
+		RenderStyle "Add";
+		Alpha 0.75;
+		DamageType "BFGSplash";
+	}
+	States
+	{
+		Spawn:
+			BFGP IJKL 8 Bright;
+			Stop;
+	}
+}

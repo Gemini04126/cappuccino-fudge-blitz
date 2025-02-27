@@ -1,5 +1,11 @@
+// Chainsaw
+// Not really replaced yet, visually, but it at least works for now.
 class CFB_Chainsaw : CFB_Weapon replaces Chainsaw
 {
+	action void A_ChainsawOffset()
+	{
+		A_WeaponOffset(0+frandom(-2.5, 2.5), 32+frandom(0, 2.5));
+	}
 	Default
 	{
 		+WEAPON.MELEEWEAPON
@@ -8,30 +14,63 @@ class CFB_Chainsaw : CFB_Weapon replaces Chainsaw
 		Weapon.SelectionOrder 2200;
 		Weapon.Kickback 0;
 
-		Tag "$TAG_CHAINSAW";
-		Obituary "$KILLCHAINSAW";
-		Inventory.PickupMessage "$GOTCHAINSAW";
+		Tag "$TAG_CFBCHAINSAW";
+		Obituary "$KILLCFBCHAINSAW";
+		Inventory.PickupMessage "$GOTCFBCHAINSAW";
 
 		Weapon.UpSound "weapons/sawup";
-		Weapon.ReadySound "weapons/sawidle";
 	}
 	States
 	{
 		Spawn:
-			CSAW A -1;
+			CHNS Z -1;
 			Stop;
 		Select:
-			SAWG C 1 A_Raise(18);
+			TNT1 A 0 A_OverlayScale(OverlayID(), 1, 1, WOF_INTERPOLATE);
+			CHNS A 1 A_Raise(18);
 			Loop;
 		Deselect:
-			SAWG C 1 A_Lower(18);
+			TNT1 A 0 A_OverlayScale(OverlayID(), 1, 1, WOF_INTERPOLATE);
+			CHNS A 1 A_Lower(18);
 			Loop;
 		Ready:
-			SAWG CD 4 A_WeaponReady;
+			CHNS A 0 {
+				A_OverlayPivot(OverlayID(), 0.5, 0.45);
+				A_WeaponOffset(0, 32);
+			}
+			CHNS A 1 {
+				A_WeaponReady();
+				A_OverlayScale(OverlayID(), 1.035, 1.035, WOF_INTERPOLATE);
+				A_StartSound("weapons/sawidle", CHAN_WEAPON);
+			}
+			CHNS AAABBBB 1 {
+				A_WeaponReady();
+				A_OverlayScale(OverlayID(), -0.005, -0.005, WOF_ADD);
+			}
 			Loop;
 		Fire:
-			SAWG AB 4 A_Saw(damage: 9, flags: SF_NORANDOM);
-			SAWG B 0 A_ReFire;
+			TNT1 A 0 A_OverlayScale(OverlayID(), 1, 1);
+			CHNS C 1 {
+				A_Saw(damage: 10, pufftype: "CFB_ChainsawPuff", flags: SF_NORANDOM);
+				A_ChainsawOffset();
+			}
+			CHNS CCC 1 A_ChainsawOffset();
+			CHNS B 0 A_ReFire("Fire2");
 			Goto Ready;
+		Fire2:
+			CHNS D 1 {
+				A_Saw(damage: 10, pufftype: "CFB_ChainsawPuff", flags: SF_NORANDOM);
+				A_ChainsawOffset();
+			}
+			CHNS DDD 1 A_ChainsawOffset();
+			CHNS B 0 A_ReFire;
+			Goto Ready;
+	}
+}
+class CFB_ChainsawPuff : CFB_BulletPuff
+{
+	Default
+	{
+		DamageType "Saw"; // for Supercharge compatibility
 	}
 }

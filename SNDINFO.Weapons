@@ -22,6 +22,20 @@ $volume weapons/ricochet 0.5
 
 //// Slot 1 ////
 // Brass Knuckles //
+weapons/bknuckles/hit1		"Sounds/Weapons/1 - Brass Knuckles/hit1.wav"
+weapons/bknuckles/hit2		"Sounds/Weapons/1 - Brass Knuckles/hit2.wav"
+weapons/bknuckles/hit3		"Sounds/Weapons/1 - Brass Knuckles/hit3.wav"
+weapons/bknuckles/hit4		"Sounds/Weapons/1 - Brass Knuckles/hit4.wav"
+weapons/bknuckles/swing1	"Sounds/Weapons/1 - Brass Knuckles/swing1.wav"
+weapons/bknuckles/swing2	"Sounds/Weapons/1 - Brass Knuckles/swing2.wav"
+weapons/bknuckles/break1	"Sounds/Weapons/1 - Brass Knuckles/break1.mp3"
+weapons/bknuckles/break2	"Sounds/Weapons/1 - Brass Knuckles/break2.mp3"
+
+$volume weapons/bknuckles/break 0.35
+
+$random weapons/bknuckles/hit { weapons/bknuckles/hit1 weapons/bknuckles/hit2 weapons/bknuckles/hit3 weapons/bknuckles/hit4 }
+$random weapons/bknuckles/swing { weapons/bknuckles/swing1 weapons/bknuckles/swing2 }
+$random weapons/bknuckles/break { weapons/bknuckles/break1 weapons/bknuckles/break2 }
 
 // Chainsaw //
 

@@ -13,9 +13,9 @@ class CFB_ThingReplacer : StaticEventHandler
 //				break;
 		// Paradise, Godless Night, and any other map(set) that uses Supercharge
 			// weapons
-//			case 'TangoChainsaw':
-//				e.Replacement = "CFB_Chainsaw";
-//				break;
+			case 'TangoChainsaw':
+				e.Replacement = "CFB_Chainsaw";
+				break;
 			case 'TangoPistol':
 				e.Replacement = "CFB_Pistol";
 				break;
@@ -25,6 +25,7 @@ class CFB_ThingReplacer : StaticEventHandler
 			case 'TangoSuperShotgun':
 				e.Replacement = "CFB_OUShotgun";
 				break;
+			case 'TangoChaingun':
 			case 'TangoAssaultRifle':
 				e.Replacement = "CFB_Chaingun"; // ...Maybe?
 				break;
@@ -37,9 +38,9 @@ class CFB_ThingReplacer : StaticEventHandler
 			case 'TangoPlasmaRifle':
 				e.Replacement = "CFB_PlasmaRifle";
 				break;
-//			case 'TangoBFG9000':
-//				e.Replacement = "";
-//				break;
+			case 'TangoBFG9000':
+				e.Replacement = "CFB_BFG9000";
+				break;
 //			case 'TangoStomper':
 //				e.Replacement = "";
 //				break;
@@ -67,12 +68,12 @@ class CFB_ThingReplacer : StaticEventHandler
 			case 'TangoRocketBox':
 				e.Replacement = "CFB_RocketBox";
 				break;
-//			case 'TangoCell':
-//				e.Replacement = "";
-//				break;
-//			case 'TangoCellPack':
-//				e.Replacement = "";
-//				break;
+			case 'TangoCell':
+				e.Replacement = "CFB_Cell";
+				break;
+			case 'TangoCellPack':
+				e.Replacement = "CFB_CellPack";
+				break;
 //			case 'TangoScrapDrum':
 //				e.Replacement = "";
 //				break;

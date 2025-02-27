@@ -36,7 +36,7 @@ class CFB_Shells : Ammo replaces Shell
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTSHELLS";
+		Inventory.PickupMessage "$GOTCFBSHELLS";
 		Inventory.Amount 4;
 		Inventory.MaxAmount 50;
 		Ammo.BackpackAmount 4;
@@ -55,7 +55,7 @@ class CFB_ShellBox : CFB_Shells replaces ShellBox
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTSHELLBOX";
+		Inventory.PickupMessage "$GOTCFBSHELLBOX";
 		Inventory.Amount 20; // 5x
 	}
 	States
@@ -70,7 +70,7 @@ class CFB_RocketAmmo : Ammo replaces RocketAmmo
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTROCKETAMMO";
+		Inventory.PickupMessage "$GOTCFBROCKET";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 50;
 		Ammo.BackpackAmount 1;
@@ -80,22 +80,56 @@ class CFB_RocketAmmo : Ammo replaces RocketAmmo
 	}
 	States
 	{
-	Spawn:
-		AROC A -1;
-		Stop;
+		Spawn:
+			AROC A -1;
+			Stop;
 	}
 }
 class CFB_RocketBox : CFB_RocketAmmo replaces RocketBox
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTROCKETBOX";
+		Inventory.PickupMessage "$GOTCFBROCKETBOX";
 		Inventory.Amount 5; // 5x
 	}
 	States
 	{
 		Spawn:
 			AROC B -1;
+			Stop;
+	}
+}
+
+class CFB_Cell : Ammo replaces Cell
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTCFBCELL";
+		Inventory.Amount 20;
+		Inventory.MaxAmount 300;
+		Ammo.BackpackAmount 20;
+		Ammo.BackpackMaxAmount 600;
+		Inventory.Icon "ACELA0";
+		Tag "$AMMO_CELLS";
+	}
+	States
+	{
+		Spawn:
+			ACEL A -1;
+			Stop;
+	}
+}
+class CFB_CellPack : CFB_Cell replaces CellPack
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTCFBCELLPACK";
+		Inventory.Amount 100; // 5x
+	}
+	States
+	{
+		Spawn:
+			ACEL B -1;
 			Stop;
 	}
 }

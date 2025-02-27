@@ -1,5 +1,14 @@
 # Sprites & Graphics
 ## Weapons
+### Brass Knuckles (Basically applies to everything here, since these are the hands used)
+* id Software
+* Superdave938
+### Chainsaw
+* Combine_Kegan (Separated Arms for Hideous Destructor)
+* Skelegant (Separated Arms for Hideous Destructor)
+* Yholl (LegenDoom)
+* Paul NMN (Blade)
+* ??? (Unknown) (Edit)
 ### Pistol
 * Tesefy
 * JMature (hands)
@@ -22,6 +31,7 @@
 * Tesefy
 * Captain J (projectile)
 ### Plasma Rifle
+* Tesefy
 ### BFG
 
 ## Effects
@@ -47,6 +57,9 @@
 
 # Sounds
 ## Weapons
+### Brass Knuckles
+* Universfield
+* Floraphonic
 ### Dry fire sound (generic)
 * Treyarch (Call of Duty: Black Ops) (generic)
 ### Pistol

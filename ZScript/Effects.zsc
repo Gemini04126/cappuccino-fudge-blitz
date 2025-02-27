@@ -16,8 +16,9 @@ class CFB_BulletPuff : Actor replaces BulletPuff
 	{
 		Spawn:
 			BPUF AB 4 Bright;
+			BPUF C 2;
 		Melee:
-			BPUF CDEF 2;
+			BPUF DEF 2;
 			Stop;
 	}
 }
