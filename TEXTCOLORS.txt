@@ -1,10 +1,10 @@
 CFB_Plasma
 {
 		#2000ba  #793eff    0 127
-		#8b56ff  #e5ceff  128 256
+		#8b56ff  #d3b6ff  128 256
 	Console:
 		#2000ba  #793eff    0 127
-		#8b56ff  #e5ceff  128 256
+		#8b56ff  #d3b6ff  128 256
 	Flat:
 		#8b56ff
 }

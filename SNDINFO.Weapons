@@ -38,6 +38,12 @@ $random weapons/bknuckles/swing { weapons/bknuckles/swing1 weapons/bknuckles/swi
 $random weapons/bknuckles/break { weapons/bknuckles/break1 weapons/bknuckles/break2 }
 
 // Chainsaw //
+weapons/chainsaw/pickup	"Sounds/Weapons/1 - Chainsaw/chainsaw_draw.wav"
+weapons/chainsaw/idle	"Sounds/Weapons/1 - Chainsaw/chainsaw_idle.wav"
+weapons/chainsaw/start	"Sounds/Weapons/1 - Chainsaw/chainsaw_windup.wav"
+weapons/chainsaw/loop	"Sounds/Weapons/1 - Chainsaw/chainsaw_attack_loop.wav"
+weapons/chainsaw/stop	"Sounds/Weapons/1 - Chainsaw/chainsaw_winddown.wav"
+weapons/chainsaw/hit	"Sounds/Weapons/1 - Chainsaw/pain.wav"
 
 //// Slot 2 ////
 // Pistol //
@@ -76,7 +82,6 @@ weapons/oushotgun/load1		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_lo
 weapons/oushotgun/load2		"Sounds/Weapons/3 - Over-and-Under Shotgun/bv_mdhdb2_load02.ogg"
 
 $random weapons/oushotgun/load {weapons/oushotgun/load1 weapons/oushotgun/load2}
-
 
 //// Slot 4 ////
 // Chaingun //
