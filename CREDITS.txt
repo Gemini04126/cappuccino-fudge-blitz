@@ -7,7 +7,7 @@
 * Combine_Kegan (Separated Arms for Hideous Destructor)
 * Skelegant (Separated Arms for Hideous Destructor)
 * Yholl (LegenDoom)
-* Paul NMN (Blade)
+* Paul NMN (Chainsaw blade)
 * ??? (Unknown) (Edit)
 ### Pistol
 * Tesefy
@@ -32,6 +32,8 @@
 * Captain J (projectile)
 ### Plasma Rifle
 * Tesefy
+* Perkristian (Smooth Doom, projectile)
+* Blox (Smooth Doom, projectile)
 ### BFG
 
 ## Effects
@@ -74,6 +76,11 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * Treyarch (Call of Duty: Black Ops) (HK12)
 ### Rocket Launcher
 * Epic Megagames (Unreal Tournament 3)
+### Plasma Rifle
+* Valve Software (Team Fortress 2, C.A.P.P.E.R)
+* id Software (DOOM (2016), Plasma Rifle)
+* Epic Games (Unreal Tournament 3, Shock Rifle)
+### BFG
 
 ## Effects
 ### Bullets

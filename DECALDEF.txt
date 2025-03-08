@@ -1,0 +1,25 @@
+/***** Plasma Rifle Scorches ***********************************************/
+
+decal CFB_PlasmaScorch1
+{
+	pic PLSPA0
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal PlasmaScorchLower1
+}
+
+decal CFB_PlasmaScorch2
+{
+	pic PLSPC0
+	add 1.0
+	fullbright
+	animator GoAway
+	lowerdecal PlasmaScorchLower2
+}
+
+decalgroup CFB_PlasmaScorch
+{
+	CFB_PlasmaScorch1	1
+	CFB_PlasmaScorch2	1
+}

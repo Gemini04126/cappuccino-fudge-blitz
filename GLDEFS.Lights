@@ -8,3 +8,61 @@ flickerlight2 CFB_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.
     offset 0 40 0
 	attenuate 1
 }
+
+// Plasma
+pointlight CFB_PLASMABALL
+{
+    color 0.75 0.5 1.0
+    size 84
+	attenuate 1
+}
+
+flickerlight CFB_PLASMA_X1
+{
+    color 0.75 0.5 1.0
+    size 96
+    secondarySize 108
+    chance 0.4
+	attenuate 1
+}
+
+flickerlight CFB_PLASMA_X2
+{
+    color 0.6 0.4 0.8
+    size 120
+    secondarySize 132
+    chance 0.4
+	attenuate 1
+}
+
+flickerlight CFB_PLASMA_X3
+{
+    color 0.375 0.25 0.5
+    size 96
+    secondarySize 108
+    chance 0.4
+	attenuate 1
+}
+
+flickerlight CFB_PLASMA_X4
+{
+    color 0.15 0.1 0.2
+    size 12
+    secondarySize 24
+    chance 0.4
+	attenuate 1
+}
+
+object CFB_PlasmaBall
+{
+    frame PLSPA { light CFB_PLASMABALL }
+    frame PLSPB { light CFB_PLASMABALL }
+    frame PLSPC { light CFB_PLASMABALL }
+    frame PLSPD { light CFB_PLASMABALL }
+
+    frame PLSPE { light CFB_PLASMA_X1 }
+    frame PLSPF { light CFB_PLASMA_X2 }
+    frame PLSPG { light CFB_PLASMA_X2 }
+    frame PLSPH { light CFB_PLASMA_X3 }
+    frame PLSPI { light CFB_PLASMA_X4 }
+}
