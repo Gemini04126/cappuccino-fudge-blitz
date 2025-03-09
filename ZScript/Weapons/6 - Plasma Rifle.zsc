@@ -16,8 +16,8 @@ class CFB_PlasmaRifle : CFB_Weapon replaces PlasmaRifle
 		// No Obituary defined here because this is a projectile weapon
 		Inventory.PickupMessage "$GOTCFBPLASMARIFLE";
 
-		//Weapon.UpSound "weapons/plasmarifle/draw";
-		//Inventory.PickupSound "weapons/plasmarifle/pickup";
+		Weapon.UpSound "weapons/plasma/draw";
+		Inventory.PickupSound "weapons/plasma/pickup";
 		// No AttackSound defined here because this is a projectile weapon
 	}
 	States
@@ -100,7 +100,7 @@ class CFB_PlasmaBall : Actor
 		Spawn:
 			PLSP A 3 Bright {
 				A_SpawnParticle("612cef", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(5, 6)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
-				A_StartSound("weapons/plasma/projectile", CHAN_VOICE, CHANF_LOOPING);
+				A_StartSound("weapons/plasma/travel", CHAN_VOICE, CHANF_LOOPING);
 			}
 			PLSP B 3 Bright A_SpawnParticle("2000ba", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(1, 2)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
 			PLSP C 3 Bright A_SpawnParticle("3d11d7", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(3, 4)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);

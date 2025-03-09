@@ -12,6 +12,8 @@ class CFB_BrassKnuckles : CFB_Weapon replaces Fist
 
 		Tag "$TAG_BRASSKNUCKLES";
 		Obituary "$KILLBRASSKNUCKLES";
+
+		Inventory.Icon "PUNCZ0"; // for stuff like Gearbox
 	}
 	States
 	{

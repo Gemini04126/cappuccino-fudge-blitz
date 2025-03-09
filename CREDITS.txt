@@ -3,6 +3,7 @@
 ### Brass Knuckles (Basically applies to everything here, since these are the hands used)
 * id Software
 * Superdave938
+* LossForWords (icon)
 ### Chainsaw
 * Combine_Kegan (Separated Arms for Hideous Destructor)
 * Skelegant (Separated Arms for Hideous Destructor)
@@ -53,6 +54,7 @@
 ### Rocket box
 * Zrrion the Insect
 ### Cells
+* LossForWords
 
 ## Other
 

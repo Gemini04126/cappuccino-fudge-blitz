@@ -118,12 +118,14 @@ $volume weapons/rlauncher/loaded 0.8
 
 //// Slot 6 ////
 // Plasma Rifle //
-weapons/plasma/fire			"Sounds/Weapons/6 - Plasma Rifle/plasma_fire.wav"
-weapons/plasma/projectile	"Sounds/Weapons/6 - Plasma Rifle/SR_AltFireTravel01.ogg"
-weapons/plasma/explode		"Sounds/Weapons/6 - Plasma Rifle/SR_AltFireImpact03.ogg"
+weapons/plasma/fire		"Sounds/Weapons/6 - Plasma Rifle/plasma_fire.wav"
+weapons/plasma/travel	"Sounds/Weapons/6 - Plasma Rifle/SR_AltFireTravel01.ogg"
+weapons/plasma/explode	"Sounds/Weapons/6 - Plasma Rifle/SR_AltFireImpact03.ogg"
+weapons/plasma/pickup	"Sounds/Weapons/6 - Plasma Rifle/Shock_Pickup.ogg"
+weapons/plasma/draw		"Sounds/Weapons/6 - Plasma Rifle/SR_Raise01.ogg"
 
-$volume weapons/plasma/projectie 0.5
-$volume weapons/plasma/explode 0.5
+$volume weapons/plasma/travel 0.6
+$volume weapons/plasma/explode 0.6
 
 //// Slot 7 ////
 // BFG9000
