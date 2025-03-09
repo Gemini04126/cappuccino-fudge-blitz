@@ -7,12 +7,12 @@ class CFB_Player : DoomPlayer
 		Player.WeaponSlot 3, "CFB_PumpShotgun", "CFB_OverAndUnderShotgun";
 		Player.WeaponSlot 4, "CFB_Chaingun";
 		Player.WeaponSlot 5, "CFB_RocketLauncher";
-		Player.WeaponSlot 6, "PlasmaRifle";
-		Player.WeaponSlot 7, "BFG9000";
+		Player.WeaponSlot 6, "CFB_PlasmaRifle";
+		Player.WeaponSlot 7, "CFB_BFG9000";
 		Player.StartItem "CFB_Pistol";
 		Player.StartItem "CFB_Magazine", 50;
 		Player.StartItem "CFB_BrassKnuckles";
-		Player.StartItem "CFB_PistolAmmo", 11;
+		Player.StartItem "CFB_PistolAmmo", 13;
 		Player.StartItem "CFB_PumpShotgunAmmo", 9;
 		Player.StartItem "CFB_OUShotgunAmmo", 2;
 		Player.StartItem "CFB_LoadedRocket", 1;

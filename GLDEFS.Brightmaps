@@ -4,7 +4,7 @@
 // Not applicable. Hands don't glow!
 
 // Chainsaw //
-// Not really applicable, unless it has a light on it.
+// Not really applicable, unless it has a light on it. (It doesn't.)
 
 /// Slot 2 ///
 // Pistol //
@@ -18,31 +18,36 @@ brightmap sprite PISGZ0 {map Graphics/Brightmaps/BMPISGZ0.png}
 
 /// Slot 3 ///
 // Shotgun //
-brightmap sprite SHTGA0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
-brightmap sprite SHTGB0 {map Graphics/Brightmaps/BMSHTGB0.png}
-brightmap sprite SHTGC0 {map Graphics/Brightmaps/BMSHTGC0.png}
-brightmap sprite SHTGD0 {map Graphics/Brightmaps/BMSHTGD0.png}
-brightmap sprite SHTGE0 {map Graphics/Brightmaps/BMSHTGE0.png}
-brightmap sprite SHTGF0 {map Graphics/Brightmaps/BMSHTGF0.png}
-brightmap sprite SHTGG0 {map Graphics/Brightmaps/BMSHTGG0.png}
-brightmap sprite SHTGJ0 {map Graphics/Brightmaps/BMSHTGJ0.png disablefullbright}
-brightmap sprite SHTGK0 {map Graphics/Brightmaps/BMSHTGK0.png disablefullbright}
-brightmap sprite SHTGL0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
-brightmap sprite SHTGM0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
-brightmap sprite SHTGN0 {map Graphics/Brightmaps/BMSHTGA0L0M0N0.png}
-brightmap sprite SHTGO0 {map Graphics/Brightmaps/BMSHTGO0U0.png}
-brightmap sprite SHTGP0 {map Graphics/Brightmaps/BMSHTGP0T0.png}
-brightmap sprite SHTGQ0 {map Graphics/Brightmaps/BMSHTGQ0S0.png}
-brightmap sprite SHTGR0 {map Graphics/Brightmaps/BMSHTGR0.png}
-brightmap sprite SHTGS0 {map Graphics/Brightmaps/BMSHTGQ0S0.png}
-brightmap sprite SHTGT0 {map Graphics/Brightmaps/BMSHTGP0T0.png}
-brightmap sprite SHTGU0 {map Graphics/Brightmaps/BMSHTGO0U0.png}
-brightmap sprite SHTGV0 {map Graphics/Brightmaps/BMSHTGV0.png}
-brightmap sprite SHTGW0 {map Graphics/Brightmaps/BMSHTGW0.png}
-brightmap sprite SHTGX0 {map Graphics/Brightmaps/BMSHTGX0.png}
+brightmap sprite PSHGA0 {map Graphics/Brightmaps/BMPSHGA0L0M0N0.png}
+brightmap sprite PSHGB0 {map Graphics/Brightmaps/BMPSHGB0.png}
+brightmap sprite PSHGC0 {map Graphics/Brightmaps/BMPSHGC0.png}
+brightmap sprite PSHGD0 {map Graphics/Brightmaps/BMPSHGD0.png}
+brightmap sprite PSHGE0 {map Graphics/Brightmaps/BMPSHGE0.png}
+brightmap sprite PSHGF0 {map Graphics/Brightmaps/BMPSHGF0.png}
+brightmap sprite PSHGG0 {map Graphics/Brightmaps/BMPSHGG0.png}
+brightmap sprite PSHGJ0 {map Graphics/Brightmaps/BMPSHGJ0.png disablefullbright}
+brightmap sprite PSHGK0 {map Graphics/Brightmaps/BMPSHGK0.png disablefullbright}
+brightmap sprite PSHGL0 {map Graphics/Brightmaps/BMPSHGA0L0M0N0.png}
+brightmap sprite PSHGM0 {map Graphics/Brightmaps/BMPSHGA0L0M0N0.png}
+brightmap sprite PSHGN0 {map Graphics/Brightmaps/BMPSHGA0L0M0N0.png}
+brightmap sprite PSHGO0 {map Graphics/Brightmaps/BMPSHGO0U0.png}
+brightmap sprite PSHGP0 {map Graphics/Brightmaps/BMPSHGP0T0.png}
+brightmap sprite PSHGQ0 {map Graphics/Brightmaps/BMPSHGQ0S0.png}
+brightmap sprite PSHGR0 {map Graphics/Brightmaps/BMPSHGR0.png}
+brightmap sprite PSHGS0 {map Graphics/Brightmaps/BMPSHGQ0S0.png}
+brightmap sprite PSHGT0 {map Graphics/Brightmaps/BMPSHGP0T0.png}
+brightmap sprite PSHGU0 {map Graphics/Brightmaps/BMPSHGO0U0.png}
+brightmap sprite PSHGV0 {map Graphics/Brightmaps/BMPSHGV0.png}
+brightmap sprite PSHGW0 {map Graphics/Brightmaps/BMPSHGW0.png}
+brightmap sprite PSHGX0 {map Graphics/Brightmaps/BMPSHGX0.png}
 
-// Super Shotgun //
-// Likely just a muzzle flash.
+// Over-and-Under Shotgun //
+brightmap sprite OUSFA0 {map Graphics/Brightmaps/BMOUSFA0.png disablefullbright}
+brightmap sprite OUSFB0 {map Graphics/Brightmaps/BMOUSFB0.png disablefullbright}
+brightmap sprite OUSFF0 {map Graphics/Brightmaps/BMOUSFF0.png disablefullbright}
+brightmap sprite OUSFG0 {map Graphics/Brightmaps/BMOUSFG0.png disablefullbright}
+brightmap sprite OUSFH0 {map Graphics/Brightmaps/BMOUSFH0.png disablefullbright}
+brightmap sprite OUSFI0 {map Graphics/Brightmaps/BMOUSFI0.png disablefullbright}
 
 /// Slot 4 ///
 // Chaingun //
@@ -72,7 +77,11 @@ brightmap sprite RKTGN0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
 
 /// Slot 6 ///
 // Plasma Rifle //
-// Likely just a muzzle flash and lights.
+brightmap sprite PLSGB0 {map Graphics/Brightmaps/BMPLSGB0.png disablefullbright}
+brightmap sprite PLSGC0 {map Graphics/Brightmaps/BMPLSGC0.png disablefullbright}
+brightmap sprite PLSGD0 {map Graphics/Brightmaps/BMPLSGD0.png disablefullbright}
+brightmap sprite PLSGE0 {map Graphics/Brightmaps/BMPLSGE0.png disablefullbright}
+brightmap sprite PLSGZ0 {map Graphics/Brightmaps/BMPLSGZ0.png}
 
 /// Slot 7 ///
 // BFG9000 //

@@ -6,9 +6,9 @@ class CFB_PistolAmmo : Ammo
 	{
 		Inventory.Icon "PISGZ0"; // Replace later
 		Inventory.Amount 0;
-		Inventory.MaxAmount 11;
+		Inventory.MaxAmount 13;
 		Ammo.BackpackAmount 0;
-		Ammo.BackpackMaxAmount 11;
+		Ammo.BackpackMaxAmount 13;
 		+INVENTORY.IGNORESKILL
 	}
 }
