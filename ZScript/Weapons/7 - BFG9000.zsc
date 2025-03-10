@@ -27,23 +27,44 @@ class CFB_BFG9000 : CFB_Weapon replaces BFG9000
 			BFGG Z -1;
 			Stop;
 		Select:
-			BFGG A 1 A_Raise(18); // Redo this later to be fancier? I think it'd be cool.
+			BFGG D 1 A_Raise(18); // Redo this later to be fancier? I think it'd be cool.
 			Loop;
 		Deselect:
-			BFGG A 1 A_Lower(18); // Ditto.
+			BFGG D 1 A_Lower(18); // Ditto.
 			Loop;
 		Ready:
-			BFGG A 1 A_WeaponReady;
+			BFGG D 1 A_WeaponReady;
 			Loop;
 		Fire: // Redo this later when you have a specific sprite set
-			BFGG A 20 A_StartSound("weapons/bfgf", CHAN_WEAPON);
-			BFGG B 10 A_GunFlash;
-			BFGG B 10 A_FireProjectile("CFB_BFGBall");
-			BFGG B 20 A_ReFire;
+			BFGG D 10 {
+				A_StartSound("weapons/bfgf", CHAN_WEAPON);
+				A_Overlay(-2, "Flash");
+			}
+			BFGG CB 10;
+			BFGG A 6;
+			BFGG A 2 A_WeaponOffset(0, 36);
+			BFGG A 2 A_WeaponOffset(0, 42);
+			BFGG E 5 {
+				A_WeaponOffset(0, 32);
+				A_FireProjectile("CFB_BFGBall");
+			}
+			BFGG FG 5;
+			BFGG D 2 {
+				A_WeaponOffset(0, 42);
+				A_ReFire();
+			}
+			BFGG D 2 {
+				A_WeaponOffset(0, 36);
+				A_ReFire();
+			}
+			BFGG D 11 {
+				A_WeaponOffset(0, 32);
+				A_ReFire();
+			}
 			Goto Ready;
 		Flash:
-			BFGF A 10 Bright A_Light1;
-			BFGF B 5 Bright A_Light2;
+			BFGF AAAABBBBAAABBBAABBAB 2 Bright A_Light1;
+			BFGF CDEFGH 1 Bright A_Light2;
 			Goto LightDone;
 	}
 }
@@ -52,26 +73,37 @@ class CFB_BFGBall : Actor
 	Default
 	{
 		+RANDOMIZE
+		+LOOKALLAROUND
+		+FRIENDLY
 		Decal "BFGLightning";
 		Radius 13;
 		Height 8;
 		Speed 25;
 		DamageFunction (450);
+		ExplosionDamage 200;
+		ExplosionRadius 256;
 		Projectile;
 		RenderStyle "Add";
 		Alpha 0.75;
 		DeathSound "weapons/bfgx";
 		DamageType "BFG";
 		Obituary "$KILLCFBBFG9000";
+		DontHurtShooter; // Why is this deprecated, *again*?
 	}
 	States
 	{
 		Spawn:
-			BFGP AB 4 Bright;
+			BFGP AAAABBBB 4 Bright {
+			/*	A_LookEx(LOF_NOSOUNDCHECK|LOF_NOSEESOUND|LOF_NOJUMP, 0, 256);
+				A_CustomRailgun(100, color1: "GreenYellow", color2: "YellowGreen", flags: RGF_NOPIERCING|RGF_FULLBRIGHT|RGF_CENTERZ, maxdiff: 4, pufftype: "CFB_BFGRailPuff");*/
+			}
 			Loop;
 		Death:
 			BFGP CD 8 Bright;
-			BFGP E 8 Bright A_BFGSpray("CFB_BFGExtra");
+			BFGP E 8 Bright {
+				A_Explode();
+				A_BFGSpray("CFB_BFGExtra");
+			}
 			BFGP FGH 8 Bright;
 			Stop;
 	}
@@ -91,5 +123,12 @@ class CFB_BFGExtra : Actor
 		Spawn:
 			BFGP IJKL 8 Bright;
 			Stop;
+	}
+}
+class CFB_BFGRailPuff : CFB_BulletPuff
+{
+	Default
+	{
+		DamageType "BFG";
 	}
 }
