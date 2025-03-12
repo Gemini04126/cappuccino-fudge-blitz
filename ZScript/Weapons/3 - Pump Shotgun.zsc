@@ -4,7 +4,7 @@ class CFB_PumpShotgunAmmo : Ammo
 {
 	Default
 	{
-		Inventory.Icon "PSHGZ0"; // Replace later
+		Inventory.Icon "PSHGY0"; // Replace later
 		Inventory.Amount 0;
 		Inventory.MaxAmount 9;
 		Ammo.BackpackAmount 0;

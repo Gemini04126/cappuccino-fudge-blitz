@@ -35,8 +35,9 @@
 * Tesefy
 * Perkristian (Smooth Doom, projectile)
 * Blox (Smooth Doom, projectile)
-### BFG
-
+### Gauss Ballista
+* Tesefy (Legacy of Rust Calamity Blade reshade)
+* Wocht11K (Railgun)
 ## Effects
 ### Bullet puff
 * Zrrion the Insect
@@ -82,7 +83,7 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * Valve Software (Team Fortress 2, C.A.P.P.E.R)
 * id Software (DOOM (2016), Plasma Rifle)
 * Epic Games (Unreal Tournament 3, Shock Rifle)
-### BFG
+### Gauss Ballista
 
 ## Effects
 ### Bullets
@@ -97,5 +98,7 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * Denis Belmondo
 
 # Other
-### Coffee brown gloves, suggestion to use the Over-and-Under Shotgun instead of the standard Super Shotgun
-* JMature
+### Suggestions, feedback, and testing
+* JMature (Coffee brown gloves, Over-and-Under Shotgun usage)
+* PX8916
+* Matt Eldrydge ("Just make the BFG a gauss cannon then lol")

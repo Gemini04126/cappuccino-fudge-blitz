@@ -20,7 +20,7 @@ GOTCFBROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White
 // Slot 6 //
 GOTCFBPLASMARIFLE = "\c[White]Picked up a \c[CFB_Plasma]Plasma Rifle\c[White]! (Slot 6)";
 // Slot 7 //
-GOTCFBBFG9000 = "\c[White]Picked up a \c[Green]BFG9000\c[White]! Oh, yes! (Slot 7)";
+GOTGAUSSBALLISTA = "\c[White]Picked up a \c[Cyan]Gauss Ballista\c[White]! Oh, yes! (Slot 7)";
 
 // ======================== //
 // Weapon obituary messages //
@@ -40,7 +40,8 @@ KILLCFBROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[DarkGray]Rocket
 // Slot 6 //
 KILLCFBPLASMARIFLE = "%o was fried by %k's \c[CFB_Plasma]Plasma Rifle\c[Gold].";
 // Slot 7 //
-KILLCFBBFG9000 = "%o was reduced to ashes by %k's \c[Green]BFG9000\c[Gold].";
+KILLGAUSSBALLISTARAIL = "%o was sniped by %k's \c[Cyan]Gauss Ballista\c[Gold] rail.";
+KILLGAUSSBALLISTAWAVE = "%o was turned to ash by %k's \c[Cyan]Gauss Ballista\c[Gold] wave.";
 
 // ======================== //
 //       Weapon names       //
@@ -60,7 +61,7 @@ TAG_CFBROCKETLAUNCHER = "Rocket Launcher";
 // Slot 6 //
 TAG_CFBPLASMARIFLE = "Plasma Rifle";
 // Slot 7 //
-TAG_CFBBFG9000 = "BFG9000";
+TAG_GAUSSBALLISTA = "Gauss Ballista";
 
 // ======================== //
 //   Ammo pickup messages   //
