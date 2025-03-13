@@ -56,6 +56,8 @@
 * Zrrion the Insect
 ### Cells
 * LossForWords
+### Berserk powerup
+* DeVloek
 
 ## Other
 
