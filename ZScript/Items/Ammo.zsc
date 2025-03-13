@@ -23,6 +23,7 @@ class CFB_MagazineBox : CFB_Magazine replaces ClipBox
 	{
 		Inventory.PickupMessage "$GOTMAGAZINEBOX";
 		Inventory.Amount 50; // 5x
+		Tag "$AMMO_MAGAZINEBOX";
 	}
 	States
 	{
@@ -57,6 +58,7 @@ class CFB_ShellBox : CFB_Shells replaces ShellBox
 	{
 		Inventory.PickupMessage "$GOTCFBSHELLBOX";
 		Inventory.Amount 20; // 5x
+		Tag "$AMMO_SHELLBOX";
 	}
 	States
 	{
@@ -76,7 +78,7 @@ class CFB_RocketAmmo : Ammo replaces RocketAmmo
 		Ammo.BackpackAmount 1;
 		Ammo.BackpackMaxAmount 100;
 		Inventory.Icon "AROCA0";
-		Tag "$AMMO_ROCKETS";
+		Tag "$AMMO_ROCKET";
 	}
 	States
 	{
@@ -91,6 +93,7 @@ class CFB_RocketBox : CFB_RocketAmmo replaces RocketBox
 	{
 		Inventory.PickupMessage "$GOTCFBROCKETBOX";
 		Inventory.Amount 5; // 5x
+		Tag "$AMMO_ROCKETBOX";
 	}
 	States
 	{
@@ -110,7 +113,7 @@ class CFB_Cell : Ammo replaces Cell
 		Ammo.BackpackAmount 20;
 		Ammo.BackpackMaxAmount 600;
 		Inventory.Icon "ACELA0";
-		Tag "$AMMO_CELLS";
+		Tag "$AMMO_CELL";
 	}
 	States
 	{
@@ -125,6 +128,7 @@ class CFB_CellPack : CFB_Cell replaces CellPack
 	{
 		Inventory.PickupMessage "$GOTCFBCELLPACK";
 		Inventory.Amount 100; // 5x
+		Tag "$AMMO_CELLPACK";
 	}
 	States
 	{

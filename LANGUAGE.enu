@@ -20,7 +20,7 @@ GOTCFBROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White
 // Slot 6 //
 GOTCFBPLASMARIFLE = "\c[White]Picked up a \c[CFB_Plasma]Plasma Rifle\c[White]! (Slot 6)";
 // Slot 7 //
-GOTGAUSSBALLISTA = "\c[White]Picked up a \c[Cyan]Gauss Ballista\c[White]! Oh, yes! (Slot 7)";
+GOTCALAMITYARROW = "\c[White]Picked up the \c[Cyan]Calamity Arrow\c[White]! Oh, yes! (Slot 7)";
 
 // ======================== //
 // Weapon obituary messages //
@@ -40,8 +40,8 @@ KILLCFBROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[DarkGray]Rocket
 // Slot 6 //
 KILLCFBPLASMARIFLE = "%o was fried by %k's \c[CFB_Plasma]Plasma Rifle\c[Gold].";
 // Slot 7 //
-KILLGAUSSBALLISTARAIL = "%o was sniped by %k's \c[Cyan]Gauss Ballista\c[Gold] rail.";
-KILLGAUSSBALLISTAWAVE = "%o was turned to ash by %k's \c[Cyan]Gauss Ballista\c[Gold] wave.";
+KILLCALAMITYARROWRAIL = "%o was sniped by %k's \c[Cyan]Calamity Arrow\c[Gold] rail.";
+KILLCALAMITYARROWWAVE = "%o was turned to ash by %k's \c[Cyan]Calamity Arrow\c[Gold] wave.";
 
 // ======================== //
 //       Weapon names       //
@@ -61,7 +61,7 @@ TAG_CFBROCKETLAUNCHER = "Rocket Launcher";
 // Slot 6 //
 TAG_CFBPLASMARIFLE = "Plasma Rifle";
 // Slot 7 //
-TAG_GAUSSBALLISTA = "Gauss Ballista";
+TAG_CALAMITYARROW = "Calamity Arrow";
 
 // ======================== //
 //   Ammo pickup messages   //
@@ -98,10 +98,14 @@ GOTMEGASPHERE = "\c[Brown]Megasphere\c[White]! (200 health and armor)";
 // ======================== //
 //         Ammo tags        //
 // ======================== //
-AMMO_MAGAZINE = "Magazines";
+AMMO_MAGAZINE = "Magazine";
+AMMO_MAGAZINEBOX = "Magazine box";
 AMMO_SHELLS = "Shotgun shells";
-AMMO_ROCKETS = "Rockets";
-AMMO_CELLS = "Cells";
+AMMO_SHELLBOX = "Shotgun shell box";
+AMMO_ROCKET = "Rocket";
+AMMO_ROCKETBOX = "Rocket box";
+AMMO_CELL = "Energy cell";
+AMMO_CELLPACK = "Energy cell pack";
 
 // ======================== //
 //           Menus          //

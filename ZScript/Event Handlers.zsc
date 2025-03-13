@@ -39,7 +39,7 @@ class CFB_ThingReplacer : StaticEventHandler
 				e.Replacement = "CFB_PlasmaRifle";
 				break;
 			case 'TangoBFG9000':
-				e.Replacement = "CFB_GaussBallista";
+				e.Replacement = "CFB_CalamityArrow";
 				break;
 //			case 'TangoStomper':
 //				e.Replacement = "";

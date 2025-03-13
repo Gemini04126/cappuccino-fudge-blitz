@@ -35,7 +35,7 @@
 * Tesefy
 * Perkristian (Smooth Doom, projectile)
 * Blox (Smooth Doom, projectile)
-### Gauss Ballista
+### Calamity Arrow
 * Tesefy (Legacy of Rust Calamity Blade reshade)
 * Wocht11K (Railgun)
 ## Effects
@@ -75,6 +75,7 @@ New World Interactive (Insurgency) (M1911 fire sound)
 ### Over-and-Under Shotgun
 * ProSoundEffects (pond5.com) (fire, altfire)
 * Cardboard Marty (Blue Vertigo, Model DHDB2) (reload, ready, pickup)
+* Treyarch (Call of Duty: World at War, Shotgun) (fire)
 ### Chaingun
 * Treyarch (Call of Duty: Black Ops) (HK12)
 ### Rocket Launcher
@@ -83,7 +84,7 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * Valve Software (Team Fortress 2, C.A.P.P.E.R)
 * id Software (DOOM (2016), Plasma Rifle)
 * Epic Games (Unreal Tournament 3, Shock Rifle)
-### Gauss Ballista
+### Calamity Arrow
 
 ## Effects
 ### Bullets
