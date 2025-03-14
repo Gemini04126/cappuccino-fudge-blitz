@@ -92,6 +92,7 @@ class CFB_PlasmaBall : Actor
 		Projectile;
 		RenderStyle "Add";
 		Alpha 0.75;
+		DamageType "Rocket"; // Whatever you say, Tango.
 		DeathSound "weapons/plasma/explode";
 		Obituary "$KILLCFBPLASMARIFLE";
 	}

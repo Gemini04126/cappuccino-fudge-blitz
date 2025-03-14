@@ -29,9 +29,9 @@ class CFB_ThingReplacer : StaticEventHandler
 			case 'TangoAssaultRifle':
 				e.Replacement = "CFB_Chaingun"; // ...Maybe?
 				break;
-//			case 'TangoMinigun':
-//				e.Replacement = "";
-//				break;
+			case 'TangoMinigun':
+				e.Replacement = "CFB_Chaingun"; // To be completely honest, it's fast enough!
+				break;
 			case 'TangoRocketLauncher':
 				e.Replacement = "CFB_RocketLauncher";
 				break;
@@ -115,28 +115,24 @@ class CFB_ThingReplacer : StaticEventHandler
 //				e.Replacement = "";
 //				break;
 		// Skulltag
-//			case 'ChaingunSpawner':
-//				e.Replacement = "";
-//				break;
-//			case 'Minigun':
-//			case 'PTag_Minigun':
-//				e.Replacement = "";
-//				break;
+			case 'ChaingunSpawner':
+			case 'Minigun':
+			case 'PTag_Minigun':
+				e.Replacement = "CFB_Chaingun";
+				break;
 //			case 'RocketLauncherSpawner':
 //			case 'GrenadeLauncher':
 //			case 'PTag_GrenadeLauncher':
 //				e.Replacement = "";
 //				break;
 //			case 'PlasmaRifleSpawner':
-//			case 'Railgun':
-//			case 'PTag_Railgun':
-//				e.Replacement = "";
-//				break;
-//			case 'BFGSpawner':
-//			case 'BFG10K':
-//			case 'PTag_BFG10K':
-//				e.Replacement = "";
-//				break;
+			case 'Railgun':
+			case 'PTag_Railgun':
+			case 'BFGSpawner':
+			case 'BFG10K':
+			case 'PTag_BFG10K':
+				e.Replacement = "CFB_CalamityArrow";
+				break;
 //			case 'BlueArmorSpawner':
 //				e.Replacement = "";
 //				break;

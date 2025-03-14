@@ -40,8 +40,9 @@ KILLCFBROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[DarkGray]Rocket
 // Slot 6 //
 KILLCFBPLASMARIFLE = "%o was fried by %k's \c[CFB_Plasma]Plasma Rifle\c[Gold].";
 // Slot 7 //
-KILLCALAMITYARROWRAIL = "%o was sniped by %k's \c[Cyan]Calamity Arrow\c[Gold] rail.";
-KILLCALAMITYARROWWAVE = "%o was turned to ash by %k's \c[Cyan]Calamity Arrow\c[Gold] wave.";
+KILLCALAMITYARROWRAIL = "%o was pierced by %k's \c[Cyan]Calamity Arrow\c[Gold].";
+KILLCALAMITYARROWEXPLOSION = "%o was fried by %k's \c[Cyan]Calamity Arrow\c[Gold].";
+KILLCALAMITYARROWWAVE = "%o was wiped out %k's \c[Cyan]Calamity Arrow\c[Gold].";
 
 // ======================== //
 //       Weapon names       //

@@ -129,3 +129,7 @@ $volume weapons/plasma/explode 0.6
 
 //// Slot 7 ////
 // Calamity Arrow
+// temp, ripped from LoR
+weapons/calarrow/charge		"Sounds/Weapons/7 - Calamity Arrow/charge.wav"
+weapons/calarrow/wavefire	"Sounds/Weapons/7 - Calamity Arrow/wavefire.wav"
+weapons/calarrow/wavecrash	"Sounds/Weapons/7 - Calamity Arrow/wavecrash.wav"

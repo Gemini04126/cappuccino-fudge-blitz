@@ -36,7 +36,10 @@
 * Perkristian (Smooth Doom, projectile)
 * Blox (Smooth Doom, projectile)
 ### Calamity Arrow
-* Tesefy (Legacy of Rust Calamity Blade reshade)
+* id Software (Legacy of Rust, Calamity Blade)
+* Nightdive Studios (Legacy of Rust, Calamity Blade)
+* MachineGames (Legacy of Rust, Calamity Blade)
+* Tesefy (Calamity Blade reshade)
 * Wocht11K (Railgun)
 ## Effects
 ### Bullet puff
@@ -87,6 +90,7 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * id Software (DOOM (2016), Plasma Rifle)
 * Epic Games (Unreal Tournament 3, Shock Rifle)
 ### Calamity Arrow
+* Cardboard Marty (custom, thanks man!!!)
 
 ## Effects
 ### Bullets
@@ -99,6 +103,8 @@ New World Interactive (Insurgency) (M1911 fire sound)
 # Code
 ### ZTracers
 * Denis Belmondo
+### Calamity Arrow's Calamity Blade half
+* Agent_Ash (ZSLoRWeapons)
 
 # Other
 ### Suggestions, feedback, and testing
