@@ -128,8 +128,21 @@ $volume weapons/plasma/travel 0.6
 $volume weapons/plasma/explode 0.6
 
 //// Slot 7 ////
-// Calamity Arrow
-// temp, ripped from LoR
-weapons/calarrow/charge		"Sounds/Weapons/7 - Calamity Arrow/charge.wav"
-weapons/calarrow/wavefire	"Sounds/Weapons/7 - Calamity Arrow/wavefire.wav"
-weapons/calarrow/wavecrash	"Sounds/Weapons/7 - Calamity Arrow/wavecrash.wav"
+// Calamity Arrow //
+weapons/calarrow/charge			"Sounds/Weapons/7 - Calamity Arrow/charge.wav"
+weapons/calarrow/rail1fire		""
+weapons/calarrow/rail1crash		""
+weapons/calarrow/rail2fire		""
+weapons/calarrow/rail2crash		""
+weapons/calarrow/rail2explode	""
+weapons/calarrow/rail3fire		""
+weapons/calarrow/rail3crash		""
+weapons/calarrow/rail3explode	""
+weapons/calarrow/rail4fire		""
+weapons/calarrow/rail4crash		""
+weapons/calarrow/rail4explode	""
+weapons/calarrow/rail4linger	""
+weapons/calarrow/wavefire		"Sounds/Weapons/7 - Calamity Arrow/wavefire.wav"
+weapons/calarrow/wavecrash		"Sounds/Weapons/7 - Calamity Arrow/wavecrash.wav"
+weapons/calarrow/draw			""
+weapons/calarrow/pickup			""

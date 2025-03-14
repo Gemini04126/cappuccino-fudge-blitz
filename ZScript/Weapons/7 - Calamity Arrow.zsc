@@ -314,6 +314,7 @@ class CFB_CalamityRail1 : FastProjectile
 		Translation "CFB_Calamity1";
 		Obituary "$KILLCALAMITYARROWRAIL";
 		Decal "CFB_RailScorch";
+		DeathSound "weapons/calarrow/rail1crash";
 		DamageType "Rocket"; // Whatever you say, Tango.
 	}
 	States
@@ -358,6 +359,7 @@ class CFB_CalamityRail2 : CFB_CalamityRail1
 		Scale 1.25;
 		MissileType "CFB_CalamityRail2Trail";
 		Translation "CFB_Calamity2";
+		DeathSound "weapons/calarrow/rail2crash";
 	}
 	States
 	{
@@ -391,12 +393,14 @@ class CFB_CalamityRail2Explosion : Actor
 		RenderStyle "Add";
 		Obituary "$KILLCALAMITYARROWEXPLOSION";
 		DamageType "Rocket";
+		DeathSound "weapons/calarrow/rail2explode";
 	}
 	States
 	{
 		Spawn:
 			TNT1 A 0 NoDelay {
 				A_Explode();
+				A_Scream();
 				A_AttachLightDef("Light", "CFB_CalamityExplosion");
 			}
 			CEX0 ACEGIKMOQSUWY[] 1 {
@@ -416,6 +420,7 @@ class CFB_CalamityRail3 : CFB_CalamityRail1
 		Scale 1.5;
 		MissileType "CFB_CalamityRail3Trail";
 		Translation "CFB_Calamity3";
+		DeathSound "weapons/calarrow/rail3crash";
 	}
 	States
 	{
@@ -439,12 +444,14 @@ class CFB_CalamityRail3Explosion : CFB_CalamityRail2Explosion
 		Scale 0.75;
 		ExplosionDamage 128;
 		ExplosionRadius 128;
+		DeathSound "weapons/calarrow/rail3explode";
 	}
 	States
 	{
 		Spawn:
 			TNT1 A 0 NoDelay {
 				A_Explode();
+				A_Scream();
 				A_AttachLightDef("Light", "CFB_CalamityExplosion");
 			}
 			CEX0 ACEGIKM 1 {
@@ -469,6 +476,7 @@ class CFB_CalamityRail4 : CFB_CalamityRail1
 		Scale 1.75;
 		MissileType "CFB_CalamityRail4Trail";
 		Translation "CFB_Calamity4";
+		DeathSound "weapons/calarrow/rail4crash";
 	}
 	States
 	{
@@ -495,19 +503,21 @@ class CFB_CalamityRail4Explosion : CFB_CalamityRail3Explosion
 	action void A_ResetAndExplode()
 	{
 		A_Explode();
-		A_StartSound("weapons/calarrow/explode3");
+		A_StartSound("weapons/calarrow/rail4linger");
 		scale = default.scale;
 		alpha = default.alpha;
 	}
 	Default
 	{
 		Scale 1;
+		DeathSound "weapons/calarrow/rail4explode";
 	}
 	States
 	{ // loop four times
 		Spawn:
 			TNT1 A 0 NoDelay {
 				A_Explode();
+				A_Scream();
 				A_AttachLightDef("Light", "CFB_CalamityExplosion");
 			}
 			CEX0 ABCD 1 A_IdleScaleAlpha;
