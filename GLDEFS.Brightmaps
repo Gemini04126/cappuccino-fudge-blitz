@@ -84,5 +84,25 @@ brightmap sprite PLSGE0 {map Graphics/Brightmaps/BMPLSGE0.png disablefullbright}
 brightmap sprite PLSGZ0 {map Graphics/Brightmaps/BMPLSGZ0.png}
 
 /// Slot 7 ///
-// BFG9000 //
-// Likely just a muzzle flash and lights.
+// Calamity Arrow //
+brightmap sprite CARGA0 {map Graphics/Brightmaps/BMCARGA0L0.png disablefullbright}
+brightmap sprite CARGB0 {map Graphics/Brightmaps/BMCARGB0.png disablefullbright}
+brightmap sprite CARGC0 {map Graphics/Brightmaps/BMCARGC0.png disablefullbright}
+brightmap sprite CARGD0 {map Graphics/Brightmaps/BMCARGD0.png disablefullbright}
+brightmap sprite CARGE0 {map Graphics/Brightmaps/BMCARGE0.png disablefullbright}
+brightmap sprite CARGF0 {map Graphics/Brightmaps/BMCARGF0.png disablefullbright}
+brightmap sprite CARGG0 {map Graphics/Brightmaps/BMCARGG0.png disablefullbright}
+brightmap sprite CARGH0 {map Graphics/Brightmaps/BMCARGH0.png disablefullbright}
+brightmap sprite CARGI0 {map Graphics/Brightmaps/BMCARGI0.png disablefullbright}
+brightmap sprite CARGJ0 {map Graphics/Brightmaps/BMCARGJ0.png disablefullbright}
+brightmap sprite CARGK0 {map Graphics/Brightmaps/BMCARGK0.png disablefullbright}
+brightmap sprite CARGL0 {map Graphics/Brightmaps/BMCARGA0L0.png disablefullbright}
+brightmap sprite CARGM0 {map Graphics/Brightmaps/BMCARGM0.png disablefullbright}
+brightmap sprite CARGN0 {map Graphics/Brightmaps/BMCARGN0.png disablefullbright}
+brightmap sprite CARGO0 {map Graphics/Brightmaps/BMCARGO0.png disablefullbright}
+brightmap sprite CARGZ0 {map Graphics/Brightmaps/BMCARGZ0.png disablefullbright}
+brightmap sprite CARLA0 {map Graphics/Brightmaps/BMCARLA0.png disablefullbright}
+brightmap sprite CARLB0 {map Graphics/Brightmaps/BMCARLB0.png disablefullbright}
+brightmap sprite CARLC0 {map Graphics/Brightmaps/BMCARLC0.png disablefullbright}
+brightmap sprite CARLD0 {map Graphics/Brightmaps/BMCARLD0.png disablefullbright}
+brightmap sprite CARLE0 {map Graphics/Brightmaps/BMCARLE0.png disablefullbright}

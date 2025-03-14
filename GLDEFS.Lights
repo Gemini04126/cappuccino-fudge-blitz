@@ -9,6 +9,16 @@ flickerlight2 CFB_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.
 	attenuate 1
 }
 
+flickerlight2 CFB_CalamityFlash
+{
+    color 0.549 0.843 0.937
+    size 72
+    secondarySize 84
+    interval 1
+    offset 0 40 0
+	attenuate 1
+}
+
 // Plasma
 pointlight CFB_PLASMABALL
 {
@@ -65,4 +75,85 @@ object CFB_PlasmaBall
     frame PLSPG { light CFB_PLASMA_X2 }
     frame PLSPH { light CFB_PLASMA_X3 }
     frame PLSPI { light CFB_PLASMA_X4 }
+}
+
+
+
+pointlight CFB_CalamityRail
+{
+    color 0.549 0.843 0.937
+    size 36
+    offset 0 0 0
+	attenuate 1
+}
+flickerlight2 CFB_CalamityExplosion
+{
+    color 0.0 0.671 0.957
+    size 72
+    secondarySize 84
+    interval 1
+    offset 0 0 0
+	attenuate 1
+}
+flickerlight2 CFB_CalamityWave
+{
+    color 0.247 0.612 0.847
+    size 36
+    secondarySize 42
+    interval 1
+    offset 0 0 0
+	attenuate 1
+}
+
+object CFB_CalamityRail1
+{
+    frame CRAIA { light CFB_CalamityRail }
+    frame CRAIB { light CFB_CalamityRail }
+    frame CRAIC { light CFB_CalamityRail }
+    frame CRAID { light CFB_CalamityRail }
+    frame CRAIE { light CFB_CalamityRail }
+    frame CRAIF { light CFB_CalamityRail }
+    frame CRAIG { light CFB_CalamityRail }
+}
+object CFB_CalamityRail2
+{
+    frame CRAIA { light CFB_CalamityRail }
+    frame CRAIB { light CFB_CalamityRail }
+    frame CRAIC { light CFB_CalamityRail }
+    frame CRAID { light CFB_CalamityRail }
+    frame CRAIE { light CFB_CalamityRail }
+    frame CRAIF { light CFB_CalamityRail }
+    frame CRAIG { light CFB_CalamityRail }
+}
+object CFB_CalamityRail3
+{
+    frame CRAIA { light CFB_CalamityRail }
+    frame CRAIB { light CFB_CalamityRail }
+    frame CRAIC { light CFB_CalamityRail }
+    frame CRAID { light CFB_CalamityRail }
+    frame CRAIE { light CFB_CalamityRail }
+    frame CRAIF { light CFB_CalamityRail }
+    frame CRAIG { light CFB_CalamityRail }
+}
+object CFB_CalamityRail4
+{
+    frame CRAIA { light CFB_CalamityRail }
+    frame CRAIB { light CFB_CalamityRail }
+    frame CRAIC { light CFB_CalamityRail }
+    frame CRAID { light CFB_CalamityRail }
+    frame CRAIE { light CFB_CalamityRail }
+    frame CRAIF { light CFB_CalamityRail }
+    frame CRAIG { light CFB_CalamityRail }
+}
+object CFB_CalamityWave
+{
+    frame CWAVA { light CFB_CalamityWave }
+    frame CWAVB { light CFB_CalamityWave }
+    frame CWAVC { light CFB_CalamityWave }
+    frame CWAVD { light CFB_CalamityWave }
+    frame CWAVE { light CFB_CalamityWave }
+    frame CWAVF { light CFB_CalamityWave }
+    frame CWAVG { light CFB_CalamityWave }
+    frame CWAVH { light CFB_CalamityWave }
+    frame CWAVI { light CFB_CalamityWave }
 }

@@ -23,3 +23,33 @@ decalgroup CFB_PlasmaScorch
 	CFB_PlasmaScorch1	1
 	CFB_PlasmaScorch2	1
 }
+
+/***** Rail Gun Scorches - contributed by Nigel Rowand *********************/
+
+decal CFB_RailScorch1
+{
+	pic CBALSCR1
+	shade "00 6B 8B"
+	fullbright
+	x-scale 0.4
+	y-scale 0.4
+	animator GoAway
+	lowerdecal RailScorchLower
+}
+
+decal CFB_RailScorch2
+{
+	pic CBALSCR2
+	shade "00 6B 8B"
+	fullbright
+	x-scale 0.4
+	y-scale 0.4
+	animator GoAway
+	lowerdecal RailScorchLower
+}
+
+decalgroup CFB_RailScorch
+{
+	CFB_RailScorch1 1
+	CFB_RailScorch2 1
+}
