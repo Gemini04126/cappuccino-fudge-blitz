@@ -20,7 +20,7 @@ GOTCFBROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White
 // Slot 6 //
 GOTCFBPLASMARIFLE = "\c[White]Picked up a \c[CFB_Plasma]Plasma Rifle\c[White]! (Slot 6)";
 // Slot 7 //
-GOTCALAMITYARROW = "\c[White]Picked up the \c[Cyan]Calamity Arrow\c[White]! Oh, yes! (Slot 7)";
+GOTCALAMITYARROW = "\c[White]Picked up the \c[Cyan]Calamity Arrow\c[White]! Oh, yes! (Slot 7, alt-fire for ripper waves)";
 
 // ======================== //
 // Weapon obituary messages //
