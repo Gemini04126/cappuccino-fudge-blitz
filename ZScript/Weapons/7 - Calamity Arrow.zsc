@@ -134,9 +134,9 @@ class CFB_CalamityArrow : CFB_Weapon replaces BFG9000
 		Weapon.AmmoUse 10;
 		Weapon.AmmoGive 100;
 
-		Tag "$TAG_CALAMITYARROW";
+		Tag "$TAG_CFBCALAMITYARROW";
 		// No Obituary defined here because this is a projectile weapon (and has two attacks)
-		Inventory.PickupMessage "$GOTCALAMITYARROW";
+		Inventory.PickupMessage "$GOTCFBCALAMITYARROW";
 
 		Weapon.UpSound "weapons/calarrow/draw";
 		Inventory.PickupSound "weapons/calarrow/pickup";
@@ -312,7 +312,7 @@ class CFB_CalamityRail1 : FastProjectile
 		RenderStyle "Add";
 		Alpha 0.8;
 		Translation "CFB_Calamity1";
-		Obituary "$KILLCALAMITYARROWRAIL";
+		Obituary "$KILLCFBCALAMITYARROWRAIL";
 		Decal "CFB_RailScorch";
 		DeathSound "weapons/calarrow/rail1crash";
 		DamageType "Rocket"; // Whatever you say, Tango.
@@ -391,7 +391,7 @@ class CFB_CalamityRail2Explosion : Actor
 		ExplosionDamage 64;
 		ExplosionRadius 96;
 		RenderStyle "Add";
-		Obituary "$KILLCALAMITYARROWEXPLOSION";
+		Obituary "$KILLCFBCALAMITYARROWEXPLOSION";
 		DamageType "Rocket";
 		DeathSound "weapons/calarrow/rail2explode";
 	}
@@ -572,7 +572,7 @@ class CFB_CalamityWave : Actor // Cheers, Ash.
 		+BRIGHT
 		RenderStyle 'Add';
 		DamageType "Rocket"; // Whatever you say, Tango.
-		Obituary "$KILLCALAMITYARROWWAVE";
+		Obituary "$KILLCFBCALAMITYARROWWAVE";
 		DeathSound "weapons/calarrow/wavecrash";
 	}
 

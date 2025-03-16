@@ -157,3 +157,16 @@ object CFB_CalamityWave
     frame CWAVH { light CFB_CalamityWave }
     frame CWAVI { light CFB_CalamityWave }
 }
+
+// this thing is right off r667 but i wanted an incinerator replacement quick
+flickerlight2 CFB_Flasher
+{
+    color 0.5 0.25 0.0
+    offset 0 32 -16
+    size 96
+    secondarySize 70
+    interval 0.0075
+}
+
+//For the sake of optimization, none of the trails have GLDEFS.
+Object CFB_FlasherProjectile { Frame DMFL { Light CFB_Flasher } }

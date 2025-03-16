@@ -13,6 +13,7 @@
 #include "./Weapons/5 - Rocket Launcher.zsc"
 // Slot 6 //
 #include "./Weapons/6 - Plasma Rifle.zsc"
+#include "./Weapons/6 - Flasher.zsc"
 // Slot 7 //
 #include "./Weapons/7 - Calamity Arrow.zsc"
 // Slot 8 //

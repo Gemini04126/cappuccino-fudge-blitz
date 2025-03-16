@@ -26,9 +26,9 @@ class CFB_PumpShotgun : CFB_Weapon replaces Shotgun
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 8;
 
-		Tag "$TAG_PSHOTGUN";
-		Obituary "$KILLPSHOTGUN";
-		Inventory.PickupMessage "$GOTPSHOTGUN";
+		Tag "$TAG_CFBPSHOTGUN";
+		Obituary "$KILLCFBPSHOTGUN";
+		Inventory.PickupMessage "$GOTCFBPSHOTGUN";
 
 		Weapon.UpSound "weapons/pshotgun/draw";
 		Inventory.PickupSound "weapons/pshotgun/pickup";

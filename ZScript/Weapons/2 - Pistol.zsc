@@ -35,9 +35,9 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 10;
 
-		Tag "$TAG_PISTOL";
-		Obituary "$KILLPISTOL";
-		Inventory.PickupMessage "$GOTPISTOL";
+		Tag "$TAG_CFBPISTOL";
+		Obituary "$KILLCFBPISTOL";
+		Inventory.PickupMessage "$GOTCFBPISTOL";
 
 		Weapon.UpSound "weapons/pistol/draw";
 		Inventory.PickupSound "weapons/pistol/pickup";

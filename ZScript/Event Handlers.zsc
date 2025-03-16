@@ -2,17 +2,28 @@ class CFB_ThingReplacer : StaticEventHandler
 {
     override void CheckReplacement(ReplaceEvent e)
     {
-		// Stuff from other mapsets
 		// check if the class exists first
 		let cls = e.Replacee.GetClassName(); //Although not necessary, it helps out for simplification.
 		switch(cls)
 		{
+		//==== Weapon replacements ====//
+		// Legacy of Rust
+			case 'PlasmaRifle':
+			// this is dumb but it seems to work????
+				if (StringTable.Localize(Inventory(GetDefaultByType(e.Replacee)).pickupMsg) == "You got the incinerator!")
+					e.Replacement = "CFB_Flasher";
+				break;
+			case 'ID24Incinerator':
+				e.Replacement = "CFB_Flasher";
+				break;
+			case 'ID24CalamityBlade':
+				e.Replacement = "CFB_CalamityArrow";
+				break;
 		// Eviternity I & II
 //			case 'Perforator':
 //				e.Replacement = "";
 //				break;
 		// Paradise, Godless Night, and any other map(set) that uses Supercharge
-			// weapons
 			case 'TangoChainsaw':
 				e.Replacement = "CFB_Chainsaw";
 				break;
@@ -48,7 +59,29 @@ class CFB_ThingReplacer : StaticEventHandler
 //				e.Replacement = "";
 //				break;
 			// Nailgun seems to be unused and inaccessible
-			// Ammo
+		// Skulltag
+			case 'ChaingunSpawner':
+			case 'Minigun':
+			case 'PTag_Minigun':
+				e.Replacement = "CFB_Chaingun";
+				break;
+//			case 'RocketLauncherSpawner':
+//			case 'GrenadeLauncher':
+//			case 'PTag_GrenadeLauncher':
+//				e.Replacement = "";
+//				break;
+//			case 'PlasmaRifleSpawner':
+			case 'Railgun':
+			case 'PTag_Railgun':
+				e.Replacement = "CFB_Flasher";
+				break;
+			case 'BFGSpawner':
+			case 'BFG10K':
+			case 'PTag_BFG10K':
+				e.Replacement = "CFB_CalamityArrow";
+				break;
+		//==== Ammo replacements ====//
+		// Paradise, Godless Night, and any other map(set) that uses Supercharge
 			case 'TangoBulletClip':
 			case 'TangoBulletClipHalf':
 				e.Replacement = "CFB_Magazine";
@@ -87,17 +120,19 @@ class CFB_ThingReplacer : StaticEventHandler
 //				e.Replacement = "";
 //				break;
 			// Nailgun seems to be unused and inaccessible
+		//==== Item replacements ====//
+		// Paradise, Godless Night, and any other map(set) that uses Supercharge
 			case 'TangoBerserk':
 				e.Replacement = "CFB_Berserk";
 				break;
 //			case 'TangoVioletArmorSmall':
-//				e.Replacement = "GSW_MediumSuitBattery";
+//				e.Replacement = "";
 //				break;
 //			case 'TangoVioletArmorMedium':
-//				e.Replacement = "GSW_MediumSuitBattery";
+//				e.Replacement = "";
 //				break;
 //			case 'TangoVioletArmorLarge':
-//				e.Replacement = "GSW_LargeSuitBattery";
+//				e.Replacement = "";
 //				break;
 //			case 'TangoArmorBonus':
 //				e.Replacement = "";
@@ -115,24 +150,6 @@ class CFB_ThingReplacer : StaticEventHandler
 //				e.Replacement = "";
 //				break;
 		// Skulltag
-			case 'ChaingunSpawner':
-			case 'Minigun':
-			case 'PTag_Minigun':
-				e.Replacement = "CFB_Chaingun";
-				break;
-//			case 'RocketLauncherSpawner':
-//			case 'GrenadeLauncher':
-//			case 'PTag_GrenadeLauncher':
-//				e.Replacement = "";
-//				break;
-//			case 'PlasmaRifleSpawner':
-			case 'Railgun':
-			case 'PTag_Railgun':
-			case 'BFGSpawner':
-			case 'BFG10K':
-			case 'PTag_BFG10K':
-				e.Replacement = "CFB_CalamityArrow";
-				break;
 //			case 'BlueArmorSpawner':
 //				e.Replacement = "";
 //				break;

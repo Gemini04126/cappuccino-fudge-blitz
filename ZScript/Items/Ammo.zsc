@@ -1,14 +1,18 @@
 class CFB_Magazine : Ammo replaces Clip
 {
+	override string PickupMessage()
+	{
+		return String.Format("%s (+%d)", StringTable.Localize(pickupMsg), amount);
+	}
 	Default
 	{
-		Inventory.PickupMessage "$GOTMAGAZINE";
+		Inventory.PickupMessage "$GOTCFBMAGAZINE";
 		Inventory.Amount 10;
 		Inventory.MaxAmount 200;
 		Ammo.BackpackAmount 10;
 		Ammo.BackpackMaxAmount 400;
 		Inventory.Icon "AMAGA0";
-		Tag "$AMMO_MAGAZINE";
+		Tag "$AMMO_CFBMAGAZINE";
 	}
 	States
 	{
@@ -21,9 +25,9 @@ class CFB_MagazineBox : CFB_Magazine replaces ClipBox
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTMAGAZINEBOX";
+		Inventory.PickupMessage "$GOTCFBMAGAZINEBOX";
 		Inventory.Amount 50; // 5x
-		Tag "$AMMO_MAGAZINEBOX";
+		Tag "$AMMO_CFBMAGAZINEBOX";
 	}
 	States
 	{
@@ -35,6 +39,10 @@ class CFB_MagazineBox : CFB_Magazine replaces ClipBox
 
 class CFB_Shells : Ammo replaces Shell
 {
+	override string PickupMessage()
+	{
+		return String.Format("%s (+%d)", StringTable.Localize(pickupMsg), amount);
+	}
 	Default
 	{
 		Inventory.PickupMessage "$GOTCFBSHELLS";
@@ -43,7 +51,7 @@ class CFB_Shells : Ammo replaces Shell
 		Ammo.BackpackAmount 4;
 		Ammo.BackpackMaxAmount 100;
 		Inventory.Icon "ASHLA0";
-		Tag "$AMMO_SHELLS";
+		Tag "$AMMO_CFBSHELLS";
 	}
 	States
 	{
@@ -58,7 +66,7 @@ class CFB_ShellBox : CFB_Shells replaces ShellBox
 	{
 		Inventory.PickupMessage "$GOTCFBSHELLBOX";
 		Inventory.Amount 20; // 5x
-		Tag "$AMMO_SHELLBOX";
+		Tag "$AMMO_CFBSHELLBOX";
 	}
 	States
 	{
@@ -70,6 +78,10 @@ class CFB_ShellBox : CFB_Shells replaces ShellBox
 
 class CFB_RocketAmmo : Ammo replaces RocketAmmo
 {
+	override string PickupMessage()
+	{
+		return String.Format("%s (+%d)", StringTable.Localize(pickupMsg), amount);
+	}
 	Default
 	{
 		Inventory.PickupMessage "$GOTCFBROCKET";
@@ -78,7 +90,7 @@ class CFB_RocketAmmo : Ammo replaces RocketAmmo
 		Ammo.BackpackAmount 1;
 		Ammo.BackpackMaxAmount 100;
 		Inventory.Icon "AROCA0";
-		Tag "$AMMO_ROCKET";
+		Tag "$AMMO_CFBROCKET";
 	}
 	States
 	{
@@ -93,7 +105,7 @@ class CFB_RocketBox : CFB_RocketAmmo replaces RocketBox
 	{
 		Inventory.PickupMessage "$GOTCFBROCKETBOX";
 		Inventory.Amount 5; // 5x
-		Tag "$AMMO_ROCKETBOX";
+		Tag "$AMMO_CFBROCKETBOX";
 	}
 	States
 	{
@@ -105,6 +117,10 @@ class CFB_RocketBox : CFB_RocketAmmo replaces RocketBox
 
 class CFB_Cell : Ammo replaces Cell
 {
+	override string PickupMessage()
+	{
+		return String.Format("%s (+%d)", StringTable.Localize(pickupMsg), amount);
+	}
 	Default
 	{
 		Inventory.PickupMessage "$GOTCFBCELL";
@@ -113,7 +129,7 @@ class CFB_Cell : Ammo replaces Cell
 		Ammo.BackpackAmount 20;
 		Ammo.BackpackMaxAmount 600;
 		Inventory.Icon "ACELA0";
-		Tag "$AMMO_CELL";
+		Tag "$AMMO_CFBCELL";
 	}
 	States
 	{
@@ -128,7 +144,7 @@ class CFB_CellPack : CFB_Cell replaces CellPack
 	{
 		Inventory.PickupMessage "$GOTCFBCELLPACK";
 		Inventory.Amount 100; // 5x
-		Tag "$AMMO_CELLPACK";
+		Tag "$AMMO_CFBCELLPACK";
 	}
 	States
 	{

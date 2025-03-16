@@ -35,6 +35,11 @@
 * Tesefy
 * Perkristian (Smooth Doom, projectile)
 * Blox (Smooth Doom, projectile)
+### Flasher
+* Joblez
+* 3D Realms/Apogee
+* id Software
+* Raven Software
 ### Calamity Arrow
 * id Software (Legacy of Rust, Calamity Blade)
 * Nightdive Studios (Legacy of Rust, Calamity Blade)
@@ -89,6 +94,10 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * Valve Software (Team Fortress 2, C.A.P.P.E.R)
 * id Software (DOOM (2016), Plasma Rifle)
 * Epic Games (Unreal Tournament 3, Shock Rifle)
+### Flasher
+* Joblez
+* Sidequesting
+* Astounded
 ### Calamity Arrow
 * Cardboard Marty (custom, thanks man!!!)
 
@@ -105,6 +114,8 @@ New World Interactive (Insurgency) (M1911 fire sound)
 * Denis Belmondo
 ### Calamity Arrow's Calamity Blade half
 * Agent_Ash (ZSLoRWeapons)
+### Flasher
+* Joblez (Realm667)
 
 # Other
 ### Suggestions, feedback, and testing

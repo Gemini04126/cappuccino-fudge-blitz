@@ -9,66 +9,69 @@ FONTTEST = "The quick brown fox jumps over the lazy dog.\nTHE QUICK BROWN FOX JU
 // No Brass Knuckles pickup message, you start with em!
 GOTCFBCHAINSAW = "\c[White]Picked up a \c[Orange]Chainsaw\c[White]! Find some meat! (Slot 1)";
 // Slot 2 //
-GOTPISTOL = "\c[White]Picked up a \c[Yellow]Pistol\c[White]! (Slot 2)";
+GOTCFBPISTOL = "\c[White]Picked up a \c[Yellow]Pistol\c[White]! (Slot 2)";
 // Slot 3 //
-GOTPSHOTGUN = "\c[White]Picked up a \c[Red]Pump Shotgun\c[White]! (Slot 3)";
-GOTOUSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3, alt-fire for single barrel)";
+GOTCFBPSHOTGUN = "\c[White]Picked up a \c[Red]Pump Shotgun\c[White]! (Slot 3)";
+GOTCFBOUSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3, alt-fire for single barrel)";
 // Slot 4 //
 GOTCFBCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4, alt-fire for automatic chaintap)";
 // Slot 5 //
 GOTCFBROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White]! (Slot 5, alt-fire to load more rockets)";
 // Slot 6 //
 GOTCFBPLASMARIFLE = "\c[White]Picked up a \c[CFB_Plasma]Plasma Rifle\c[White]! (Slot 6)";
+GOTCFBFLASHER = "\c[White]Picked up a \c[Fire]Flasher\c[White]! (Slot 6)";
 // Slot 7 //
-GOTCALAMITYARROW = "\c[White]Picked up the \c[Cyan]Calamity Arrow\c[White]! Oh, yes! (Slot 7, alt-fire for ripper waves)";
+GOTCFBCALAMITYARROW = "\c[White]Picked up the \c[Cyan]Calamity Arrow\c[White]! Oh, yes! (Slot 7, alt-fire for ripper waves)";
 
 // ======================== //
 // Weapon obituary messages //
 // ======================== //
 // Slot 1 //
-KILLBRASSKNUCKLES = "%o was punched in %p snout by %k to establish superiority.";
+KILLCFBBRASSKNUCKLES = "%o was punched in %p snout by %k to establish superiority.";
 KILLCFBCHAINSAW = "%o was torn asunder by %k's \c[Orange]Chainsaw\c[Gold].";
 // Slot 2 //
-KILLPISTOL = "%o was plinked to death by %k's \c[Yellow]Pistol\c[Gold].";
+KILLCFBPISTOL = "%o was plinked to death by %k's \c[Yellow]Pistol\c[Gold].";
 // Slot 3 //
-KILLPSHOTGUN = "%o was slammed by %k's \c[Red]Pump Shotgun\c[Gold].";
-KILLOUSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
+KILLCFBPSHOTGUN = "%o was slammed by %k's \c[Red]Pump Shotgun\c[Gold].";
+KILLCFBOUSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
 // Slot 4 //
 KILLCFBCHAINGUN = "%o was mowed down by %k's \c[Yellow]Chaingun\c[Gold].";
 // Slot 5 //
 KILLCFBROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[DarkGray]Rocket Launcher\c[Gold].";
 // Slot 6 //
 KILLCFBPLASMARIFLE = "%o was fried by %k's \c[CFB_Plasma]Plasma Rifle\c[Gold].";
+KILLCFBFLASHER = "%o was toasted, nice and even, by %k's \c[Fire]Flasher\c[Gold].";
 // Slot 7 //
-KILLCALAMITYARROWRAIL = "%o was pierced by %k's \c[Cyan]Calamity Arrow\c[Gold].";
-KILLCALAMITYARROWEXPLOSION = "%o was fried by %k's \c[Cyan]Calamity Arrow\c[Gold].";
-KILLCALAMITYARROWWAVE = "%o was wiped out %k's \c[Cyan]Calamity Arrow\c[Gold].";
+KILLCFBCALAMITYARROWRAIL = "%o was pierced by %k's \c[Cyan]Calamity Arrow\c[Gold].";
+KILLCFBCALAMITYARROWEXPLOSION = "%o was obliterated by %k's \c[Cyan]Calamity Arrow\c[Gold].";
+KILLCFBCALAMITYARROWWAVE = "%o was wiped out %k's \c[Cyan]Calamity Arrow\c[Gold].";
 
 // ======================== //
 //       Weapon names       //
 // ======================== //
 // Slot 1 //
-TAG_BRASSKNUCKLES = "Brass Knuckles";
+TAG_CFBBRASSKNUCKLES = "Brass Knuckles";
 TAG_CFBCHAINSAW = "Chainsaw";
 // Slot 2 //
-TAG_PISTOL = "Pistol";
+TAG_CFBPISTOL = "Pistol";
 // Slot 3 //
-TAG_PSHOTGUN = "Pump Shotgun";
-TAG_OUSHOTGUN = "Over-and-Under Shotgun";
+TAG_CFBPSHOTGUN = "Pump Shotgun";
+TAG_CFBOUSHOTGUN = "Over-and-Under Shotgun";
 // Slot 4 //
 TAG_CFBCHAINGUN = "Chaingun";
 // Slot 5 //
 TAG_CFBROCKETLAUNCHER = "Rocket Launcher";
 // Slot 6 //
 TAG_CFBPLASMARIFLE = "Plasma Rifle";
+TAG_CFBFLASHER = "Flasher";
 // Slot 7 //
-TAG_CALAMITYARROW = "Calamity Arrow";
+TAG_CFBCALAMITYARROW = "Calamity Arrow";
 
 // ======================== //
 //   Ammo pickup messages   //
 // ======================== //
-GOTMAGAZINE = "\c[White]Picked up a \c[Yellow]magazine\c[White].";
-GOTMAGAZINEBOX = "\c[White]Picked up a \c[Yellow]box of magazines\c[White].";
+GOTCFBMAGAZINE = "\c[White]Picked up a \c[Yellow]magazine\c[White].";
+GOTCFBMAGAZINEBOX = "\c[White]Picked up a \c[Yellow]box of magazines\c[White].";
 GOTCFBSHELLS = "\c[White]Picked up a \c[Red]handful of shotgun shells\c[White].";
 GOTCFBSHELLBOX = "\c[White]Picked up a \c[Red]box of shotgun shells\c[White].";
 GOTCFBROCKET = "\c[White]Picked up a \c[DarkGray]rocket\c[White].";
@@ -80,33 +83,33 @@ GOTCFBCELLPACK = "\c[White]Picked up an \c[CFB_Plasma]energy cell pack\c[White].
 //   Item pickup messages   //
 // ======================== //
 // Health //
-GOTHEALTHBONUS = "\c[White]Picked up a \c[Blue]health bonus\c[White]. (+1 health)";
-GOTHEALTHBONUSNEED = "\c[White]Picked up a \c[Blue]health bonus\c[White]. Gonna need more. (+1 health)";
-GOTSTIMPACK = "\c[White]Picked up a \c[Red]stimpack\c[White]. (+10 health)";
-GOTSTIMPACKNEED = "\c[White]Picked up a \c[Red]stimpack\c[White]. Feeling a bit better. (+10 health)";
-GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
-GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
+//GOTHEALTHBONUS = "\c[White]Picked up a \c[Blue]health bonus\c[White]. (+1 health)";
+//GOTHEALTHBONUSNEED = "\c[White]Picked up a \c[Blue]health bonus\c[White]. Gonna need more. (+1 health)";
+//GOTSTIMPACK = "\c[White]Picked up a \c[Red]stimpack\c[White]. (+10 health)";
+//GOTSTIMPACKNEED = "\c[White]Picked up a \c[Red]stimpack\c[White]. Feeling a bit better. (+10 health)";
+//GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
+//GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
 // Armor //
-GOTARMORBONUS = "\c[White]Picked up an \c[Green]armor bonus\c[White]. (+1 armor)";
-GOTGREENARMOR = "\c[White]Picked up the \c[Green]security armor\c[White]. (100 armor)";
-GOTBLUEARMOR = "\c[White]Picked up the \c[Blue]combat armor\c[White]. (200 armor)";
+//GOTARMORBONUS = "\c[White]Picked up an \c[Green]armor bonus\c[White]. (+1 armor)";
+//GOTGREENARMOR = "\c[White]Picked up the \c[Green]security armor\c[White]. (100 armor)";
+//GOTBLUEARMOR = "\c[White]Picked up the \c[Blue]combat armor\c[White]. (200 armor)";
 
 // Powerups //
 GOTCFBBERSERK = "\c[Red]Berserk\c[White]! (10x punch damage!)";
-GOTSOULSPHERE = "\c[Blue]Soulsphere\c[White]! (+100 health)";
-GOTMEGASPHERE = "\c[Brown]Megasphere\c[White]! (200 health and armor)";
+//GOTSOULSPHERE = "\c[Blue]Soulsphere\c[White]! (+100 health)";
+//GOTMEGASPHERE = "\c[Brown]Megasphere\c[White]! (200 health and armor)";
 
 // ======================== //
 //         Ammo tags        //
 // ======================== //
-AMMO_MAGAZINE = "Magazine";
-AMMO_MAGAZINEBOX = "Magazine box";
-AMMO_SHELLS = "Shotgun shells";
-AMMO_SHELLBOX = "Shotgun shell box";
-AMMO_ROCKET = "Rocket";
-AMMO_ROCKETBOX = "Rocket box";
-AMMO_CELL = "Energy cell";
-AMMO_CELLPACK = "Energy cell pack";
+AMMO_CFBMAGAZINE = "Magazine";
+AMMO_CFBMAGAZINEBOX = "Magazine box";
+AMMO_CFBSHELLS = "Shotgun shells";
+AMMO_CFBSHELLBOX = "Shotgun shell box";
+AMMO_CFBROCKET = "Rocket";
+AMMO_CFBROCKETBOX = "Rocket box";
+AMMO_CFBCELL = "Energy cell";
+AMMO_CFBCELLPACK = "Energy cell pack";
 
 // ======================== //
 //           Menus          //

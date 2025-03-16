@@ -36,9 +36,9 @@ class CFB_OUShotgun : CFB_Weapon replaces SuperShotgun
 		Weapon.AmmoUse2 0;
 		Weapon.AmmoGive2 8;
 
-		Tag "$TAG_OUSHOTGUN";
-		Obituary "$KILLOUSHOTGUN";
-		Inventory.PickupMessage "$GOTOUSHOTGUN";
+		Tag "$TAG_CFBOUSHOTGUN";
+		Obituary "$KILLCFBOUSHOTGUN";
+		Inventory.PickupMessage "$GOTCFBOUSHOTGUN";
 
 		Weapon.UpSound "weapons/oushotgun/draw";
 		Inventory.PickupSound "weapons/oushotgun/pickup";

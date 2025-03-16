@@ -10,8 +10,8 @@ class CFB_BrassKnuckles : CFB_Weapon replaces Fist
 		Weapon.SlotNumber 1;
 		Weapon.SelectionOrder 3700;
 
-		Tag "$TAG_BRASSKNUCKLES";
-		Obituary "$KILLBRASSKNUCKLES";
+		Tag "$TAG_CFBBRASSKNUCKLES";
+		Obituary "$KILLCFBBRASSKNUCKLES";
 
 		Inventory.Icon "PUNCZ0"; // for stuff like Gearbox
 	}

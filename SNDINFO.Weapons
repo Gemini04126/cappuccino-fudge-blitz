@@ -127,6 +127,19 @@ weapons/plasma/draw		"Sounds/Weapons/6 - Plasma Rifle/SR_Raise01.ogg"
 $volume weapons/plasma/travel 0.6
 $volume weapons/plasma/explode 0.6
 
+// Flasher //
+weapons/flasher/fire1	"Sounds/Weapons/6 - Flasher/fire1.ogg"
+weapons/flasher/fire2	"Sounds/Weapons/6 - Flasher/fire2.ogg"
+weapons/flasher/fire3	"Sounds/Weapons/6 - Flasher/fire3.ogg"
+weapons/flasher/sizzle1	"Sounds/Weapons/6 - Flasher/sizzle1.ogg"
+weapons/flasher/sizzle2	"Sounds/Weapons/6 - Flasher/sizzle2.ogg"
+weapons/flasher/sizzle3	"Sounds/Weapons/6 - Flasher/sizzle3.ogg"
+weapons/flasher/draw	""
+weapons/flasher/pickup	""
+
+$random weapons/flasher/fire {weapons/flasher/fire1 weapons/flasher/fire2 weapons/flasher/fire3}
+$random weapons/flasher/sizzle {weapons/flasher/sizzle1 weapons/flasher/sizzle2 weapons/flasher/sizzle3}
+
 //// Slot 7 ////
 // Calamity Arrow //
 weapons/calarrow/charge			"Sounds/Weapons/7 - Calamity Arrow/charge.wav"
