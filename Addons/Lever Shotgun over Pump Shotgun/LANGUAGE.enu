@@ -1,0 +1,18 @@
+[enu default]
+// ======================== //
+//  Weapon pickup messages  //
+// ======================== //
+// Slot 3 //
+GOTCFBADDLSHOTGUN = "\c[White]Picked up a \c[Red]Lever Shotgun\c[White]! (Slot 3)";//, alt-fire for spin)";
+
+// ======================== //
+// Weapon obituary messages //
+// ======================== //
+// Slot 3 //
+KILLCFBADDLSHOTGUN = "%o was turned into grit by %k's \c[Red]Lever Shotgun\c[Gold]."; // ... get it? like True Grit (1969)--? Sorry.
+
+// ======================== //
+//       Weapon names       //
+// ======================== //
+// Slot 3 //
+TAG_CFBADDLSHOTGUN = "Lever Shotgun";

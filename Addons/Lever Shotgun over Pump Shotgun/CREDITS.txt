@@ -1,0 +1,6 @@
+# Sprites
+## Weapons
+### Lever Shotgun
+* LossForWords
+* JoeyTD
+* JMature

@@ -1,0 +1,7 @@
+//// Slot 3 ////
+// Lever Shotgun //
+weapons/addons/lshotgun/fire			"Sounds/Weapons/3 - Lever Shotgun/shotgun_db_shoot.wav"
+weapons/addons/lshotgun/draw			"Sounds/Weapons/3 - Lever Shotgun/draw_secondary.wav"
+weapons/addons/lshotgun/cock_back		"Sounds/Weapons/3 - Lever Shotgun/shotgun_db_cock_back.wav"
+weapons/addons/lshotgun/cock_forward	"Sounds/Weapons/3 - Lever Shotgun/shotgun_db_cock_forward.wav"
+weapons/addons/lshotgun/pickup			"Sounds/Weapons/3 - Lever Shotgun/draw_shotgun_db.wav"
