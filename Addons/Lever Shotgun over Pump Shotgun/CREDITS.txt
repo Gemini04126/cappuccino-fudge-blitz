@@ -2,5 +2,6 @@
 ## Weapons
 ### Lever Shotgun
 * LossForWords
-* JoeyTD
-* JMature
+* JoeyTD (Pickup)
+* JMature (Recolored reload shell)
+* Tesefy (Flash)

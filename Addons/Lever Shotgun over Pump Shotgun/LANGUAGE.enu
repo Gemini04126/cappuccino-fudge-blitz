@@ -3,7 +3,7 @@
 //  Weapon pickup messages  //
 // ======================== //
 // Slot 3 //
-GOTCFBADDLSHOTGUN = "\c[White]Picked up a \c[Red]Lever Shotgun\c[White]! (Slot 3)";//, alt-fire for spin)";
+GOTCFBADDLSHOTGUN = "\c[White]Picked up a \c[Red]Lever Shotgun\c[White]! (Slot 3)";//
 
 // ======================== //
 // Weapon obituary messages //
