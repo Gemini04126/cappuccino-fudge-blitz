@@ -1,0 +1,6 @@
+Graphic "CFBLOGO", 328, 30
+{
+	XScale 1.500
+	YScale 1.500
+	Patch "CFBLOGO", 0, 0
+}

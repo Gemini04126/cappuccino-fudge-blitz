@@ -68,7 +68,9 @@
 * DeVloek
 
 ## Other
-
+### Title logo
+* Marblecheese (Palette from "StarCatcher Marin")
+* Techokami (Sonic Worlds Next, title card font)
 
 # Sounds
 ## Weapons
@@ -78,7 +80,7 @@
 ### Dry fire sound (generic)
 * Treyarch (Call of Duty: Black Ops) (generic)
 ### Pistol
-New World Interactive (Insurgency) (M1911 fire sound)
+* New World Interactive (Insurgency) (M1911 fire sound)
 * Treyarch (Call of Duty: World at War) (1911 & generic pistol dryfire sound)
 ### Shotgun
 * Valve Software (Counter-Strike: Global Offensive, Sawed-Off Shotgun)
