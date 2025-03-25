@@ -47,6 +47,8 @@
 * MachineGames (Legacy of Rust, Calamity Blade)
 * Tesefy (Calamity Blade reshade)
 * Wocht11K (Railgun)
+* JoesAlotofthings (OpenGameArt, spark explosion)
+* Konami (TMNT: Turtles in Time, explosion/flash)
 ### Effects
 #### Bullet puff
 * Zrrion the Insect
@@ -101,6 +103,7 @@
 * Joblez
 * Sidequesting
 * Astounded
+* Cardboard Marty (custom, pickup & raise)
 #### Calamity Arrow
 * Cardboard Marty (custom, thanks man!!!)
 

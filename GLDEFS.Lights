@@ -18,6 +18,51 @@ flickerlight2 CFB_CalamityFlash
     offset 0 40 0
 	attenuate 1
 }
+flickerlight2 CFB_CalamityCharge1
+{
+    color 0.000 0.361 0.412
+    size 72
+    secondarySize 64
+    interval 1
+    offset 0 40 0
+    attenuate 1
+}
+flickerlight2 CFB_CalamityCharge2
+{
+    color 0.039 0.490 0.557
+    size 72
+    secondarySize 64
+    interval 1
+    offset 0 40 0
+    attenuate 1
+}
+flickerlight2 CFB_CalamityCharge3
+{
+    color 0.215 0.655 0.706
+    size 72
+    secondarySize 64
+    interval 1
+    offset 0 40 0
+    attenuate 1
+}
+flickerlight2 CFB_CalamityCharge4
+{
+    color 0.392 0.820 0.855
+    size 72
+    secondarySize 64
+    interval 1
+    offset 0 40 0
+    attenuate 1
+}
+flickerlight2 CFB_CalamityCharge5
+{
+    color 0.702 0.933 0.949
+    size 72
+    secondarySize 64
+    interval 1
+    offset 0 40 0
+    attenuate 1
+}
 
 // Plasma
 pointlight CFB_PLASMABALL
