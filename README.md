@@ -49,6 +49,7 @@
 * Wocht11K (Railgun)
 * JoesAlotofthings (OpenGameArt, spark explosion)
 * Konami (TMNT: Turtles in Time, explosion/flash)
+
 ### Effects
 #### Bullet puff
 * Zrrion the Insect
@@ -112,8 +113,6 @@
 * Valve Software (Counter-Strike, bullet whiz and ricochet)
 #### Explosions
 * Epic Megagames (Unreal Tournament 3) (RL Explosions)
-### Other
-
 
 ## Code
 #### ZTracers
@@ -129,3 +128,5 @@
 * PX8916
 * Matt Eldrydge ("Just make the BFG a gauss cannon then lol")
 * Mengo ("Calamity Arrow" name)
+#### Translations
+* Ezra Nobleheart (Finnish)

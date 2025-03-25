@@ -290,7 +290,7 @@ class CFB_CalamityArrow : CFB_Weapon replaces BFG9000
 			CAR0 VWXYZ[\ 3 Bright;
 			Stop;
 		PrimaryFlash.End:
-			CARF A 1 Bright
+			CARF A 2 Bright
 			{
 				A_OverlayFlags(OverlayID(), PSPF_RENDERSTYLE, true);
 				A_OverlayRenderStyle(OverlayID(), STYLE_Add);

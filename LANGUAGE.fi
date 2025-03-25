@@ -1,0 +1,115 @@
+[fi] // Finnish (Suomi)
+// ======================== //
+//        Debug text        //
+// ======================== //
+PLACEHOLDER = "Sinun ei pitäisi nähdä tätä.";
+
+// ======================== //
+//  Weapon pickup messages  //
+// ======================== //
+// Slot 1 //
+// No Brass Knuckles pickup message, you start with em!
+GOTCFBCHAINSAW = "\c[White]Noukit \c[Orange]Moottorisahan\c[White]! Aika etsiä vähän lihaa! (Paikka 1)";
+// Slot 2 //
+GOTCFBPISTOL = "\c[White]Noukit \c[Yellow]Pistoolin\c[White]! (Paikka 2)";
+// Slot 3 //
+GOTCFBPSHOTGUN = "\c[White]Noukit \c[Red]Pumppuhaulikon\c[White]! (Paikka 3)";
+GOTCFBOUSHOTGUN = "\c[White]Noukit \c[Red]Päällekkäispiippuisen haulikon\c[White]! (Paikka 3, vaihtoehtoampumisella yhdellä piipulla)";
+// Slot 4 //
+GOTCFBCHAINGUN = "\c[White]Noukit \c[Yellow]Gatlingin\c[White]! (Paikka 4, vaihtoehtoampumisella automaattinen ketjunapauttaminen)"; // last word (for chaintap) used to be "ketjuhakkaaminen"
+// Slot 5 //
+GOTCFBROCKETLAUNCHER = "\c[White]Noukit \c[DarkGray]Raketinheittimen\c[White]! (Paikka 5, vaihtoehtoampumisella lataa lisää raketteja)";
+// Slot 6 //
+GOTCFBPLASMARIFLE = "\c[White]Noukit \c[CFB_Plasma]Plasmakiväärin\c[White]! (Paikka 6)";
+GOTCFBFLASHER = "\c[White]Noukit \c[Fire]Leimauttajan\c[White]! (Paikka 6)";
+// Slot 7 //
+GOTCFBCALAMITYARROW = "\c[White]Noukit \c[Cyan]Tuhon nuolen\c[White]! Ou, jee! (Paikka 7, vaihtoehtoampumisella repivät aallot)";
+
+// ======================== //
+// Weapon obituary messages //
+// ======================== //
+// Slot 1 //
+KILLCFBBRASSKNUCKLES = "%o sai turpaan %k-nimiseltä.";
+KILLCFBCHAINSAW = "%o revittiin riekaleiksi %kn \c[Orange]Moottorisahalla\c[Gold].";
+// Slot 2 //
+KILLCFBPISTOL = "%o pamautettiin kuoliaaksi %kn \c[Yellow]Pistoolilla\c[Gold].";
+// Slot 3 //
+KILLCFBPSHOTGUN = "%o murskattiin %kn \c[Red]Pumppuhaulikolla\c[Gold].";
+KILLCFBOUSHOTGUN = "%o-nimiseltä ammuttiin aivot pellolle %kn \c[Red]Päällekkäispiippuisella haulikolla\c[Gold].";
+// Slot 4 //
+KILLCFBCHAINGUN = "%o murskattiin %kn \c[Yellow]Gatlingillä\c[Gold].";
+// Slot 5 //
+KILLCFBROCKETLAUNCHER = "%o pamautettiin tuonpuoleiseen %kn \c[DarkGray]Raketinheittimellä\c[Gold].";
+// Slot 6 //
+KILLCFBPLASMARIFLE = "%o käristettiin %kn \c[CFB_Plasma]Plasmakiväärillä\c[Gold].";
+KILLCFBFLASHER = "%o paistettiin, hyvin kummaltakin puolelta, %kn \c[Fire]Leimauttajalla\c[Gold].";
+// Slot 7 //
+KILLCFBCALAMITYARROWRAIL = "%k lävisti %on \c[Cyan]Tuhon nuolella\c[Gold].";
+KILLCFBCALAMITYARROWEXPLOSION = "%o tuhoutui %kn \c[Cyan]Tuhon nuolella\c[Gold].";
+KILLCFBCALAMITYARROWWAVE = "%k poisti pelaajan %o \c[Cyan]Tuhon nuolella\c[Gold].";
+
+// ======================== //
+//       Weapon names       //
+// ======================== //
+// Slot 1 //
+TAG_CFBBRASSKNUCKLES = "Nyrkkiraudat";
+TAG_CFBCHAINSAW = "Moottorisaha";
+// Slot 2 //
+TAG_CFBPISTOL = "Pistooli";
+// Slot 3 //
+TAG_CFBPSHOTGUN = "Pumppuhaulikko";
+TAG_CFBOUSHOTGUN = "Päällekkäispiippuinen haulikko";
+// Slot 4 //
+TAG_CFBCHAINGUN = "Gatling";
+// Slot 5 //
+TAG_CFBROCKETLAUNCHER = "Raketinheitin";
+// Slot 6 //
+TAG_CFBPLASMARIFLE = "Plasmakivääri";
+TAG_CFBFLASHER = "Leimauttaja";
+// Slot 7 //
+TAG_CFBCALAMITYARROW = "Tuhon nuoli";
+
+
+// ======================== //
+//   Ammo pickup messages   //
+// ======================== //
+GOTCFBMAGAZINE = "\c[White]Noukit \c[Yellow]lippaan\c[White].";
+GOTCFBMAGAZINEBOX = "\c[White]Noukit \c[Yellow]lipaslaatikon\c[White].";
+GOTCFBSHELLS = "\c[White]Noukit a \c[Red]kourallisen haulikon ammuksia\c[White].";
+GOTCFBSHELLBOX = "\c[White]Noukit \c[Red]laatikollisen haulikon ammuksia\c[White].";
+GOTCFBROCKET = "\c[White]Noukit \c[DarkGray]raketin\c[White].";
+GOTCFBROCKETBOX = "\c[White]Noukit \c[DarkGray]laatikollisen raketteja\c[White].";
+GOTCFBCELL = "\c[White]Noukit \c[CFB_Plasma]energiakennon\c[White].";
+GOTCFBCELLPACK = "\c[White]Noukit \c[CFB_Plasma]energiakennopakkauksen\c[White].";
+
+// ======================== //
+//   Item pickup messages   //
+// ======================== //
+// Health //
+//GOTHEALTHBONUS = "\c[White]Noukit \c[Blue]elämäboonuksen\c[White]. (+1 elämäpistettä)";
+//GOTHEALTHBONUSNEED = "\c[White]Noukit \c[Blue]elämäboonuksen\c[White]. Tarvitaan lisää. (+1 elämäpistettä)";
+//GOTSTIMPACK = "\c[White]Noukit \c[Red]ruiskupakkauksen\c[White]. (+10 elämäpistettä)";
+//GOTSTIMPACKNEED = "\c[White]Noukit \c[Red]ruiskupakkauksen\c[White]. Vähän parempi olo. (+10 elämäpistettä)";
+//GOTMEDKIT = "\c[White]Noukit \c[Red]lääkärinpakkauksen\c[White]. (+25 elämäpistettä)";
+//GOTMEDKITNEED = "\c[White]Noukit \c[Red]lääkärinpaukkauksen\c[White]. Paljon parempi olo. (+25 elämäpistettä)";
+// Armor //
+//GOTARMORBONUS = "\c[White]Noukit \c[Green]panssariboonuksen\c[White]. (+1 panssaripistettä)";
+//GOTGREENARMOR = "\c[White]Noukit \c[Green]turvamies panssarin\c[White]. (100 panssaripistettä)";
+//GOTBLUEARMOR = "\c[White]Noukit \c[Blue]sotapanssarin\c[White]. (200 panssaripistettä)";
+
+// Powerups //
+GOTCFBBERSERK = "\c[Red]Raivo\c[White]! (10x lyöntivahinkoa!)";
+//GOTSOULSPHERE = "\c[Blue]Sielupallo\c[White]! (+100 elämäpistettä)";
+//GOTMEGASPHERE = "\c[Brown]Megapallo\c[White]! (200 elämää ja panssaria)";
+
+// ======================== //
+//         Ammo tags        //
+// ======================== //
+AMMO_CFBMAGAZINE = "Lipas";
+AMMO_CFBMAGAZINEBOX = "Lipaslaatikko";
+AMMO_CFBSHELLS = "Haulikon ammukset";
+AMMO_CFBSHELLBOX = "Laatikko haulikon ammuksia";
+AMMO_CFBROCKET = "Raketti";
+AMMO_CFBROCKETBOX = "Rakettilaatikko";
+AMMO_CFBCELL = "Energiakenno";
+AMMO_CFBCELLPACK = "Energiakennopakkaus";
