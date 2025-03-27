@@ -1,1 +1,1 @@
-STARTUPTITLE = "Cappuccino Fudge Blitz"
+STARTUPTITLE = "Cappuccino Fudge Blitz v1.0.0"

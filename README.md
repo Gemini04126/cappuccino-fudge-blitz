@@ -130,3 +130,4 @@
 * Mengo ("Calamity Arrow" name)
 #### Translations
 * Ezra Nobleheart (Finnish)
+* IcyNeens (German)
