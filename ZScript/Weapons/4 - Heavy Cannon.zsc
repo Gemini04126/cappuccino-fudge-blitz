@@ -1,0 +1,109 @@
+// Heavy Cannon
+// It shoot, but harder and takes 2 ammo per shot.
+class CFB_HeavyCannon : CFB_Weapon // Randomly spawned through the event handler
+{
+	Default
+	{
+		+WEAPON.AMMO_OPTIONAL
+		+WEAPON.ALT_AMMO_OPTIONAL
+		Weapon.SlotNumber 4;
+		Weapon.SelectionOrder 700;
+		Weapon.AmmoType "CFB_Magazine";
+		Weapon.AmmoUse 2;
+		Weapon.AmmoGive 20;
+
+		Tag "$TAG_CFBHEAVYCANNON";
+		// No Obituary defined here because this is a projectile weapon
+		Inventory.PickupMessage "$GOTCFBHEAVYCANNON";
+
+		Weapon.UpSound "weapons/hcannon/draw";
+		Inventory.PickupSound "weapons/hcannon/pickup";
+		// No AttackSound defined here because this is a projectile weapon
+	}
+	States
+	{
+		Spawn:
+			HCAG Z -1;
+			Stop;
+		Select:
+			HCAG A 1 A_Raise(18); // Redo this later to be fancier? I think it'd be cool.
+			Loop;
+		Deselect:
+			HCAG A 1 A_Lower(18); // Ditto.
+			Loop;
+		Ready:
+			HCAG A 1 A_WeaponReady;
+			Loop;
+		Fire:
+			TNT1 A 0 A_JumpIfNoAmmo("Fire.Empty");
+			HCAG D 2 Bright {
+				A_FireProjectile("CFB_HeavyCannonBullet");
+				A_StartSound("weapons/hcannon/fire", CHAN_WEAPON);
+				A_Overlay(-2, "Flash");
+			}
+			HCAG EF 2 Bright;
+			HCAG A 0 A_ReFire;
+			Goto Ready;
+		Fire.Empty:
+			HCAG C 2 A_StartSound("weapons/empty");
+			HCAG BA 2;
+			HCAG A 0 A_ReFire;
+			Goto Ready;
+		Flash:
+			TNT1 A 3 Bright A_AttachLightDef("Flash", "CFB_GunFlash");
+			TNT1 A 0 A_RemoveLight("Flash");
+			Stop;
+	}
+}
+class CFB_HeavyCannonBullet : FastProjectile
+{
+	Default
+	{
+		+BRIGHT
+		MissileType "CFB_HeavyCannonBulletAfterimage";
+		MissileHeight 8;
+		Radius 6;
+		Height 8;
+		Speed 200;
+		DamageFunction (35);
+		Translation "0:223=[98,57,1]:[255,243,21]", "223:255=[255,243,21]:[255,255,254]";
+		Obituary "$KILLCFBHEAVYCANNON";
+		Decal "BulletChip"; // temp, make a big bullet chip decal
+		RenderStyle "Add";
+		DamageType "Bullet";
+		SeeSound "weapons/whiz";
+		DeathSound "weapons/ricochet";
+	}
+	States
+	{
+		Spawn:
+			PHCA A -1;
+			Stop;
+		Death:
+			PHCA BCDEF 2;
+			Stop;
+	}
+}
+class CFB_HeavyCannonBulletAfterimage : Actor
+{
+	Default
+	{
+		+NOBLOCKMAP
+		+NOGRAVITY
+		+NOTELEPORT
+		+CANNOTPUSH
+		+NODAMAGETHRUST
+		+NOINTERACTION
+		+BRIGHT
+		Alpha 0.5;
+		Scale 0.75;
+		RenderStyle "Add";
+		Translation "0:223=[98,57,1]:[255,243,21]", "223:255=[255,243,21]:[255,255,254]";
+	}
+	States
+	{
+		Spawn:
+			PHCA A 4;
+			Stop;
+	}
+}

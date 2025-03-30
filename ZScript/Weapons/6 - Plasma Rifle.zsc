@@ -1,6 +1,6 @@
 // Plasma Rifle
 // It's a plasma rifle. :/
-class CFB_PlasmaRifle : CFB_Weapon replaces PlasmaRifle
+class CFB_PlasmaRifle : CFB_Weapon //replaces PlasmaRifle // Removed because it's randomly spawned through the event handler
 {
 	int cooldown;
 	Default

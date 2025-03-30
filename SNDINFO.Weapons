@@ -31,11 +31,11 @@ weapons/bknuckles/swing2	"Sounds/Weapons/1 - Brass Knuckles/swing2.wav"
 weapons/bknuckles/break1	"Sounds/Weapons/1 - Brass Knuckles/break1.mp3"
 weapons/bknuckles/break2	"Sounds/Weapons/1 - Brass Knuckles/break2.mp3"
 
-$volume weapons/bknuckles/break 0.35
-
 $random weapons/bknuckles/hit { weapons/bknuckles/hit1 weapons/bknuckles/hit2 weapons/bknuckles/hit3 weapons/bknuckles/hit4 }
 $random weapons/bknuckles/swing { weapons/bknuckles/swing1 weapons/bknuckles/swing2 }
 $random weapons/bknuckles/break { weapons/bknuckles/break1 weapons/bknuckles/break2 }
+
+$volume weapons/bknuckles/break 0.35
 
 // Chainsaw //
 weapons/chainsaw/pickup	"Sounds/Weapons/1 - Chainsaw/chainsaw_draw.wav"
@@ -95,6 +95,18 @@ weapons/chaingun/fire4		"Sounds/Weapons/4 - Chaingun/shot_04.wav"
 
 $random weapons/chaingun/fire {weapons/chaingun/fire1 weapons/chaingun/fire2 weapons/chaingun/fire3 weapons/chaingun/fire4}
 
+// Heavy Cannon //
+weapons/hcannon/pickup	"Sounds/Weapons/4 - Heavy Cannon/fly_m60_2nd_bonk.wav"
+weapons/hcannon/draw	"Sounds/Weapons/4 - Heavy Cannon/fly_m60_1st_bonk.wav"
+weapons/hcannon/fire1	"Sounds/Weapons/4 - Heavy Cannon/shot_00.wav"
+weapons/hcannon/fire2	"Sounds/Weapons/4 - Heavy Cannon/shot_01.wav"
+weapons/hcannon/fire3	"Sounds/Weapons/4 - Heavy Cannon/shot_02.wav"
+weapons/hcannon/fire4	"Sounds/Weapons/4 - Heavy Cannon/shot_03.wav"
+
+$random weapons/hcannon/fire {weapons/hcannon/fire1 weapons/hcannon/fire2 weapons/hcannon/fire3 weapons/hcannon/fire4}
+
+$volume weapons/hcannon/fire 0.75
+
 //// Slot 5 ////
 // Rocket Launcher //
 weapons/rlauncher/fire		"Sounds/Weapons/5 - Rocket Launcher/RL_Fire03.ogg"
@@ -115,6 +127,19 @@ $volume weapons/rlauncher/fire 0.8
 $volume weapons/rlauncher/load_out 0.6
 $volume weapons/rlauncher/load_in 0.6
 $volume weapons/rlauncher/loaded 0.8
+
+// Grenade Launcher //
+weapons/glauncher/fire		"Sounds/Weapons/5 - Grenade Launcher/grenade_launcher_fire_1.wav"
+weapons/glauncher/pickup	"Sounds/Weapons/5 - Grenade Launcher/grenade_launcher_latchopen.wav"
+weapons/glauncher/draw		"Sounds/Weapons/5 - Grenade Launcher/he_draw.wav"
+weapons/glauncher/bounce	"Sounds/Weapons/5 - Grenade Launcher/he_bounce-1.wav"
+weapons/glauncher/load		"Sounds/Weapons/5 - Grenade Launcher/grenade_launcher_shellin.wav"
+
+weapons/glauncher/explode1	"Sounds/Weapons/5 - Grenade Launcher/hegrenade_detonate_01.wav"
+weapons/glauncher/explode2	"Sounds/Weapons/5 - Grenade Launcher/hegrenade_detonate_02.wav"
+weapons/glauncher/explode3	"Sounds/Weapons/5 - Grenade Launcher/hegrenade_detonate_03.wav"
+
+$random weapons/glauncher/explode {weapons/glauncher/explode1 weapons/glauncher/explode2 weapons/glauncher/explode3}
 
 //// Slot 6 ////
 // Plasma Rifle //

@@ -4,7 +4,7 @@
 // Not applicable. Hands don't glow!
 
 // Chainsaw //
-// Not really applicable, unless it has a light on it. (It doesn't.)
+// Not applicable. Has no lights.
 
 /// Slot 2 ///
 // Pistol //
@@ -58,6 +58,11 @@ brightmap sprite CHGGB0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
 brightmap sprite CHGGC0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
 brightmap sprite CHGGD0 {map Graphics/Brightmaps/BMCHGGA0B0C0D0.png}
 
+// Heavy Cannon //
+brightmap sprite HCAGD0 {map Graphics/Brightmaps/BMHCAGD0.png disablefullbright}
+brightmap sprite HCAGE0 {map Graphics/Brightmaps/BMHCAGE0.png disablefullbright}
+brightmap sprite HCAGF0 {map Graphics/Brightmaps/BMHCAGF0.png disablefullbright}
+
 /// Slot 5 ///
 // Rocket Launcher //
 brightmap sprite RKTGA0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
@@ -75,6 +80,9 @@ brightmap sprite RKTGL0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
 brightmap sprite RKTGM0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
 brightmap sprite RKTGN0 {map Graphics/Brightmaps/BMRKTGA0I0J0K0L0M0N0.png}
 
+// Grenade Launcher //
+// Not applicable. Has no lights, flashes are seperated.
+
 /// Slot 6 ///
 // Plasma Rifle //
 brightmap sprite PLSGB0 {map Graphics/Brightmaps/BMPLSGB0.png disablefullbright}
@@ -82,6 +90,9 @@ brightmap sprite PLSGC0 {map Graphics/Brightmaps/BMPLSGC0.png disablefullbright}
 brightmap sprite PLSGD0 {map Graphics/Brightmaps/BMPLSGD0.png disablefullbright}
 brightmap sprite PLSGE0 {map Graphics/Brightmaps/BMPLSGE0.png disablefullbright}
 brightmap sprite PLSGZ0 {map Graphics/Brightmaps/BMPLSGZ0.png}
+
+// Flasher //
+// Not applicable. Has no lights, flash is rendered additively.
 
 /// Slot 7 ///
 // Calamity Arrow //

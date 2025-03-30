@@ -12,7 +12,7 @@ class CFB_LoadedRocket : Ammo
 		+INVENTORY.IGNORESKILL
 	}
 }
-class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
+class CFB_RocketLauncher : CFB_Weapon //replaces RocketLauncher // Removed because it's randomly spawned through the event handler
 {
 	Default
 	{
@@ -52,66 +52,37 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 			Loop;
 		Fire:
 			TNT1 A 0 A_AlertMonsters;
-			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 5, "Fire.Five");
-			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 4, "Fire.Four");
-			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 3, "Fire.Three");
-			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 2, "Fire.Two");
 			TNT1 A 0 A_JumpIfNoAmmo("Fire.Empty");
-			Goto Fire.One;
-		Fire.Five:
 			RKTG B 2;
-			RKTG C 2 Bright {
-				A_FireProjectile("CFB_Rocket", 10);
-				A_FireProjectile("CFB_Rocket", 5);
-				A_FireProjectile("CFB_Rocket");
-				A_FireProjectile("CFB_Rocket", -5);
-				A_FireProjectile("CFB_Rocket", -10);
-				A_StartSound("weapons/rlauncher/fire", CHAN_WEAPON);
-				A_GunFlash();
-			}
-			RKTG DDE 1 Bright;
-			RKTG FGGGH 1;
-			Goto PostFire;
-		Fire.Four:
-			RKTG B 2;
-			RKTG C 2 Bright {
-				A_FireProjectile("CFB_Rocket", 10);
-				A_FireProjectile("CFB_Rocket", 5);
-				A_FireProjectile("CFB_Rocket", -5);
-				A_FireProjectile("CFB_Rocket", -10);
-				A_StartSound("weapons/rlauncher/fire", CHAN_WEAPON);
-				A_GunFlash();
-			}
-			RKTG DDE 1 Bright;
-			RKTG FGGGH 1;
-			Goto PostFire;
-		Fire.Three:
-			RKTG B 2;
-			RKTG C 2 Bright {
-				A_FireProjectile("CFB_Rocket", 5);
-				A_FireProjectile("CFB_Rocket");
-				A_FireProjectile("CFB_Rocket", -5);
-				A_StartSound("weapons/rlauncher/fire", CHAN_WEAPON);
-				A_GunFlash();
-			}
-			RKTG DDE 1 Bright;
-			RKTG FGGGH 1;
-			Goto PostFire;
-		Fire.Two:
-			RKTG B 2;
-			RKTG C 2 Bright {
-				A_FireProjectile("CFB_Rocket", 5);
-				A_FireProjectile("CFB_Rocket", -5);
-				A_StartSound("weapons/rlauncher/fire", CHAN_WEAPON);
-				A_GunFlash();
-			}
-			RKTG DDE 1 Bright;
-			RKTG FGGGH 1;
-			Goto PostFire;
-		Fire.One:
-			RKTG B 2;
-			RKTG C 2 Bright {
-				A_FireProjectile("CFB_Rocket");
+			RKTG C 2 Bright { // optimized this to not suck ass
+				if (invoker.ammo1.Amount >= 5)
+				{
+					A_FireProjectile("CFB_Rocket", 10);
+					A_FireProjectile("CFB_Rocket", 5);
+					A_FireProjectile("CFB_Rocket");
+					A_FireProjectile("CFB_Rocket", -5);
+					A_FireProjectile("CFB_Rocket", -10);
+				}
+				else if (invoker.ammo1.Amount >= 4)
+				{
+					A_FireProjectile("CFB_Rocket", 10);
+					A_FireProjectile("CFB_Rocket", 5);
+					A_FireProjectile("CFB_Rocket", -5);
+					A_FireProjectile("CFB_Rocket", -10);
+				}
+				else if (invoker.ammo1.Amount >= 3)
+				{
+					A_FireProjectile("CFB_Rocket", 5);
+					A_FireProjectile("CFB_Rocket");
+					A_FireProjectile("CFB_Rocket", -5);
+				}
+				else if (invoker.ammo1.Amount >= 2)
+				{
+					A_FireProjectile("CFB_Rocket", 5);
+					A_FireProjectile("CFB_Rocket", -5);
+				}
+				else if (invoker.ammo1.Amount >= 1)
+					A_FireProjectile("CFB_Rocket");
 				A_StartSound("weapons/rlauncher/fire", CHAN_WEAPON);
 				A_GunFlash();
 			}
@@ -119,7 +90,8 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 			RKTG FGGGH 1;
 			Goto PostFire;
 		AltFire:
-			Goto PostFire;
+			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", invoker.ammo1.MaxAmount, "Ready");
+			Goto PostFire+1;
 		Fire.Empty:
 			RKTG A 2;
 			RKTG H 2 A_StartSound("weapons/empty", CHAN_WEAPON);
@@ -127,7 +99,7 @@ class CFB_RocketLauncher : CFB_Weapon replaces RocketLauncher
 			RKTG H 1;
 			Goto PostFire;
 		PostFire:
-			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", invoker.ammo1.MaxAmount, "Ready");
+			TNT1 A 0 A_JumpIfInventory("CFB_LoadedRocket", 1, "Ready"); // used to be invoker.ammo1.MaxAmount but that kinda makes no sense
 			RKTG I 3 A_StartSound("weapons/rlauncher/load_out", CHAN_5);
 			RKTG JK 3;
 			TNT1 A 0 A_JumpIfInventory("CFB_RocketAmmo", 1, 1);

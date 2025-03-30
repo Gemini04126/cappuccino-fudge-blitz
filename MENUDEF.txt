@@ -33,3 +33,17 @@ LISTMENU "MainMenu"
 		PatchItem "M_QUITG", "q", "QuitMenu"
 	}
 }
+OPTIONMENU CFB_Options
+{
+	Title "$TITLE_CFBOPTIONS"
+
+	StaticText "$DESC_CFBSPAWNALTS", "CFB_Plasma"
+	Option "$CVAR_CFBSPAWNALTS", sv_cfb_spawnaltweapons, OnOff
+}
+
+// Entry points
+
+AddOptionMenu OptionsMenu
+{
+	Submenu "$TITLE_CFBOPTIONS", CFB_Options
+}

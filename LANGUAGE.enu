@@ -18,8 +18,10 @@ GOTCFBPSHOTGUN = "\c[White]Picked up a \c[Red]Pump Shotgun\c[White]! (Slot 3)";
 GOTCFBOUSHOTGUN = "\c[White]Picked up an \c[Red]Over-and-Under Shotgun\c[White]! (Slot 3, alt-fire for single barrel)";
 // Slot 4 //
 GOTCFBCHAINGUN = "\c[White]Picked up a \c[Yellow]Chaingun\c[White]! (Slot 4, alt-fire for automatic chaintap)";
+GOTCFBHEAVYCANNON = "\c[White]Picked up a \c[Yellow]Heavy Cannon\c[White]! (Slot 4)";
 // Slot 5 //
 GOTCFBROCKETLAUNCHER = "\c[White]Picked up a \c[DarkGray]Rocket Launcher\c[White]! (Slot 5, alt-fire to load more rockets)";
+GOTCFBGRENADELAUNCHER = "\c[White]Picked up a \c[DarkGray]Grenade Launcher\c[White]! (Slot 5, alt-fire to fire all three grenades)";
 // Slot 6 //
 GOTCFBPLASMARIFLE = "\c[White]Picked up a \c[CFB_Plasma]Plasma Rifle\c[White]! (Slot 6)";
 GOTCFBFLASHER = "\c[White]Picked up a \c[Fire]Flasher\c[White]! (Slot 6)";
@@ -39,8 +41,10 @@ KILLCFBPSHOTGUN = "%o was slammed by %k's \c[Red]Pump Shotgun\c[Gold].";
 KILLCFBOUSHOTGUN = "%o was splattered by %k's \c[Red]Over-and-Under Shotgun\c[Gold].";
 // Slot 4 //
 KILLCFBCHAINGUN = "%o was mowed down by %k's \c[Yellow]Chaingun\c[Gold].";
+KILLCFBHEAVYCANNON = "%o was sniped by %k's \c[Yellow]Heavy Cannon\c[Gold].";
 // Slot 5 //
 KILLCFBROCKETLAUNCHER = "%o was blown to kingdom come by %k's \c[DarkGray]Rocket Launcher\c[Gold].";
+KILLCFBGRENADELAUNCHER = "%o was detonated by %k's \c[DarkGray]Grenade Launcher\c[Gold].";
 // Slot 6 //
 KILLCFBPLASMARIFLE = "%o was fried by %k's \c[CFB_Plasma]Plasma Rifle\c[Gold].";
 KILLCFBFLASHER = "%o was toasted, nice and even, by %k's \c[Fire]Flasher\c[Gold].";
@@ -62,8 +66,10 @@ TAG_CFBPSHOTGUN = "Pump Shotgun";
 TAG_CFBOUSHOTGUN = "Over-and-Under Shotgun";
 // Slot 4 //
 TAG_CFBCHAINGUN = "Chaingun";
+TAG_CFBHEAVYCANNON = "Heavy Cannon";
 // Slot 5 //
 TAG_CFBROCKETLAUNCHER = "Rocket Launcher";
+TAG_CFBGRENADELAUNCHER = "Grenade Launcher";
 // Slot 6 //
 TAG_CFBPLASMARIFLE = "Plasma Rifle";
 TAG_CFBFLASHER = "Flasher";
@@ -117,4 +123,6 @@ AMMO_CFBCELLPACK = "Energy cell pack";
 // ======================== //
 //           Menus          //
 // ======================== //
-// Don't think we'll need any of these.
+TITLE_CFBOPTIONS = "\c[CFB_Coffee]Cappuccino Fudge Blitz \c[Red]options";
+DESC_CFBSPAWNALTS = "Some weapons have a 50% chance to be randomly replaced.";
+CVAR_CFBSPAWNALTS = "Spawn alternative weapons";

@@ -1,10 +1,7 @@
 // Chaingun
 // It shoot.
-class CFB_Chaingun : CFB_Weapon replaces Chaingun
+class CFB_Chaingun : CFB_Weapon //replaces Chaingun // Removed because it's randomly spawned through the event handler
 {
-	action void A_FireChaingun()
-	{
-	}
 	Default
 	{
 		+WEAPON.AMMO_OPTIONAL

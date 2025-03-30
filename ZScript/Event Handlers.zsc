@@ -2,27 +2,70 @@ class CFB_ThingReplacer : StaticEventHandler
 {
     override void CheckReplacement(ReplaceEvent e)
     {
+        CVar spawnAltWeapons = CVar.FindCVar('sv_cfb_spawnaltweapons');
 		// check if the class exists first
 		let cls = e.Replacee.GetClassName(); //Although not necessary, it helps out for simplification.
 		switch(cls)
 		{
 		//==== Weapon replacements ====//
-		// Legacy of Rust
+		// Vanilla & Legacy of Rust
+			case 'Chaingun':
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_Chaingun";
+					else
+						e.Replacement = "CFB_HeavyCannon";
+				}
+				else
+					e.Replacement = "CFB_Chaingun";
+				break;
+			case 'RocketLauncher':
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_RocketLauncher";
+					else
+						e.Replacement = "CFB_GrenadeLauncher";
+				}
+				else
+					e.Replacement = "CFB_RocketLauncher";
+				break;
 			case 'PlasmaRifle':
-			// this is dumb but it seems to work????
-				if (StringTable.Localize(Inventory(GetDefaultByType(e.Replacee)).pickupMsg) == "You got the incinerator!")
-					e.Replacement = "CFB_Flasher";
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_PlasmaRifle";
+					else
+						e.Replacement = "CFB_Flasher";
+				}
+				else
+				{
+				// this is dumb but it seems to work????
+					if (StringTable.Localize(Inventory(GetDefaultByType(e.Replacee)).pickupMsg) == "You got the incinerator!")
+						e.Replacement = "CFB_Flasher";
+					else
+						e.Replacement = "CFB_PlasmaRifle";
+				}
 				break;
 			case 'ID24Incinerator':
-				e.Replacement = "CFB_Flasher";
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_Flasher";
+					else
+						e.Replacement = "CFB_PlasmaRifle";
+				}
+				else
+					e.Replacement = "CFB_Flasher";
 				break;
 			case 'ID24CalamityBlade':
 				e.Replacement = "CFB_CalamityArrow";
 				break;
 		// Eviternity I & II
-//			case 'Perforator':
-//				e.Replacement = "";
-//				break;
+			case 'Perforator': // I dunno, man. I GUESS??????
+				e.Replacement = "CFB_HeavyCannon";
+				break;
 		// Paradise, Godless Night, and any other map(set) that uses Supercharge
 			case 'TangoChainsaw':
 				e.Replacement = "CFB_Chainsaw";
@@ -41,13 +84,29 @@ class CFB_ThingReplacer : StaticEventHandler
 				e.Replacement = "CFB_Chaingun"; // ...Maybe?
 				break;
 			case 'TangoMinigun':
-				e.Replacement = "CFB_Chaingun"; // To be completely honest, it's fast enough!
+				e.Replacement = "CFB_HeavyCannon"; // Since both are here, and the Minigun is kind of a reward for beating that one part of The Old Earth...
 				break;
 			case 'TangoRocketLauncher':
-				e.Replacement = "CFB_RocketLauncher";
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_RocketLauncher";
+					else
+						e.Replacement = "CFB_GrenadeLauncher";
+				}
+				else
+					e.Replacement = "CFB_RocketLauncher";
 				break;
 			case 'TangoPlasmaRifle':
-				e.Replacement = "CFB_PlasmaRifle";
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_PlasmaRifle";
+					else
+						e.Replacement = "CFB_Flasher";
+				}
+				else
+					e.Replacement = "CFB_PlasmaRifle";
 				break;
 			case 'TangoBFG9000':
 				e.Replacement = "CFB_CalamityArrow";
@@ -61,19 +120,58 @@ class CFB_ThingReplacer : StaticEventHandler
 			// Nailgun seems to be unused and inaccessible
 		// Skulltag
 			case 'ChaingunSpawner':
+				if (random(0, 1) == 0)
+					e.Replacement = "CFB_Chaingun";
+				else
+					e.Replacement = "CFB_HeavyCannon";
+				break;
 			case 'Minigun':
 			case 'PTag_Minigun':
-				e.Replacement = "CFB_Chaingun";
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_HeavyCannon";
+					else
+						e.Replacement = "CFB_Chaingun";
+				}
+				else
+					e.Replacement = "CFB_HeavyCannon";
 				break;
-//			case 'RocketLauncherSpawner':
-//			case 'GrenadeLauncher':
-//			case 'PTag_GrenadeLauncher':
-//				e.Replacement = "";
-//				break;
-//			case 'PlasmaRifleSpawner':
+			case 'RocketLauncherSpawner':
+				if (random(0, 1) == 0)
+					e.Replacement = "CFB_RocketLauncher";
+				else
+					e.Replacement = "CFB_GrenadeLauncher";
+				break;
+			case 'GrenadeLauncher':
+			case 'PTag_GrenadeLauncher':
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_GrenadeLauncher";
+					else
+						e.Replacement = "CFB_RocketLauncher";
+				}
+				else
+					e.Replacement = "CFB_GrenadeLauncher";
+				break;
+			case 'PlasmaRifleSpawner':
+				if (random(0, 1) == 0)
+					e.Replacement = "CFB_PlasmaRifle";
+				else
+					e.Replacement = "CFB_Flasher";
+				break;
 			case 'Railgun':
 			case 'PTag_Railgun':
-				e.Replacement = "CFB_Flasher";
+				if (spawnAltWeapons.GetBool())
+				{
+					if (random(0, 1) == 0)
+						e.Replacement = "CFB_Flasher";
+					else
+						e.Replacement = "CFB_PlasmaRifle";
+				}
+				else
+					e.Replacement = "CFB_Flasher";
 				break;
 			case 'BFGSpawner':
 			case 'BFG10K':

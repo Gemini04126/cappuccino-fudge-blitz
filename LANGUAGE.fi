@@ -3,6 +3,7 @@
 //        Debug text        //
 // ======================== //
 PLACEHOLDER = "Sinun ei pitäisi nähdä tätä.";
+// <not translated>
 
 // ======================== //
 //  Weapon pickup messages  //
@@ -17,8 +18,10 @@ GOTCFBPSHOTGUN = "\c[White]Noukit \c[Red]Pumppuhaulikon\c[White]! (Paikka 3)";
 GOTCFBOUSHOTGUN = "\c[White]Noukit \c[Red]Päällekkäispiippuisen haulikon\c[White]! (Paikka 3, vaihtoehtoampumisella yhdellä piipulla)";
 // Slot 4 //
 GOTCFBCHAINGUN = "\c[White]Noukit \c[Yellow]Gatlingin\c[White]! (Paikka 4, vaihtoehtoampumisella automaattinen ketjunapauttaminen)"; // last word (for chaintap) used to be "ketjuhakkaaminen"
+GOTCFBHEAVYCANNON = "\c[White]Noukit \c[Yellow]Raskaan kanuunan\c[White]! (Paikka 4)";
 // Slot 5 //
 GOTCFBROCKETLAUNCHER = "\c[White]Noukit \c[DarkGray]Raketinheittimen\c[White]! (Paikka 5, vaihtoehtoampumisella lataa lisää raketteja)";
+GOTCFBGRENADELAUNCHER = "\c[White]Noukit \c[DarkGray]Kranaatinheittimen\c[White]! (Paikka 5, vaihtoehtoisella ampumisella laukaise kaikki kolme kranaattia)";
 // Slot 6 //
 GOTCFBPLASMARIFLE = "\c[White]Noukit \c[CFB_Plasma]Plasmakiväärin\c[White]! (Paikka 6)";
 GOTCFBFLASHER = "\c[White]Noukit \c[Fire]Leimauttajan\c[White]! (Paikka 6)";
@@ -38,8 +41,10 @@ KILLCFBPSHOTGUN = "%o murskattiin %kn \c[Red]Pumppuhaulikolla\c[Gold].";
 KILLCFBOUSHOTGUN = "%o-nimiseltä ammuttiin aivot pellolle %kn \c[Red]Päällekkäispiippuisella haulikolla\c[Gold].";
 // Slot 4 //
 KILLCFBCHAINGUN = "%o murskattiin %kn \c[Yellow]Gatlingillä\c[Gold].";
+KILLCFBHEAVYCANNON = "%k sala-ampui pelaajan %o \c[Yellow]Raskaalla kanuunalla\c[Gold].";
 // Slot 5 //
 KILLCFBROCKETLAUNCHER = "%o pamautettiin tuonpuoleiseen %kn \c[DarkGray]Raketinheittimellä\c[Gold].";
+KILLCFBGRENADELAUNCHER = "%o pamautettiin %kn \c[DarkGray]Kranaatinheittimellä\c[Gold].";
 // Slot 6 //
 KILLCFBPLASMARIFLE = "%o käristettiin %kn \c[CFB_Plasma]Plasmakiväärillä\c[Gold].";
 KILLCFBFLASHER = "%o paistettiin, hyvin kummaltakin puolelta, %kn \c[Fire]Leimauttajalla\c[Gold].";
@@ -61,8 +66,10 @@ TAG_CFBPSHOTGUN = "Pumppuhaulikko";
 TAG_CFBOUSHOTGUN = "Päällekkäispiippuinen haulikko";
 // Slot 4 //
 TAG_CFBCHAINGUN = "Gatling";
+TAG_CFBHEAVYCANNON = "Raskas kanuuna";
 // Slot 5 //
 TAG_CFBROCKETLAUNCHER = "Raketinheitin";
+TAG_CFBGRENADELAUNCHER = "Kranaatinheitin";
 // Slot 6 //
 TAG_CFBPLASMARIFLE = "Plasmakivääri";
 TAG_CFBFLASHER = "Leimauttaja";
@@ -113,3 +120,11 @@ AMMO_CFBROCKET = "Raketti";
 AMMO_CFBROCKETBOX = "Rakettilaatikko";
 AMMO_CFBCELL = "Energiakenno";
 AMMO_CFBCELLPACK = "Energiakennopakkaus";
+
+// ======================== //
+//           Menus          //
+// ======================== //
+TITLE_CFBOPTIONS = "\c[CFB_Coffee]Cappuccino Fudge Blitz \c[Red]asetukset";
+DESC_CFBSPAWNALTS = "Joillakin aseilla on 50% mahdollisuus tulla satunnaisesti korvatuksi.";
+CVAR_CFBSPAWNALTS = "Spawnaa vaihtoehtoaseet";
+

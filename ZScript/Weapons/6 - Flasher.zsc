@@ -1,7 +1,7 @@
 // Flasher
 // I wanted a quick and easy Incinerator replacement...
 // ... That's it. I saw this one, I fuck with it, and it's fine.
-class CFB_Flasher : CFB_Weapon
+class CFB_Flasher : CFB_Weapon // Randomly spawned through the event handler
 {
 	Default
 	{

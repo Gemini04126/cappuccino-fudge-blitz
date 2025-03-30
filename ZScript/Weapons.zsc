@@ -9,8 +9,10 @@
 #include "./Weapons/3 - Over-and-Under Shotgun.zsc"
 // Slot 4 //
 #include "./Weapons/4 - Chaingun.zsc"
+#include "./Weapons/4 - Heavy Cannon.zsc"
 // Slot 5 //
 #include "./Weapons/5 - Rocket Launcher.zsc"
+#include "./Weapons/5 - Grenade Launcher.zsc"
 // Slot 6 //
 #include "./Weapons/6 - Plasma Rifle.zsc"
 #include "./Weapons/6 - Flasher.zsc"

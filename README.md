@@ -27,11 +27,17 @@
 * Midway
 * Necronoxis
 * DoomerBlazkowicz (Pickup)
+#### Heavy Cannon
+* Tesefy
+* WispArt (pixil.art, Pickup)
 #### Rocket Launcher
 * OJSC
 * Amuscaria
 * Tesefy
 * Captain J (projectile)
+#### Grenade Launcher
+* Captain J
+* Tesefy (Flash)
 #### Plasma Rifle
 * Tesefy
 * Perkristian (Smooth Doom, projectile)
@@ -94,8 +100,12 @@
 * Treyarch (Call of Duty: World at War, Shotgun) (fire)
 #### Chaingun
 * Treyarch (Call of Duty: Black Ops) (HK12)
+#### Heavy Cannon
+* Treyarch (Call of Duty: Black Ops) (M60)
 #### Rocket Launcher
 * Epic Megagames (Unreal Tournament 3)
+#### Grenade Launcher
+* Valve Software (Counter-Strike: Global Offensive & Left 4 Dead 2)
 #### Plasma Rifle
 * Valve Software (Team Fortress 2, C.A.P.P.E.R)
 * id Software (DOOM (2016), Plasma Rifle)
@@ -130,4 +140,5 @@
 * Mengo ("Calamity Arrow" name)
 #### Translations
 * Ezra Nobleheart (Finnish)
-* IcyNeens (German)
+* GuzzDoritos (Brazilian Portuguese)
+* IcyNeens (German) (still waiting...?)

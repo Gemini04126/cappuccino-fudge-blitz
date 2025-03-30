@@ -1,0 +1,262 @@
+// Grenade Launcher
+// Faster than the Rocket Launcher,
+// but its projectiles travel in an arc, they bounce,
+// and it can't load multiple at once.
+// Also, it has a 3-grenade "mag" (read: you load the nades into the barrels)
+class CFB_GrenadeLauncherAmmo : Ammo
+{
+	Default
+	{
+		Inventory.Icon "GNDGY0"; // Replace later
+		Inventory.Amount 0;
+		Inventory.MaxAmount 3;
+		Ammo.BackpackAmount 0;
+		Ammo.BackpackMaxAmount 3;
+		+INVENTORY.IGNORESKILL
+	}
+}
+class CFB_GrenadeLauncher : CFB_Weapon // Randomly spawned through the event handler
+{
+	Default
+	{
+		+WEAPON.AMMO_OPTIONAL
+		+WEAPON.EXPLOSIVE
+		+WEAPON.NOAUTOFIRE // So you don't blow yourself up
+		Weapon.SlotNumber 5;
+		Weapon.SelectionOrder 2500;
+		Weapon.AmmoType1 "CFB_GrenadeLauncherAmmo";
+		Weapon.AmmoUse1 1;
+		Weapon.AmmoGive1 0;
+		Weapon.AmmoType2 "CFB_RocketAmmo";
+		Weapon.AmmoUse2 0;
+		Weapon.AmmoGive2 3;
+
+		Tag "$TAG_CFBGRENADELAUNCHER";
+		// No Obituary defined here because this is a projectile weapon
+		Inventory.PickupMessage "$GOTCFBGRENADELAUNCHER";
+
+		Weapon.UpSound "weapons/glauncher/draw";
+		Inventory.PickupSound "weapons/glauncher/pickup";
+		// No AttackSound defined here because this is a projectile weapon
+	}
+	States
+	{
+		Spawn:
+			GNDG Z -1;
+			Stop;
+		Select:
+			TNT1 A 0 A_QuickRaise();
+			GNDG B 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			GNDG A 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
+			Goto Ready;
+		Deselect:
+			GNDG B 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			TNT1 A 0 A_WeaponOffset(0, 32);
+			TNT1 A 0 A_QuickLower();
+			Stop;
+		Ready:
+			GNDG A 1 A_WeaponReady(WRF_ALLOWRELOAD);
+			Loop;
+		Fire:
+			GNDG A 0 A_JumpIfNoAmmo("FireEmpty");
+			GNDG A 1 Bright Offset(0, 36) {
+				A_Overlay(-2, "FlashSelector");
+				if ((sv_infiniteammo || (invoker.Owner.FindInventory('PowerInfiniteAmmo', true) != null)))
+					A_FireProjectile("CFB_Grenade", spawnofs_xy: 0, spawnheight: 0);
+				else
+				{
+					switch ((invoker.ammo1.Amount % 3) + 1)
+					{
+						case 1: // Top
+							A_FireProjectile("CFB_Grenade", spawnofs_xy: 0, spawnheight: 0);
+							break;
+						case 2: // Right
+							A_FireProjectile("CFB_Grenade", spawnofs_xy: 3, spawnheight: -4);
+							break;
+						case 3: // Left
+							A_FireProjectile("CFB_Grenade", spawnofs_xy: -3, spawnheight: -4);
+							break;
+						default:
+							Console.Printf("$PLACEHOLDER");
+							break;
+					}
+				}
+				A_OverlayPivot(OverlayID(), 0.33, 0.5);
+				A_StartSound("weapons/glauncher/fire", CHAN_WEAPON);
+				A_OverlayScale(OverlayID(), 1.1);
+			}
+			GNDG A 1 Bright Offset(0, 52) A_OverlayScale(OverlayID(), 1.3);
+			GNDG A 2 Offset (0, 57) A_OverlayScale(OverlayID(), 1.4);
+			GNDG A 2 Offset (0, 47) A_OverlayScale(OverlayID(), 1.2);
+			GNDG A 2 Offset (0, 37) A_OverlayScale(OverlayID(), 1.1);
+			GNDG A 10 Offset (0, 32) A_OverlayScale(OverlayID(), 1.0);
+			GNDG A 0 A_ReFire;
+			Goto Ready;
+		AltFire: // ughhhhh fuck you matt (/lh) for making me do this
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "FireEmpty");
+			GNDG A 1 Bright Offset(0, 36) {
+				if (invoker.ammo1.Amount >= 3 || (sv_infiniteammo || (invoker.Owner.FindInventory('PowerInfiniteAmmo', true) != null))) // Top
+				{
+					A_FireProjectile("CFB_Grenade", useammo: false, spawnofs_xy: 0, spawnheight: 0);
+					invoker.DepleteAmmo(false, true);
+					A_Overlay(-2, "Flash0");
+				}
+				if (invoker.ammo1.Amount >= 2 || (sv_infiniteammo || (invoker.Owner.FindInventory('PowerInfiniteAmmo', true) != null))) // Left
+				{
+					A_FireProjectile("CFB_Grenade", useammo: false, spawnofs_xy: -3, spawnheight: -4);
+					invoker.DepleteAmmo(false, true);
+					A_Overlay(-4, "Flash2");
+				}
+				if (invoker.ammo1.Amount >= 1 || (sv_infiniteammo || (invoker.Owner.FindInventory('PowerInfiniteAmmo', true) != null))) // Right
+				{
+					A_FireProjectile("CFB_Grenade", useammo: false, spawnofs_xy: 3, spawnheight: -4);
+					invoker.DepleteAmmo(false, true);
+					A_Overlay(-3, "Flash1");
+				}
+				A_OverlayPivot(OverlayID(), 0.33, 0.5);
+				A_StartSound("weapons/glauncher/fire", CHAN_WEAPON);
+				A_OverlayScale(OverlayID(), 1.1);
+			}
+			GNDG A 1 Bright Offset(0, 52) A_OverlayScale(OverlayID(), 1.3);
+			GNDG A 2 Offset (0, 57) A_OverlayScale(OverlayID(), 1.4);
+			GNDG A 2 Offset (0, 47) A_OverlayScale(OverlayID(), 1.2);
+			GNDG A 2 Offset (0, 37) A_OverlayScale(OverlayID(), 1.1);
+			GNDG A 10 Offset (0, 32) A_OverlayScale(OverlayID(), 1.0);
+			GNDG A 0 A_ReFire;
+			Goto Ready;
+		FireEmpty:
+			TNT1 A 0 A_JumpIfInventory("CFB_RocketAmmo", 1, "Reload");
+			GNDG A 4 {
+				A_StartSound("weapons/empty");
+				A_OverlayPivot(OverlayID(), 0.33, 0);
+				A_OverlayScale(OverlayID(), 1.1);
+			}
+			GNDG A 14 A_OverlayScale(OverlayID(), 1.0);
+			GNDG A 0 A_ReFire;
+			Goto Ready;
+		Reload:
+		// Check for rockets, and if you're already full.
+			TNT1 A 0 A_JumpIfInventory("CFB_GrenadeLauncherAmmo", 0, "Ready");
+			TNT1 A 0 A_JumpIfInventory("CFB_RocketAmmo", 1, 1);
+			Goto Ready;
+			GNDG B 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+		Reload.Repeat:
+			// if full on ammo, finish reload
+			TNT1 A 0 A_JumpIfInventory("CFB_GrenadeLauncherAmmo", 0, "Reload.Finish");
+			// if at least 1 shell to load, continue
+			TNT1 A 0 A_JumpIfInventory("CFB_RocketAmmo", 1, 1);
+			Goto Reload.Finish;
+			TNT1 A 6;
+			// exchange shell for ammo
+			TNT1 A 0 {
+				A_GiveInventory("CFB_GrenadeLauncherAmmo", 1);
+				A_Takeinventory("CFB_RocketAmmo",1);
+			}
+			TNT1 A 4 A_StartSound("weapons/glauncher/load");
+			TNT1 AAAA 1 A_JumpIf(IsPressed(BT_ATTACK|BT_ALTATTACK), "Reload.Finish");
+			Goto Reload.Repeat;
+		Reload.Finish:
+			GNDG B 1 A_WeaponOffset(-90, 122, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-60, 92, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
+			GNDG B 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
+			GNDG A 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
+			Goto Ready;
+		FlashSelector:
+			TNT1 A 0 {return invoker.FindStateByString("Flash"..clamp((invoker.ammo1.Amount % 3), 0,2));}
+		Flash0: // Top
+			GNDF A 1 Bright {
+				A_AttachLightDef("Flash", "CFB_GunFlash");
+				A_OverlayPivotAlign(OverlayID(), PSPA_CENTER, PSPA_BOTTOM);
+				A_OverlayOffset(OverlayID(), 0, -1);
+				A_OverlayScale(OverlayID(), 0.7);
+			}
+			GNDF B 1 Bright {
+				A_OverlayScale(OverlayID(), 0.9);
+				A_OverlayOffset(OverlayID(), 0, -6);
+			}
+			GNDF C 1 Bright A_OverlayScale(OverlayID(), 1);
+			TNT1 A 0 A_RemoveLight("Flash");
+			Stop;
+		Flash2: // Left
+			GNDF D 1 Bright {
+				A_AttachLightDef("Flash", "CFB_GunFlash");
+				A_OverlayPivotAlign(OverlayID(), PSPA_CENTER, PSPA_BOTTOM);
+				A_OverlayOffset(OverlayID(), 0, -1);
+				A_OverlayScale(OverlayID(), 0.7);
+			}
+			GNDF E 1 Bright {
+				A_OverlayScale(OverlayID(), 0.9);
+				A_OverlayOffset(OverlayID(), 0, -6);
+			}
+			GNDF F 1 Bright A_OverlayScale(OverlayID(), 1);
+			TNT1 A 0 A_RemoveLight("Flash");
+			Stop;
+		Flash1: // Right
+			GNDF G 1 Bright {
+				A_AttachLightDef("Flash", "CFB_GunFlash");
+				A_OverlayPivotAlign(OverlayID(), PSPA_CENTER, PSPA_BOTTOM);
+				A_OverlayOffset(OverlayID(), 0, -1);
+				A_OverlayScale(OverlayID(), 0.7);
+			}
+			GNDF H 1 Bright {
+				A_OverlayScale(OverlayID(), 0.9);
+				A_OverlayOffset(OverlayID(), 0, -6);
+			}
+			GNDF I 1 Bright A_OverlayScale(OverlayID(), 1);
+			TNT1 A 0 A_RemoveLight("Flash");
+			Stop;
+	}
+}
+class CFB_Grenade : Actor
+{
+	Default
+	{
+		Radius 8;
+		Height 8;
+		Speed 45;
+		DamageFunction (90);
+		DamageType "Rocket";
+		Projectile;
+		-NOGRAVITY
+		BounceType "Doom";
+		Gravity 0.5;
+		BounceSound "weapons/glauncher/bounce";
+		DeathSound "weapons/glauncher/explode";
+		Obituary "$KILLCFBGRENADELAUNCHER";
+		Decal "Scorch";
+	}
+	States
+	{
+		Spawn:
+			PGND A 4 Bright {
+				//A_StartSound("weapons/rlauncher/travel", CHAN_BODY, CHANF_LOOPING);
+				A_SpawnItemEx("RocketSmokeTrail", zofs: -4);
+			}
+			Loop;
+		Death:
+			PROC B 3 Bright {
+				bNOGRAVITY = true;
+				A_Stop();
+				A_Explode();
+				A_SetRenderStyle(1, STYLE_ColorAdd);
+			}
+			PROC C 2 Bright A_FadeOut(0.2);
+			PROC DE 2 Bright A_FadeOut(0.2);
+			PROC EFF 1 Bright A_FadeOut(0.1);
+			Stop;
+	}
+}

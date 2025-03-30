@@ -1,2 +1,3 @@
 Brightness -100
 ... that's it
+Do this twice if you're using GIMP 3.0

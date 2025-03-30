@@ -1,0 +1,119 @@
+[pt] // Brazilian Portugese (Português do Brasil)
+// ======================== //
+//        Debug text        //
+// ======================== //
+// <not translated>
+
+// ======================== //
+//  Weapon pickup messages  //
+// ======================== //
+// Slot 1 //
+// No Brass Knuckles pickup message, you start with em!
+GOTCFBCHAINSAW = "\c[White]Você adquiriu uma \c[Orange]Motosserra\c[White]! Encontre alguma carne! (Espaço 1)";
+// Slot 2 //
+GOTCFBPISTOL = "\c[White]Você adquiriu uma \c[Yellow]Pistola\c[White]! (Espaço 2)";
+// Slot 3 //
+GOTCFBPSHOTGUN = "\c[White]Você adquiriu uma \c[Red]Espingarda de Bombeamento\c[White]! (Espaço 3)";
+GOTCFBOUSHOTGUN = "\c[White]Você adquiriu uma \c[Red]Espingarda Sobreposta\c[White]! (Espaço 3, use o tiro alternativo para cano único)";
+// Slot 4 //
+GOTCFBCHAINGUN = "\c[White]Você adquiriu uma \c[Yellow]Metralhadora Giratória\c[White]! (Espaço 4, use o tiro alternativo para atirar mais lenta e precisamente)";
+GOTCFBHEAVYCANNON = "\c[White]Você adquiriu um \c[Yellow]Canhão Pesado\c[White]! (Espaço 4)";
+// Slot 5 //
+GOTCFBROCKETLAUNCHER = "\c[White]Você adquiriu um \c[DarkGray]Lança-foguetes\c[White]! (Espaço 5, use o tiro alternativo para carregar mais foguetes)";
+GOTCFBGRENADELAUNCHER = "\c[White]Você adquiriu um \c[DarkGray]Lança-granadas\c[White]! (Espaço 5, use o tiro alternativo para atirar as três granadas!)";
+// Slot 6 //
+GOTCFBPLASMARIFLE = "\c[White]Você adquiriu um \c[CFB_Plasma]Rifle de Plasma\c[White]! (Espaço 6)";
+GOTCFBFLASHER = "\c[White]Você adquiriu uma \c[Fire]Flasher\c[White]! (Espaço 6)";
+// Slot 7 //
+GOTCFBCALAMITYARROW = "\c[White]Você adquiriu uma \c[Cyan]Flecha da Calamidade\c[White]! Aí sim! (Espaço 7, use o tiro alternativo para ondas rasgantes)";
+
+// ======================== //
+// Weapon obituary messages //
+// ======================== //
+// Slot 1 //
+KILLCFBBRASSKNUCKLES = "%o foi socado(a) no seu focinho por %k para estabelecer superioridade.";
+KILLCFBCHAINSAW = "%o foi rasgado(a) em pedaços por %k com sua \c[Orange]Motosserra\c[Gold].";
+// Slot 2 //
+KILLCFBPISTOL = "%o foi furado(a) até a morte por %k com sua \c[Yellow]Pistola\c[Gold].";
+// Slot 3 //
+KILLCFBPSHOTGUN = "%o foi destroçado(a) por %k com sua \c[Red]Espingarda de Bombeamento\c[Gold].";
+KILLCFBOUSHOTGUN = "%o foi esparramado(a) por %k com sua \c[Red]Espingarda Sobreposta\c[Gold].";
+// Slot 4 //
+KILLCFBCHAINGUN = "%o teve seu corpo moído vivo(a) por %k com sua \c[Yellow]Motosserra\c[Gold].";
+KILLCFBHEAVYCANNON = "%o foi abatido(a) por %k com seu \c[Yellow]Canhão Pesado\c[Gold].";
+// Slot 5 //
+KILLCFBROCKETLAUNCHER = "%o foi explodido(a) até os céus por %k com seu \c[DarkGray]Lança-foguetes\c[Gold].";
+KILLCFBGRENADELAUNCHER = "%o foi detonado(a) por %k com seu \c[DarkGray]Lança-granadas\c[Gold].";
+// Slot 6 //
+KILLCFBPLASMARIFLE = "%o foi fritado(a) por %k com seu \c[CFB_Plasma]Rifle de Plasma\c[Gold].";
+KILLCFBFLASHER = "%o foi torrado(a), bem douradinho(a), por %k com sua \c[Fire]Flasher\c[Gold].";
+// Slot 7 //
+KILLCFBCALAMITYARROWRAIL = "%o foi perfurado(a) por %k com sua \c[Cyan]Flecha da Calamidade\c[Gold].";
+KILLCFBCALAMITYARROWEXPLOSION = "%o foi obliterado(a) or %k com sua \c[Cyan]Flecha da Calamidade\c[Gold].";
+KILLCFBCALAMITYARROWWAVE = "%o foi apagado(a) da existência %k com sua \c[Cyan]Flecha da Calamidade\c[Gold].";
+
+// ======================== //
+//       Weapon names       //
+// ======================== //
+// Slot 1 //
+TAG_CFBBRASSKNUCKLES = "Soco-inglês";
+TAG_CFBCHAINSAW = "Motosserra";
+// Slot 2 //
+TAG_CFBPISTOL = "Pistola";
+// Slot 3 //
+TAG_CFBPSHOTGUN = "Espingarda de Bombeamento";
+TAG_CFBOUSHOTGUN = "Espingarda Sobreposta";
+// Slot 4 //
+TAG_CFBCHAINGUN = "Metralhadora Giratória";
+TAG_CFBHEAVYCANNON = "Canhão Pesado";
+// Slot 5 //
+TAG_CFBROCKETLAUNCHER = "Lança-foguetes";
+TAG_CFBGRENADELAUNCHER = "Lança-granadas";
+// Slot 6 //
+TAG_CFBPLASMARIFLE = "Rifle de Plasma";
+TAG_CFBFLASHER = "Flasher";
+// Slot 7 //
+TAG_CFBCALAMITYARROW = "Flecha da Calamidade";
+
+// ======================== //
+//   Ammo pickup messages   //
+// ======================== //
+GOTCFBMAGAZINE = "\c[White]Você adquiriu uma \c[Yellow]munição\c[White].";
+GOTCFBMAGAZINEBOX = "\c[White]Você adquiriu uma \c[Yellow]caixa de munição\c[White].";
+GOTCFBSHELLS = "\c[White]Você adquiriu um \c[Red]punhado de cartuchos de espingarda\c[White].";
+GOTCFBSHELLBOX = "\c[White]Você adquiriu uma \c[Red]caixa de cartuchos de espingarda\c[White].";
+GOTCFBROCKET = "\c[White]Você adquiriu um \c[DarkGray]foguete\c[White].";
+GOTCFBROCKETBOX = "\c[White]Você adquiriu uma \c[DarkGray]caixa de foguetes\c[White].";
+GOTCFBCELL = "\c[White]Você adquiriu uma \c[CFB_Plasma]célula de energia\c[White].";
+GOTCFBCELLPACK = "\c[White]Você adquiriu um \c[CFB_Plasma]pacote de célula de energia\c[White].";
+
+// ======================== //
+//   Item pickup messages   //
+// ======================== //
+// Health //
+// <not translated>
+// Armor //
+// <not translated>
+
+// Powerups //
+GOTCFBBERSERK = "\c[Red]Berserk\c[White]! (10x dano no soco!)";
+// <not translated>
+
+// ======================== //
+//         Ammo tags        //
+// ======================== //
+AMMO_CFBMAGAZINE = "Munição";
+AMMO_CFBMAGAZINEBOX = "Caixa de munição";
+AMMO_CFBSHELLS = "Cartuchos de espingarda";
+AMMO_CFBSHELLBOX = "Caixa de cartuchos de espingarda";
+AMMO_CFBROCKET = "Foguete";
+AMMO_CFBROCKETBOX = "Caixa de foguete";
+AMMO_CFBCELL = "Célula de energia";
+AMMO_CFBCELLPACK = "Pacote de célula de energia";
+
+// ======================== //
+//           Menus          //
+// ======================== //
+TITLE_CFBOPTIONS = "\c[Red]Opções do \c[CFB_Coffee]Cappuccino Fudge Blitz";
+DESC_CFBSPAWNALTS = "Algumas armas têm 50% de chance de serem substituídas aleatoriamente.";
+CVAR_CFBSPAWNALTS = "Invocar armas alternativas";
