@@ -79,7 +79,7 @@
 
 ### Other
 #### Title logo
-* Marblecheese (Palette from "StarCatcher Marin")
+* Marblecheese (NPC Palette from "StarCatcher Marin")
 * Techokami (Sonic Worlds Next, title card font)
 
 ## Sounds
