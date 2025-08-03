@@ -1,0 +1,11 @@
+//// Weapons ////
+
+/// Slot 6 ///
+// Cryo Rifle //
+brightmap sprite F8CRA0 {map Graphics/Brightmaps/BMF8CRA0.png}
+brightmap sprite F8CRB0 {map Graphics/Brightmaps/BMF8CRB0.png}
+brightmap sprite F8CRC0 {map Graphics/Brightmaps/BMF8CRC0.png}
+brightmap sprite F8CRD0 {map Graphics/Brightmaps/BMF8CRD0.png disablefullbright}
+brightmap sprite F8CRE0 {map Graphics/Brightmaps/BMF8CRE0.png disablefullbright}
+brightmap sprite F8CRF0 {map Graphics/Brightmaps/BMF8CRF0.png}
+brightmap sprite F8CRG0 {map Graphics/Brightmaps/BMF8CRG0.png}

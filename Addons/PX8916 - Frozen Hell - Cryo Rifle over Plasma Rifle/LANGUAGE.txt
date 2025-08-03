@@ -1,0 +1,4 @@
+[enu default]
+GOTPX8FRCRYORIFLE = "\c[White]Picked up a \c[Cyan]Cryo Rifle\c[White]! (Slot 6, alt-fire for burst fire)";
+KILLPX8FRCRYORIFLE = "%o was frozen by %k's \c[Cyan]Cryo Rifle\c[Gold].";
+TAG_PX8FRCRYORIFLE = "Cryo Rifle";

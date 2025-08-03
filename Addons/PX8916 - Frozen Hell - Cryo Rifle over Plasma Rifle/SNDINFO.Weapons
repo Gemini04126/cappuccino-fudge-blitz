@@ -1,0 +1,24 @@
+//// Slot 6 ////
+/// Cryo Rifle ///
+weapons/frplasma/fire		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave.wav"
+weapons/frplasma/fire2		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave.wav"
+weapons/frplasma/fire3		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave.wav"
+weapons/frplasma/fire4		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave.wav"
+weapons/frplasma/fire5		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave.wav"
+weapons/frplasma/fire6		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave.wav"
+weapons/frplasma/travel		"Sounds/Weapons/6 - Cryo Rifle/snd_snowgrave2.wav"
+weapons/frplasma/hit		"Sounds/Weapons/6 - Cryo Rifle/snd_heavyswing.wav"
+weapons/frplasma/select		"Sounds/Weapons/6 - Cryo Rifle/snd_icespell.wav"
+weapons/frplasma/cooldown	"Sounds/Weapons/6 - Cryo Rifle/snd_vaporized.wav"
+weapons/frplasma/pickup		"Sounds/Weapons/6 - Cryo Rifle/snd_vaporized.wav"
+
+// Other definitions //
+$pitchset weapons/frplasma/fire2 1.1
+$pitchset weapons/frplasma/fire3 1.2
+$pitchset weapons/frplasma/fire4 1.3
+$pitchset weapons/frplasma/fire5 1.4
+$pitchset weapons/frplasma/fire6 1.5
+$limit weapons/frplasma/hit 0
+$volume weapons/frplasma/travel 0.5
+$volume weapons/frplasma/cooldown 0.8
+$volume weapons/frplasma/select 0.6

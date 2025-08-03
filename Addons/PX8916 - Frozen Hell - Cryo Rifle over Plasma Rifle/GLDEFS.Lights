@@ -1,0 +1,57 @@
+// Cryo, yoinked from CFB's Plasma
+pointlight PX8FR_CryoProjectile
+{
+    color 0.5 0.75 1.0
+    size 84
+	attenuate 1
+}
+
+flickerlight PX8FR_Cryo_X1
+{
+    color 0.5 0.75 1.0
+    size 96
+    secondarySize 108
+    chance 0.4
+	attenuate 1
+}
+
+flickerlight PX8FR_Cryo_X2
+{
+    color 0.4 0.6 0.8
+    size 120
+    secondarySize 132
+    chance 0.4
+	attenuate 1
+}
+
+flickerlight PX8FR_Cryo_X3
+{
+    color 0.25 0.375 0.5
+    size 96
+    secondarySize 108
+    chance 0.4
+	attenuate 1
+}
+
+flickerlight PX8FR_Cryo_X4
+{
+    color 0.1 0.15 0.2
+    size 12
+    secondarySize 24
+    chance 0.4
+	attenuate 1
+}
+
+object PX8FR_CryoProjectile
+{
+    frame F8BRA { light PX8FR_CryoProjectile }
+    frame F8BRB { light PX8FR_CryoProjectile }
+    frame F8BRC { light PX8FR_CryoProjectile }
+    frame F8BRD { light PX8FR_CryoProjectile }
+
+    frame F8BRE { light PX8FR_Cryo_X1 }
+    frame F8BRF { light PX8FR_Cryo_X2 }
+    frame F8BRG { light PX8FR_Cryo_X2 }
+    frame F8BRH { light PX8FR_Cryo_X3 }
+    frame F8BRI { light PX8FR_Cryo_X4 }
+}

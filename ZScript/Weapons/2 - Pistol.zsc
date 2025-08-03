@@ -79,7 +79,6 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			TNT1 A 0 A_QuickLower();
 			Stop;
 		DeselectEmpty:
-			PISG F 1;
 			PISG Y 1 A_WeaponOffset(-10, 42, WOF_INTERPOLATE);
 			PISG Y 1 A_WeaponOffset(-20, 52, WOF_INTERPOLATE);
 			PISG Y 1 A_WeaponOffset(-40, 72, WOF_INTERPOLATE);
@@ -94,6 +93,7 @@ class CFB_Pistol : CFB_Weapon replaces Pistol
 			PISG A 1 A_WeaponReady(WRF_ALLOWRELOAD);
 			Loop;
 		ReadyEmpty:
+			PISG F 0 A_JumpIfInventory(invoker.ammo1.GetClassName(), 1, "Ready");
 			PISG F 1 A_WeaponReady(WRF_ALLOWRELOAD);
 			Loop;
 

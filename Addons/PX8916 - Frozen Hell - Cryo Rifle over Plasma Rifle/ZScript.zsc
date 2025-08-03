@@ -1,0 +1,314 @@
+class PX8FR_CryoRifle : CFB_Weapon replaces CFB_PlasmaRifle
+{
+	int cooldown;
+	int fireproj;
+	
+	action void A_FireCryoRifle()
+	{
+		if (invoker.fireproj == 0)
+		{
+			invoker.fireproj = random(1,2);
+		}
+		if (invoker.fireproj == 1)
+		{
+			A_FireProjectile("PX8FR_CryoProjectile");
+			invoker.fireproj = 2;
+		}
+		else
+		{
+			A_FireProjectile("PX8FR_CryoProjectileAlt");
+			invoker.fireproj = 1;
+		}
+		if (invoker.cooldown > 5)
+		{
+			invoker.cooldown = 5;
+		}
+		switch(invoker.cooldown)
+		{
+		case 0:
+			A_StartSound("weapons/frplasma/fire", CHAN_WEAPON);
+			break;
+		case 1:
+			A_StartSound("weapons/frplasma/fire2", CHAN_WEAPON);
+			break;
+		case 2:
+			A_StartSound("weapons/frplasma/fire3", CHAN_WEAPON);
+			break;
+		case 3:
+			A_StartSound("weapons/frplasma/fire4", CHAN_WEAPON);
+			break;
+		case 4:
+			A_StartSound("weapons/frplasma/fire5", CHAN_WEAPON);
+			break;
+		case 5:
+			A_StartSound("weapons/frplasma/fire6", CHAN_WEAPON);
+			break;
+		}
+		invoker.cooldown++;
+	}
+	Default
+	{
+		Weapon.SlotNumber 6;
+		Weapon.SelectionOrder 100;
+		Weapon.AmmoUse 1;
+		Weapon.AmmoGive 40;
+		Weapon.AmmoType "CFB_Cell";
+		Inventory.PickupMessage "$GOTPX8FRCRYORIFLE";
+		Obituary "$KILLPX8FRCRYORIFLE";
+		Tag "$TAG_PX8FRCRYORIFLE";
+		Weapon.UpSound "weapons/frplasma/select";
+		Inventory.PickupSound "weapons/frplasma/pickup";
+	}
+	States
+	{
+		Ready:
+			F8CR A 4 {
+				if (invoker.cooldown != 0)
+				{
+					A_WeaponReady(WRF_NOSECONDARY);
+				}
+				else
+				{
+					A_WeaponReady();
+				}
+			}
+			TNT1 A 0 {
+				if (invoker.cooldown != 0)
+				{
+					invoker.cooldown--;
+				}
+				invoker.fireproj = 0;
+			}
+			Loop;
+		Deselect:
+			F8CR A 1 A_WeaponOffset(0, 32);
+			F8CR A 1 A_WeaponOffset(0, 37, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 49, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 65, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 85, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 125, WOF_INTERPOLATE);
+			TNT1 A 0 {
+				A_WeaponOffset(0, 32);
+				invoker.cooldown = 0;
+				A_QuickLower();
+			}
+			Loop;
+		Select:
+			TNT1 A 0 A_QuickRaise();
+			F8CR A 1 A_WeaponOffset(0, 125);
+			F8CR A 1 A_WeaponOffset(0, 85, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 65, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 49, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 37, WOF_INTERPOLATE);
+			F8CR A 1 A_WeaponOffset(0, 32, WOF_INTERPOLATE);
+			Goto Ready;
+		Fire:
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "EmptyFire");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+			F8CR C 1 {
+				A_WeaponOffset(0, 34);
+				A_OverlayScale(OverlayID(), 1);
+			}
+			F8CR B 1 {
+				A_WeaponOffset(0, 32);
+				A_OverlayScale(OverlayID(), 1);
+			}
+			TNT1 A 0 A_ReFire;
+			TNT1 A 0 A_JumpIf(invoker.cooldown > 5, "Cooldown"); // 5 shots
+			Goto Ready;
+		AltFire:
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "EmptyFire");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+				invoker.DepleteAmmo(false, true);
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "AltFire.Finish");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+				invoker.DepleteAmmo(false, true);
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "AltFire.Finish");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+				invoker.DepleteAmmo(false, true);
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "AltFire.Finish");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+				invoker.DepleteAmmo(false, true);
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "AltFire.Finish");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+				invoker.DepleteAmmo(false, true);
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount <= 0, "AltFire.Finish");
+			F8CR D 1 Bright {
+				A_WeaponOffset(0, 40);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.25);
+				A_FireCryoRifle();
+				invoker.DepleteAmmo(false, true);
+			}
+			F8CR E 1 Bright {
+				A_WeaponOffset(0, 36);
+				A_OverlayPivot(OverlayID(), 0.5, 0.4);
+				A_OverlayScale(OverlayID(), 1.125);
+			}
+		AltFire.Finish:
+			F8CR C 1 {
+				A_WeaponOffset(0, 34);
+				A_OverlayScale(OverlayID(), 1);
+			}
+			F8CR B 1 {
+				A_WeaponOffset(0, 32);
+				A_OverlayScale(OverlayID(), 1);
+			}
+			Goto Cooldown;
+		EmptyFire:
+			// You wouldn't be here if you had ammo, right?
+			TNT1 A 0 A_JumpIf(invoker.ammo1.Amount > 0, "Ready");
+			F8CR A 2 {
+				A_WeaponOffset(0, 40);
+				A_StartSound("weapons/empty");
+			}
+			F8CR A 2 A_WeaponOffset(0, 34);
+			F8CR A 4 A_WeaponOffset(0, 32);
+			Goto Ready;
+		Cooldown:
+			F8CR F 2;
+			F8CR GH 2;
+			F8CR I 3 A_StartSound("weapons/frplasma/cooldown", CHAN_BODY);
+			F8CR J 6;
+			F8CR I 3;
+			F8CR HGFA 2;
+			TNT1 A 0 {
+				invoker.cooldown = 0;
+			}
+			Goto Ready;
+		Spawn:
+			F8CR Z -1;
+			Stop;
+	}
+}
+
+class PX8FR_CryoProjectile : Actor
+{
+	Default
+	{
+		Radius 13;
+		Height 8;
+		Speed 25;
+		DamageFunction (25);
+		Projectile;
+		+RANDOMIZE
+		+NOEXTREMEDEATH
+		RenderStyle "Add";
+		Alpha 0.75;
+		DamageType "Ice"; // Proceed
+		+ICESHATTER
+		+BLOODLESSIMPACT
+		DeathSound "weapons/frplasma/hit";
+		Obituary "$OB_MPPLASMARIFLE";
+		Decal "Scorch";
+	}
+	States
+	{
+		Spawn:
+			F8BR A 2 Bright {
+				A_SpawnParticle("2c61ef", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(5, 6)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			F8BR B 2 Bright {
+				A_SpawnParticle("0020ba", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(1, 2)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			F8BR C 2 Bright {
+				A_SpawnParticle("113dd7", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(3, 4)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			F8BR D 2 Bright {
+				A_SpawnParticle("3e79ff", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(7, 8)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			Loop;
+		Death:
+			F8BR EFGHI 2 Bright;
+			Stop;
+	}
+}
+
+class PX8FR_CryoProjectileAlt : PX8FR_CryoProjectile
+{
+	States
+	{
+		Spawn:
+			F8BR A 2 Bright {
+				A_SpawnParticle("2c61ef", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(5, 6)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			F8BR D 2 Bright {
+				A_SpawnParticle("3e79ff", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(7, 8)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			F8BR C 2 Bright {
+				A_SpawnParticle("113dd7", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(3, 4)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			F8BR B 2 Bright {
+				A_SpawnParticle("0020ba", SPF_FULLBRIGHT|SPF_RELATIVE, 12, (random(1, 2)*3), random(-8, 8), random(-6, 6), random(-6, 6), velx: random(0, 4), vely: random(-2, 2), velz: random(-2, 2), accelx: random(-1, 0), startalphaf: 0.75, sizestep: -0.5);
+				A_StartSound("weapons/frplasma/travel", CHAN_VOICE, CHANF_LOOPING);
+			}
+			Loop;
+	}
+}
